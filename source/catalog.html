@@ -7,7 +7,7 @@
 <body>
 <header class="header">
   <a class="header__logo" href="index.html">
-    <span class="visually-hidden">Логотип Мишка</span>
+    Логотип Мишка
     <img src="./img/mishka-logo-mobile.svg" width="85.97" height="34.92" alt="Логотип Мишка"/>
   </a>
   <nav class="header__nav">
@@ -33,7 +33,7 @@
         <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
         <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
         <strong class="catalog__item-price">1 200 pуб.</strong>
-        <button class="button" type="submit">
+        <button class="button" type="submit">Купить
           <svg class="icon" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               opacity=".2"
@@ -49,7 +49,7 @@
         <h3 class="catalog__item-title">Корзинка для белья</h3>
         <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
         <strong class="catalog__item-price">690 pуб.</strong>
-        <button class="button" type="submit">
+        <button class="button" type="submit">Купить
           <svg class="icon" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               opacity=".2"
@@ -60,11 +60,12 @@
         </button>
       </li>
       <li class="catalog__item">
-        <img class="catalog__item-preview" src="https://via.placeholder.com/150x150" alt="Большая корзинка  для игрушек"/>
-        <h3 class="catalog__item-title">Большая корзинка  для игрушек</h3>
+        <img class="catalog__item-preview" src="https://via.placeholder.com/150x150"
+             alt="Большая корзинка  для игрушек"/>
+        <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
         <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
         <strong class="catalog__item-price">1 500 pуб.</strong>
-        <button class="button" type="submit">
+        <button class="button" type="submit">Купить
           <svg class="icon" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               opacity=".2"
@@ -76,23 +77,26 @@
       </li>
     </ul>
   </section>
-  <section class="section">
-    <h2 class="section__title">Процесс производства</h2>
-    <div class="video">
-      <p class="characteristic">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
-        появляются наши товары.</p>
-      <a class="button" href="form.html" aria-label="Перейти на форму оформления заказа">Сделать заказ</a>
-    </div>
+  <section class="overview">
+    <h2 class="overview__title">Процесс производства</h2>
+    <p class="overview__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
+      появляются наши товары.</p>
+    <a class="button" href="form.html" aria-label="Перейти на форму оформления заказа">Сделать заказ</a>
   </section>
 </main>
-<footer>
-  <a class="networks__link" href="" aria-label="Инстаграм">Инстаграм</a>
-  <a class="networks__link" href="" aria-label="Фейсбук">Фейсбук</a>
-  <a class="networks__link" href="" aria-label="Твиттер">Твиттер</a>
-  <p class="developer__text">Разработано</p>
-  <a class="developer__logo" href="https://htmlacademy.ru/intensive/adaptive">
-    <img src="./img/htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"/>
-  </a>
+<footer class="page-footer">
+  <div class="page-footer__social">
+    <a class="page-footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
+    <a class="page-footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>
+    <a class="page-footer__social-item" href="" aria-label="Твиттер">Твиттер</a>
+  </div>
+  <p class="page-footer__copyright">
+    Разработано
+    <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
+      HTML Academy
+      <img src="./img/htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"/>
+    </a>
+  </p>
 </footer>
 </body>
 </html>
