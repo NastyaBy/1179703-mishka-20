@@ -10,7 +10,7 @@
     Логотип Мишка
     <img src="./img/mishka-logo-mobile.svg" width="85.97" height="34.92" alt="Логотип Мишка"/>
   </a>
-  <button class="main-nav__toggle" type="button">
+  <button class="header__nav-toggle" type="button">
     Открыть меню
   </button>
   <nav class="header__nav">
@@ -26,7 +26,7 @@
   <section class="intro">
     <h2 class="intro__title">Милые штуки ручной работы для дома</h2>
     <a class="intro__item" href="#" aria-label="Предметы интерьера">
-      <h2 class="intro__item-title">Предметы интерьера</h2>
+      Предметы интерьера
       <svg class="intro__item-picture" width="40" height="62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity=".5" fill="#149080">
           <path
@@ -38,7 +38,7 @@
       </svg>
     </a>
     <a class="intro__item" href="#" aria-label="Детские игрушки">
-      <h2 class="intro__item-title">Детские игрушки</h2>
+      Детские игрушки
       <svg class="intro__item-picture" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           opacity=".5"
@@ -57,12 +57,14 @@
     <table class="hot-product__item-table">
       <tr class="hot-product__table-row">
         <th class="hot-product__row-title">Цвет:</th>
-        <th class="hot-product__row-title">Диаметр:</th>
-        <th class="hot-product__row-title">Высота:</th>
+        <td class="hot-product__row-description">«Тиффани»/серый</td>
       </tr>
       <tr class="hot-product__table-row">
-        <td class="hot-product__row-description">«Тиффани»/серый</td>
+        <th class="hot-product__row-title">Диаметр:</th>
         <td class="hot-product__row-description">25 см</td>
+      </tr>
+      <tr>
+        <th class="hot-product__row-title">Высота:</th>
         <td class="hot-product__row-description">15 см</td>
       </tr>
     </table>
@@ -73,23 +75,23 @@
 
   <section class="features">
     <h2 class="features__title">Коротко о нас:</h2>
-    <ul class="features-info">
-      <li class="features-info__item">
+    <ul class="features__list">
+      <li class="features__item">
         Экологически чистые материалы
       </li>
-      <li class="features-info__item">
+      <li class="features__item">
         Скандинавский стиль по российской цене
       </li>
-      <li class="features-info__item">
+      <li class="features__item">
         Увеличивает лайки на фотографиях
       </li>
-      <li class="features-info__item">
+      <li class="features__item">
         Связано вручную с любовью и умилением
       </li>
-      <li class="features-info__item">
+      <li class="features__item">
         Поддержка отечественного производителя
       </li>
-      <li class="features-info__item">
+      <li class="features__item">
         Поставляется в подарочной упаковке
       </li>
     </ul>
@@ -124,10 +126,12 @@
     <table class="contacts__table">
       <tr class="contacts__table-row">
         <th class="table-row__item">E-mail:</th>
-        <th class="table-row__item">Адрес:</th>
+        <td class="table-row__item-description">Info@mimimishkashop.ru</td>
       </tr>
-      <tr class="table-row__item-description">Info@mimimishkashop.ru</tr>
-      <tr class="table-row__item-description">Г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</tr>
+      <tr>
+        <th class="table-row__item">Адрес:</th>
+        <td class="table-row__item-description">Г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+      </tr>
     </table>
     <img class="contacts__item-picture" src="./img/map-mobile.jpg" width="320" height="457"
          alt="Мы находимся по адресу: г. Санкт-Петербург,  ул. Большая Конюшенная,  д. 19/8, офис 101"/>
