@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <title>HTML Academy: Мишка</title>
+</head>
+<body>
+<header class="header">
+  <a class="header__logo" href="index.html">
+    Логотип Мишка
+    <img src="./img/mishka-logo-mobile.svg" width="85.97" height="34.92" alt="Логотип Мишка"/>
+  </a>
+  <button class="header__nav-toggle" type="button">
+    Открыть меню
+  </button>
+  <nav class="header__nav">
+    <a class="header__nav-item" href="catalog.html" aria-label="Каталог товара">Каталог товара</a>
+    <a class="header__nav-item" href="form.html" aria-label="Вязание на заказ">Вязание на заказ</a>
+    <a class="header__nav-item" href="#" aria-label="Поиск по сайту">Поиск по сайту</a>
+    <a class="header__nav-item" href="#" aria-label="Корзина: пока пуста">Корзина: пока пуста</a>
+  </nav>
+</header>
+<main>
+  <h1 class="visually-hidden">Мишка</h1>
+  <section class="intro">
+  <h2 class="intro__title">Вязание на заказ</h2>
+  <p class="intro__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
+    с вами, чтобы уточнить детали.</p>
+  <form class="form" action="https://echo.htmlacademy.ru" method="get">
+    <fieldset class="form__fieldset">
+      <legend class="form__title">Тип</legend>
+      <div class="form-radio">
+        <input  type="radio" name="type" value="Interior accessory" checked="checked"/>
+        <label>Аксессуар для интерьер</label>
+      </div>
+      <div class="form-radio">
+        <input type="radio" name="type" value="Kids toy"/>
+        <label>Детская игрушка</LABEL>
+      </div>
+    </fieldset>
+    <fieldset class="form__fieldset" >
+      <legend class="form__title">Цвет</legend>
+      <div class="form-checkbox">
+        <input type="checkbox" name="сolor" value="White" checked="checked"/>
+        <label>Белый</label>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" name="сolor" value="Gray" checked="checked"/>
+        <label>Серый</label>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" name="сolor" value="Tiffany"/>
+        <label>«Тиффани»</label>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" name="сolor" value="Black"/>
+        <label>Черный</label>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" name="сolor" value="Pink"/>
+        <label>Розовый</label>
+      </div>
+      <div class="form-checkbox">
+        <input type="checkbox" name="сolor" value="Orange"/>
+        <label>Оранжевый</label>
+      </div>
+    </fieldset>
+    <fieldset class="form__item" >
+      <legend class="form__item-title">Фио</legend>
+      <label class="form__item-text">
+        Имя:
+        <input class="form__item-input" type="text" placeholder="Введите ваше имя*"/>
+      </label>
+      <label class="form__item-text">
+        Фамилия:
+        <input class="form__item-input" type="text" placeholder="Укажите фамилию*"/>
+      </label>
+      <label class="form__item-text">
+        Отчество:
+        <input class="form__item-input" type="text" placeholder="Отчество, если желаете"/>
+      </label>
+    </fieldset>
+
+    <label class="form__item-title">
+      Тел
+      <input class="form__item-input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
+    </label>
+    <label class="form__item-title">
+      E-mail
+      <input class="form__item-input" type="email" placeholder="Ваш Email*"/>
+    </label>
+    <label class="form__item-title">
+      Доп
+      <input class="form__item-input" type="text" placeholder="Опишите все ваши  пожелания к заказу"/>
+    </label>
+    <p class="form__text">*Поля обязательны для заполнения</p>
+    <button class="button" type="submit" formaction="#" aria-label="Кнопка отправить заказ">
+      Отправить заказ
+    </button>
+  </form>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <div class="page-footer__social">
+    <a class="page-footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
+    <a class="page-footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>
+    <a class="page-footer__social-item" href="" aria-label="Твиттер">Твиттер</a>
+  </div>
+  <p class="page-footer__copyright">
+    Разработано
+    <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
+      HTML Academy
+      <img src="./img/htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"/>
+    </a>
+  </p>
+</footer>
+</body>
+</html>
