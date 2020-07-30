@@ -1,0 +1,29 @@
+$features-title: #000000;
+$features-item: #000000;
+
+.features {
+  margin: 0 30px;
+
+  &__title {
+    margin: 0;
+    padding-top: 30px;
+    color: $features-title;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding: 28px 0;
+    color: $features-item;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    list-style-type: none;
+  }
+}

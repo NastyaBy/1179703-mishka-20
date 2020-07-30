@@ -1,0 +1,17 @@
+.header {
+  margin: 0;
+  padding: 22px;
+  display: flex;
+
+  &__logo {
+    font-size: 0;
+  }
+
+  &__nav {
+    display: none;
+
+    &-toggle {
+      font-size: 0;
+    }
+  }
+}

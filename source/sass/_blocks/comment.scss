@@ -1,0 +1,43 @@
+$comment-title: #000000;
+$comment-item-text: #444444;
+$comment-item-name: #000000;
+$comment-item-email: #444444;
+
+.comment {
+  margin: 0 30px;
+
+  &__title {
+    margin: 0;
+    padding: 15px 0;
+    color: $comment-title;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  &__item-text {
+    margin: 0;
+    padding-bottom: 30px;
+    color: $comment-item-text;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 30px;
+  }
+
+  &__item-name {
+    margin: 0;
+    color: $comment-item-name;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+
+  &__item-email {
+    margin: 0;
+    color: $comment-item-email;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 30px;
+    text-decoration: none;
+  }
+}

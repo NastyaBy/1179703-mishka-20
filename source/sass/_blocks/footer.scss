@@ -1,0 +1,25 @@
+$footer-background: #f1f1f1;
+$footer-copyright: #000000;
+
+.footer {
+  margin: 0;
+  padding: 0;
+  background: $footer-background;
+
+  &__social {
+    &-item {
+      font-size: 0;
+    }
+  }
+
+  &__copyright {
+    color: $footer-copyright;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  &__academy {
+    font-size: 0;
+  }
+}

@@ -1,1 +1,48 @@
-// Начните писать стили здесь
+@import "_blocks/header";
+@import "_blocks/footer";
+@import "_blocks/catalog";
+@import "_blocks/comment";
+@import "_blocks/contacts";
+@import "_blocks/features";
+@import "_blocks/hot-product";
+@import "_blocks/intro";
+@import "_blocks/overview";
+
+$button-color: #444444;
+$button-border :#444444;
+$button-background: #ffffff;
+
+
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  margin: 0;
+  padding: 18px;
+  color: $button-color;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 16px;
+  border: 2px solid $button-border;
+  background: $button-background;
+  text-transform: uppercase;
+  text-decoration: none;
+}
