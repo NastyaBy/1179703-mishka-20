@@ -3,7 +3,7 @@ $form-radio-color: #000000;
 $form-checkbox-color: #000000;
 $form-item-title-color: #63d1bb;
 $form-item-text-color: #000000;
-$form-item-input: #00000;
+$form-item-input: #000000;
 
 .form {
   display: flex;
@@ -54,8 +54,6 @@ $form-item-input: #00000;
     font-weight: bold;
     line-height: 18px;
   }
-
-
 
   &__botton {
     margin: 30px 0 55px 0;
