@@ -3,6 +3,8 @@ $overview-title: #000000;
 $overview-desc: #444444;
 
 .overview {
+  display: flex;
+  flex-direction: column;
   margin: 0 30px;
   padding: 0 30px;
   border: 1px solid $overview-border-color;
@@ -14,10 +16,15 @@ $overview-desc: #444444;
     line-height: 24px;
   }
 
-  &__desc {
+  &__descr {
+    margin: 35px 0;
+    padding: 0;
     color: $overview-desc;
     font-size: 13px;
     font-weight: normal;
     line-height: 24px;
+  }
+  &__button {
+    text-align: center;
   }
 }

@@ -31,7 +31,8 @@ $catalog-item-description: #444444;
     border: 1px solid $catalog-item-border-color;
 
     &-title {
-      padding: 28px;
+      margin: 0;
+      padding: 28px 28px 8px 28px;
       color: $catalog-item-title;
       font-size: 17px;
       font-weight: bold;
@@ -39,6 +40,8 @@ $catalog-item-description: #444444;
     }
 
     &-description {
+      margin: 0;
+      padding: 0 28px 28px 28px;
       color: $catalog-item-description;
       font-size: 13px;
       font-weight: normal;
@@ -46,9 +49,15 @@ $catalog-item-description: #444444;
     }
 
     &-price {
+      margin: 0;
+      padding: 0 28px;
       font-size: 15px;
       font-weight: bold;
       line-height: 24px;
+    }
+    &-button {
+      font-size: 0;
+      border: none;
     }
   }
 }
