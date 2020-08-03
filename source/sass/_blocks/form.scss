@@ -12,6 +12,8 @@ $form-item-input: #000000;
   padding: 0;
 
   &__fieldset {
+    margin: 0;
+    padding: 0;
     border: 0 none;
   }
 
@@ -25,6 +27,8 @@ $form-item-input: #000000;
   }
 
   &__item-text {
+    margin: 0;
+    padding: 0;
     color: $form-item-text-color;
     font-size: 17px;
     font-weight: bold;
@@ -32,6 +36,8 @@ $form-item-input: #000000;
   }
 
   &__item-input {
+    margin: 0;
+    padding: 0;
     color: $form-item-input;
     font-size: 17px;
     font-weight: normal;
