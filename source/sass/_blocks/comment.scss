@@ -2,8 +2,11 @@ $comment-title: #000000;
 $comment-item-text: #444444;
 $comment-item-name: #000000;
 $comment-item-email: #444444;
+$comment-item-button-border: #ececec;
 
 .comment {
+  display: flex;
+  flex-direction: column;
   margin: 0 30px;
 
   &__title {
@@ -39,5 +42,16 @@ $comment-item-email: #444444;
     font-weight: normal;
     line-height: 30px;
     text-decoration: none;
+  }
+
+  &__item-button {
+    padding: 13px 38px;
+    font-size: 0;
+    border: 1px solid $comment-item-button-border;
+  }
+
+  &__button {
+    margin: 38px 30px;
+    text-align: center;
   }
 }

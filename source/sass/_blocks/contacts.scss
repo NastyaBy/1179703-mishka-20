@@ -3,6 +3,8 @@ $contacts-info: #444444;
 $contacts-info-title: #444444;
 
 .contacts {
+  display: flex;
+  flex-direction: column;
   margin: 0 30px;
 
   &__title {
@@ -34,5 +36,10 @@ $contacts-info-title: #444444;
 
   &__item-picture {
     margin: 0 -30px;
+  }
+
+  &__button {
+    margin: 39px 0;
+    text-align: center;
   }
 }

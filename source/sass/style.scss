@@ -1,17 +1,13 @@
-@import "_blocks/header";
-@import "_blocks/footer";
-@import "_blocks/catalog";
-@import "_blocks/comment";
-@import "_blocks/contacts";
-@import "_blocks/features";
-@import "_blocks/hot-product";
-@import "_blocks/intro";
-@import "_blocks/overview";
-
-$button-color: #444444;
-$button-border :#444444;
-$button-background: #ffffff;
-
+@import "_blocks/button.scss";
+@import "_blocks/header.scss";
+@import "_blocks/footer.scss";
+@import "_blocks/catalog.scss";
+@import "_blocks/comment.scss";
+@import "_blocks/contacts.scss";
+@import "_blocks/features.scss";
+@import "_blocks/hot-product.scss";
+@import "_blocks/intro.scss";
+@import "_blocks/overview.scss";
 
 .body {
   margin: 0;
@@ -34,15 +30,3 @@ $button-background: #ffffff;
   overflow: hidden;
 }
 
-.button {
-  margin: 0;
-  padding: 18px;
-  color: $button-color;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 16px;
-  border: 2px solid $button-border;
-  background: $button-background;
-  text-transform: uppercase;
-  text-decoration: none;
-}

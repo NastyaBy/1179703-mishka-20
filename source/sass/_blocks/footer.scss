@@ -2,6 +2,8 @@ $footer-background: #f1f1f1;
 $footer-copyright: #000000;
 
 .footer {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background: $footer-background;
@@ -17,6 +19,7 @@ $footer-copyright: #000000;
     font-size: 19px;
     font-weight: bold;
     line-height: 18px;
+    text-align: center;
   }
 
   &__academy {
