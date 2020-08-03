@@ -1,5 +1,3 @@
-$catalog-title: #000000;
-$catalog-title-background: #f1f1f1;
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
@@ -7,22 +5,9 @@ $catalog-item-description: #444444;
 .catalog {
   display: flex;
   flex-direction: column;
+  margin: 0 30px;
+  padding: 0;
 
-  &__title {
-    margin: 0;
-    padding: 73px 20px;
-    color: $catalog-title;
-    font-size: 27px;
-    font-weight: bold;
-    line-height: 30px;
-    background: $catalog-title-background;
-    text-align: center;
-  }
-
-  &-list {
-    margin: 0 30px;
-    padding: 30px 0;
-  }
 
   &__item {
     margin: 30px 0 0;
@@ -31,8 +16,8 @@ $catalog-item-description: #444444;
     border: 1px solid $catalog-item-border-color;
 
     &-title {
-      margin: 0;
-      padding: 28px 28px 8px 28px;
+      margin: 28px 28px 8px 28px;
+      padding: 0;
       color: $catalog-item-title;
       font-size: 17px;
       font-weight: bold;
@@ -55,6 +40,7 @@ $catalog-item-description: #444444;
       font-weight: bold;
       line-height: 24px;
     }
+
     &-button {
       font-size: 0;
       border: none;

@@ -5,7 +5,7 @@ $overview-desc: #444444;
 .overview {
   display: flex;
   flex-direction: column;
-  margin: 0 30px;
+  margin: 30px;
   padding: 0 30px;
   border: 1px solid $overview-border-color;
 
@@ -17,7 +17,7 @@ $overview-desc: #444444;
   }
 
   &__descr {
-    margin: 35px 0;
+    margin: 33px 0;
     padding: 0;
     color: $overview-desc;
     font-size: 13px;
@@ -25,6 +25,7 @@ $overview-desc: #444444;
     line-height: 24px;
   }
   &__button {
+    margin: 33px 0;
     text-align: center;
   }
 }
