@@ -12,10 +12,12 @@ $header-nav-toggle-box-shadow: #231f20;
     padding: 22px 0;
     font-size: 0;
   }
-&__nav {
-  margin: 0;
-  padding: 0;
-}
+
+  &__nav {
+    margin: 0;
+    padding: 0;
+  }
+
   &__nav-toggle {
     position: absolute;
     display: block;
@@ -30,11 +32,5 @@ $header-nav-toggle-box-shadow: #231f20;
     background-color: $header-nav-toggle-background-color;
     box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
     font-size: 0;
-
-
-
-
   }
-
 }
-
