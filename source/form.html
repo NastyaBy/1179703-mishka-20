@@ -17,10 +17,10 @@
     Открыть меню
   </button>
   <nav class="header__nav">
-    <a class="header__nav-item" href="catalog.html" aria-label="Каталог товара">Каталог товара</a>
-    <a class="header__nav-item" href="form.html" aria-label="Вязание на заказ">Вязание на заказ</a>
-    <a class="header__nav-item" href="#" aria-label="Поиск по сайту">Поиск по сайту</a>
-    <a class="header__nav-item" href="#" aria-label="Корзина: пока пуста">Корзина: пока пуста</a>
+    <a class="header__nav-link" href="catalog.html" aria-label="Каталог товара">Каталог товара</a>
+    <a class="header__nav-link" href="form.html" aria-label="Вязание на заказ">Вязание на заказ</a>
+    <a class="header__nav-link" href="#" aria-label="Поиск по сайту">Поиск по сайту</a>
+    <a class="header__nav-link" href="#" aria-label="Корзина: пока пуста">Корзина: пока пуста</a>
   </nav>
 </header>
 <main>
@@ -33,54 +33,54 @@
     <fieldset class="form__fieldset">
       <legend class="form__title">Тип</legend>
       <div class="form-radio">
-        <input  type="radio" name="type" value="Interior accessory" checked="checked"/>
-        <label>Аксессуар для интерьер</label>
+        <input  type="radio" name="type" id="interior-accessory" value="Interior accessory" checked="checked"/>
+        <label for="interior-accessory">Аксессуар для интерьер</label>
       </div>
       <div class="form-radio">
-        <input type="radio" name="type" value="Kids toy"/>
-        <label>Детская игрушка</label>
+        <input type="radio" name="type" id="kids-toy" value="Kids toy"/>
+        <label for="kids-toy">Детская игрушка</label>
       </div>
     </fieldset>
     <fieldset class="form__fieldset" >
       <legend class="form__title">Цвет</legend>
       <div class="form-checkbox">
-        <input type="checkbox" name="сolor" value="White" checked="checked"/>
-        <label>Белый</label>
+        <input type="checkbox" name="color" id="white" value="White" checked="checked"/>
+        <label for="white">Белый</label>
       </div>
       <div class="form-checkbox">
-        <input type="checkbox" name="сolor" value="Gray" checked="checked"/>
-        <label>Серый</label>
+        <input type="checkbox" name="color" id="gray" value="Gray" checked="checked"/>
+        <label for="gray">Серый</label>
       </div>
       <div class="form-checkbox">
-        <input type="checkbox" name="сolor" value="Tiffany"/>
-        <label>«Тиффани»</label>
+        <input type="checkbox" name="color"  id="tiffany" value="Tiffany"/>
+        <label for="tiffany">«Тиффани»</label>
       </div>
       <div class="form-checkbox">
-        <input type="checkbox" name="сolor" value="Black"/>
-        <label>Черный</label>
+        <input type="checkbox" name="color" id="black" value="Black"/>
+        <label for="black">Черный</label>
       </div>
       <div class="form-checkbox">
-        <input type="checkbox" name="сolor" value="Pink"/>
-        <label>Розовый</label>
+        <input type="checkbox" name="color" id="pink" value="Pink"/>
+        <label for="pink">Розовый</label>
       </div>
       <div class="form-checkbox">
-        <input type="checkbox" name="сolor" value="Orange"/>
-        <label>Оранжевый</label>
+        <input type="checkbox" name="color" id="orange" value="Orange"/>
+        <label for="orange">Оранжевый</label>
       </div>
     </fieldset>
     <fieldset class="form__fieldset" >
       <legend class="form__title">Фио</legend>
-      <label class="form__item-text">
+      <label class="form__item-text" for="name">
         Имя:
-        <input class="form__item-input" type="text" placeholder="Введите ваше имя*"/>
+        <input class="form__item-input" type="text" id="name" placeholder="Введите ваше имя*"/>
       </label>
-      <label class="form__item-text">
+      <label class="form__item-text" for="surname">
         Фамилия:
-        <input class="form__item-input" type="text" placeholder="Укажите фамилию*"/>
+        <input class="form__item-input" type="text" id="surname" placeholder="Укажите фамилию*"/>
       </label>
-      <label class="form__item-text">
+      <label class="form__item-text" for="patronymic">
         Отчество:
-        <input class="form__item-input" type="text" placeholder="Отчество, если желаете"/>
+        <input class="form__item-input" type="text" id="patronymic" placeholder="Отчество, если желаете"/>
       </label>
     </fieldset>
 
@@ -97,7 +97,7 @@
       <input class="form__item-input" type="text" placeholder="Опишите все ваши пожелания к заказу"/>
     </label>
     <p class="form__text">*Поля обязательны для заполнения</p>
-    <button class="button form__botton" type="submit" formaction="#" aria-label="Кнопка отправить заказ">
+    <button class="button form__button" type="submit" formaction="#" aria-label="Кнопка отправить заказ">
       Отправить заказ
     </button>
   </form>
