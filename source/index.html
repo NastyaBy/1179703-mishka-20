@@ -2,7 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body">
 <header class="header">
@@ -24,8 +27,8 @@
 <main class="main">
   <h1 class="visually-hidden">Мишка</h1>
   <section class="intro">
-    <h2 class="intro__title">Милые штуки ручной работы для дома</h2>
-    <a class="intro__item" href="#" aria-label="Предметы интерьера">
+    <h2 class="intro__title intro__title--bg">Милые штуки ручной<br/> работы для дома</h2>
+    <a class="intro__item intro__item--bg1" href="#" aria-label="Предметы интерьера">
       Предметы интерьера
       <svg class="intro__item-picture" width="40" height="62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity=".5" fill="#149080">
@@ -37,7 +40,7 @@
         </g>
       </svg>
     </a>
-    <a class="intro__item" href="#" aria-label="Детские игрушки">
+    <a class="intro__item intro__item--bg2" href="#" aria-label="Детские игрушки">
       Детские игрушки
       <svg class="intro__item-picture" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -108,17 +111,17 @@
       <strong class="comment__item-name">Анастасия Красильникова</strong>
       <a class="comment__item-email" href="#" aria-label="@misssssiskras">@misssssiskras</a>
     </div>
-    <button class="button" type="button">Дальше
+    <button class="button comment__item-button" type="button">Дальше
       <svg class="arrow-back" width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M50 11H7.7l8.1-8.2L13 0 0 13l13 13 2.8-2.8L7.7 15H50v-4z" fill="#000"/>
       </svg>
     </button>
-    <button class="button" type="button">Назад
+    <button class="button comment__item-button" type="button">Назад
       <svg class="arrow-next" width="50" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 11h42.3l-8.1-8.2L37 0l13 13-13 13-2.8-2.8 8.1-8.2H0v-4z" fill="#000"/>
       </svg>
     </button>
-    <a class="button" href="blank.html" aria-label="Написать отзыв">Написать</a>
+    <a class="button comment__button" href="blank.html" aria-label="Написать отзыв">Написать</a>
   </section>
 
   <section class="contacts">
@@ -133,21 +136,20 @@
         <td class="table-row__item-description">Г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
       </tr>
     </table>
-    <img class="contacts__item-picture" src="./img/map-mobile.jpg" width="320" height="457"
-         alt="Мы находимся по адресу: г. Санкт-Петербург,  ул. Большая Конюшенная,  д. 19/8, офис 101"/>
-    <a class="button" href="blank.html" aria-label="Написать нам">Напишите нам</a>
+    <img class="contacts__item-picture" src="./img/map-mobile.jpg" width="320" height="457" alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"/>
+    <a class="button contacts__button " href="blank.html" aria-label="Написать нам">Напишите нам</a>
   </section>
 </main>
 
-<footer class="page-footer">
-  <div class="page-footer__social">
-    <a class="page-footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
-    <a class="page-footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>
-    <a class="page-footer__social-item" href="" aria-label="Твиттер">Твиттер</a>
+<footer class="footer">
+  <div class="footer__social">
+    <a class="footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
+    <a class="footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>
+    <a class="footer__social-item" href="" aria-label="Твиттер">Твиттер</a>
   </div>
-  <p class="page-footer__copyright">
+  <p class="footer__copyright">
     Разработано
-    <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
       HTML Academy
       <img src="./img/htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"/>
     </a>

@@ -1,0 +1,67 @@
+$form-title-color: #63d1bb;
+$form-radio-color: #000000;
+$form-checkbox-color: #000000;
+$form-item-title-color: #63d1bb;
+$form-item-text-color: #000000;
+$form-item-input: #000000;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  padding: 0;
+
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: $form-title-color;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__item-text {
+    margin: 0;
+    padding: 0;
+    color: $form-item-text-color;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  &__item-input {
+    margin: 0;
+    padding: 0;
+    color: $form-item-input;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 18px;
+    opacity: 0.3;
+    border: 0 none;
+  }
+
+
+  &-radio {
+    color: $form-radio-color;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  &-checkbox {
+    color: $form-checkbox-color;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+  }
+
+  &__botton {
+    margin: 30px 0 55px 0;
+  }
+}

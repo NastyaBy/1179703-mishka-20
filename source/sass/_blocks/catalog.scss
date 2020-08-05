@@ -1,0 +1,49 @@
+$catalog-item-border-color: #ececec;
+$catalog-item-title: #000000;
+$catalog-item-description: #444444;
+
+.catalog {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  padding: 0;
+
+
+  &__item {
+    margin: 30px 0 0;
+    padding: 0;
+    list-style-type: none;
+    border: 1px solid $catalog-item-border-color;
+
+    &-title {
+      margin: 28px 28px 8px 28px;
+      padding: 0;
+      color: $catalog-item-title;
+      font-size: 17px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    &-description {
+      margin: 0;
+      padding: 0 28px 28px 28px;
+      color: $catalog-item-description;
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 30px;
+    }
+
+    &-price {
+      margin: 0;
+      padding: 0 28px;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    &-button {
+      font-size: 0;
+      border: none;
+    }
+  }
+}

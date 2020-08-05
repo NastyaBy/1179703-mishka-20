@@ -2,9 +2,12 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Мишка</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="body">
 <header class="header">
   <a class="header__logo" href="index.html">
     Логотип Мишка
@@ -25,15 +28,15 @@
 
 <main>
   <h1 class="visually-hidden">Мишка</h1>
-  <section class="catalog">
-    <h2 class="catalog__title">Каталог товаров</h2>
-    <ul class="catalog-list">
+  <section class="intro">
+    <h2 class="intro__title">Каталог товаров</h2>
+    <ul class="catalog">
       <li class="catalog__item">
-        <img class="catalog__item-preview" src="https://via.placeholder.com/150x150" alt="Зайчик-попрыгайчик"/>
+        <img class="catalog__item-preview" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик"/>
         <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
         <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
         <strong class="catalog__item-price">1 200 pуб.</strong>
-        <button class="button" type="submit">Купить
+        <button class="button catalog__item-button" type="submit">Купить
           <svg class="icon" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               opacity=".2"
@@ -45,11 +48,11 @@
       </li>
 
       <li class="catalog__item">
-        <img class="catalog__item-preview" src="https://via.placeholder.com/150x150" alt="Корзинка для белья"/>
+        <img class="catalog__item-preview" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья"/>
         <h3 class="catalog__item-title">Корзинка для белья</h3>
         <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
         <strong class="catalog__item-price">690 pуб.</strong>
-        <button class="button" type="submit">Купить
+        <button class="button catalog__item-button" type="submit">Купить
           <svg class="icon" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               opacity=".2"
@@ -60,12 +63,11 @@
         </button>
       </li>
       <li class="catalog__item">
-        <img class="catalog__item-preview" src="https://via.placeholder.com/150x150"
-             alt="Большая корзинка  для игрушек"/>
+        <img class="catalog__item-preview" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек"/>
         <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
         <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
         <strong class="catalog__item-price">1 500 pуб.</strong>
-        <button class="button" type="submit">Купить
+        <button class="button catalog__item-button" type="submit">Купить
           <svg class="icon" width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               opacity=".2"
@@ -81,18 +83,18 @@
     <h2 class="overview__title">Процесс производства</h2>
     <p class="overview__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
       появляются наши товары.</p>
-    <a class="button" href="form.html" aria-label="Перейти на форму оформления заказа">Сделать заказ</a>
+    <a class="button overview__button" href="form.html" aria-label="Перейти на форму оформления заказа">Сделать заказ</a>
   </section>
 </main>
-<footer class="page-footer">
-  <div class="page-footer__social">
-    <a class="page-footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
-    <a class="page-footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>
-    <a class="page-footer__social-item" href="" aria-label="Твиттер">Твиттер</a>
+<footer class="footer">
+  <div class="footer__social">
+    <a class="footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
+    <a class="footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>
+    <a class="footer__social-item" href="" aria-label="Твиттер">Твиттер</a>
   </div>
-  <p class="page-footer__copyright">
+  <p class="footer__copyright">
     Разработано
-    <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
+    <a class="footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
       HTML Academy
       <img src="./img/htmlacademy.svg" width="108" height="39" alt="Логотип HTML Academy"/>
     </a>

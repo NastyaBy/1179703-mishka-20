@@ -1,0 +1,45 @@
+$contacts-title: #000000;
+$contacts-info: #444444;
+$contacts-info-title: #444444;
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+
+  &__title {
+    margin: 0;
+    padding: 30px 0;
+    color: $contacts-title;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  &__info {
+    margin: 0;
+    color: $contacts-info;
+    font-size: 15px;
+    line-height: 30px;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    &-title {
+      width: 90px;
+      color: $contacts-info-title;
+      font-weight: normal;
+      white-space: nowrap;
+      text-transform: lowercase;
+      text-align: start;
+    }
+  }
+
+  &__item-picture {
+    margin: 0 -30px;
+  }
+
+  &__button {
+    margin: 39px 0;
+    text-align: center;
+  }
+}
