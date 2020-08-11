@@ -9,6 +9,10 @@ $comment-item-button-border: #ececec;
   flex-direction: column;
   margin: 0 30px;
 
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
+  }
+
   &__title {
     margin: 0;
     padding: 15px 0;
@@ -16,6 +20,12 @@ $comment-item-button-border: #ececec;
     font-size: 25px;
     font-weight: bold;
     line-height: 30px;
+
+    @media (min-width: $tablet-width) {
+      padding: 85px 284px 39px 0;
+      font-size: 43px;
+      line-height: 50px;
+    }
   }
 
   &__item-text {
@@ -25,6 +35,11 @@ $comment-item-button-border: #ececec;
     font-size: 15px;
     font-weight: normal;
     line-height: 30px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 61px;
+      font-size: 17px;
+    }
   }
 
   &__item-name {
@@ -33,6 +48,10 @@ $comment-item-button-border: #ececec;
     font-size: 17px;
     font-weight: bold;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 8px;
+    }
   }
 
   &__item-email {
@@ -48,10 +67,18 @@ $comment-item-button-border: #ececec;
     padding: 13px 38px;
     font-size: 0;
     border: 1px solid $comment-item-button-border;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
 
   &__button {
     margin: 38px 30px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      width: 175px;
+    }
   }
 }

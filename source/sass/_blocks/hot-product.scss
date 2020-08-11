@@ -13,6 +13,8 @@ $hot-product-item-price: #444444;
 
   @media (min-width: $tablet-width) {
     margin: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__item-preview {
@@ -24,8 +26,10 @@ $hot-product-item-price: #444444;
     line-height: 30px;
 
     @media (min-width: $tablet-width) {
+      padding-bottom: 50px;
       font-size: 43px;
       line-height: 50px;
+      flex-grow: 2;
     }
   }
 
@@ -37,8 +41,9 @@ $hot-product-item-price: #444444;
     text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
-      line-height: 17px;
       width: 100px;
+      padding-top: 46px;
+      line-height: 17px;
       text-align: center;
     }
   }
@@ -51,6 +56,11 @@ $hot-product-item-price: #444444;
     font-size: 15px;
     font-weight: normal;
     line-height: 24px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 17px;
+      line-height: 30px;
+    }
   }
 
   &__row-title {
@@ -83,5 +93,9 @@ $hot-product-item-price: #444444;
     font-weight: bold;
     line-height: 24px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
   }
 }

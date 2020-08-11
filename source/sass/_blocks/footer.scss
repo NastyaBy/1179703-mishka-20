@@ -8,6 +8,21 @@ $footer-copyright: #000000;
   padding: 0;
   background: $footer-background;
 
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+  }
+
+  &__logo {
+    padding: 22px 0;
+    font-size: 0;
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
+  }
+
   &__social {
     &-item {
       font-size: 0;
