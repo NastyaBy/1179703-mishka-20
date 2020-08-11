@@ -10,6 +10,10 @@ $header-nav-toggle-box-shadow: #231f20;
   margin: 0;
   padding: 0;
 
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
   &__logo {
     padding: 22px 0;
     font-size: 0;
@@ -23,6 +27,34 @@ $header-nav-toggle-box-shadow: #231f20;
     justify-content: center;
     flex-direction: column;
 
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+    }
+
+    &-toggle {
+      position: absolute;
+      display: block;
+      top: 30px;
+      left: 269px;
+      right: 30px;
+      width: 20px;
+      height: 2px;
+      z-index: 2;
+      cursor: pointer;
+      border: none;
+      background-color: $header-nav-toggle-background-color;
+      box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
+      font-size: 0;
+
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+
+      @media (min-width: $desktop-width) {
+        display: none;
+      }
+    }
+
     &-link {
       margin: 0;
       padding: 28px 30px;
@@ -30,26 +62,26 @@ $header-nav-toggle-box-shadow: #231f20;
       font-size: 17px;
       font-weight: bold;
       line-height: 24px;
+      white-space: nowrap;
       text-decoration: none;
       position: relative;
       border-top: 1px solid $header-nav-link-border;
       border-bottom: 1px solid $header-nav-link-border;
+
+      @media (min-width: $tablet-width) {
+        font-size: 15px;
+      }
     }
   }
 
-  &__nav-toggle {
-    position: absolute;
-    display: block;
-    top: 30px;
-    left: 269px;
-    right: 30px;
-    width: 20px;
-    height: 2px;
-    z-index: 2;
-    cursor: pointer;
-    border: none;
-    background-color: $header-nav-toggle-background-color;
-    box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
-    font-size: 0;
+  &__info {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 24px;
+    white-space: nowrap;
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
   }
 }
