@@ -30,23 +30,25 @@ $intro-item-bg2: #56c3b2;
     background: $intro-title-background;
     flex-grow: 1;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       font-size: 43px;
       line-height: 50px;
       width: 100%;
+      padding: 155px 20px 372px 20px;
     }
 
     &--bg {
       padding-bottom: 120px;
       background: $intro-title-bg-mobile;
 
-      @media (min-width: $tablet-width) {
-        padding-bottom: 154px;
+      @include for-size(tablet) {
+        padding-bottom: 595px;
         background: $intro-title-bg-tablet;
         background-size: cover;
+        margin: 0 -50px -132px;
       }
 
-      @media (min-width: $desktop-width) {
+      @include for-size(desktop) {
         background: $intro-title-bg-desktop;
       }
     }
@@ -69,7 +71,7 @@ $intro-item-bg2: #56c3b2;
     line-height: 24px;
     text-decoration: none;
 
-    @media (min-width: $tablet-width) {
+  @include for-size(tablet) {
       font-size: 20px;
       line-height: 30px;
     }

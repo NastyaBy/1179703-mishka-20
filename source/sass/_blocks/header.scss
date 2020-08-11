@@ -10,12 +10,13 @@ $header-nav-toggle-box-shadow: #231f20;
   margin: 0;
   padding: 0;
 
-  @media (min-width: $tablet-width) {
+  @include for-size(tablet) {
     flex-direction: row;
+    position: relative;
   }
 
   &__logo {
-    padding: 22px 0;
+    padding: 20px 0;
     font-size: 0;
   }
 
@@ -27,9 +28,10 @@ $header-nav-toggle-box-shadow: #231f20;
     justify-content: center;
     flex-direction: column;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       flex-direction: row;
     }
+
 
     &-toggle {
       position: absolute;
@@ -46,11 +48,11 @@ $header-nav-toggle-box-shadow: #231f20;
       box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
       font-size: 0;
 
-      @media (min-width: $tablet-width) {
+      @include for-size(tablet) {
         display: none;
       }
 
-      @media (min-width: $desktop-width) {
+    @include for-size(desktop) {
         display: none;
       }
     }
@@ -68,9 +70,19 @@ $header-nav-toggle-box-shadow: #231f20;
       border-top: 1px solid $header-nav-link-border;
       border-bottom: 1px solid $header-nav-link-border;
 
-      @media (min-width: $tablet-width) {
-        font-size: 15px;
+      &--catalog {
+        @include for-size(tablet) {
+          position: absolute;
+          left: 0;
+          top: 100px;
+          border: none;
+          padding: 0;
+        }
       }
+    }
+
+    @include for-size(tablet) {
+      font-size: 15px;
     }
   }
 
@@ -80,7 +92,7 @@ $header-nav-toggle-box-shadow: #231f20;
     line-height: 24px;
     white-space: nowrap;
 
-    @media (max-width: $mobile-width-only) {
+    @include for-size(phone-only) {
       display: none;
     }
   }
