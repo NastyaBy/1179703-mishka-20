@@ -8,7 +8,7 @@ $catalog-item-description: #444444;
   margin: 0 30px;
   padding: 0;
 
-  @include for-size(tablet) {
+  @include for-size (tablet) {
     margin: 0 50px;
   }
 
@@ -18,7 +18,7 @@ $catalog-item-description: #444444;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
 
-    @include for-size(tablet) {
+    @include for-size (tablet) {
       display: grid;
       grid-template-columns: 50% auto min-content;
       grid-template-rows: auto min-content min-content;
@@ -28,7 +28,7 @@ $catalog-item-description: #444444;
       margin: 0;
       padding: 0;
 
-      @include for-size(tablet) {
+      @include for-size (tablet) {
         grid-column: 1;
         grid-row: 1 / -1;
       }
@@ -42,7 +42,7 @@ $catalog-item-description: #444444;
       font-weight: bold;
       line-height: 24px;
 
-      @include for-size(tablet) {
+      @include for-size (tablet) {
         grid-column: 2 / 4;
         grid-row: 1;
       }
@@ -56,7 +56,7 @@ $catalog-item-description: #444444;
       font-weight: normal;
       line-height: 30px;
 
-      @include for-size(tablet) {
+      @include for-size (tablet) {
         grid-column: 2 / 4;
         grid-row: 2;
       }
@@ -69,7 +69,7 @@ $catalog-item-description: #444444;
       font-weight: bold;
       line-height: 24px;
 
-      @include for-size(tablet) {
+      @include for-size (tablet) {
         grid-column: 2;
         grid-row: 3;
       }
@@ -79,7 +79,7 @@ $catalog-item-description: #444444;
       font-size: 0;
       border: none;
 
-      @include for-size(tablet) {
+      @include for-size (tablet) {
         grid-column: 3;
         grid-row: 3;
       }
