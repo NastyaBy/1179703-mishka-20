@@ -13,7 +13,7 @@ $intro-item-bg2: #56c3b2;
   display: flex;
   flex-direction: column;
 
-  @media (min-width: $tablet-width) {
+  @include for-size(tablet) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,10 +42,10 @@ $intro-item-bg2: #56c3b2;
       background: $intro-title-bg-mobile;
 
       @include for-size(tablet) {
-        padding-bottom: 595px;
+        padding-bottom: 555px;
         background: $intro-title-bg-tablet;
         background-size: cover;
-        margin: 0 -50px -132px;
+        margin: 0 -50px -125px;
       }
 
       @include for-size(desktop) {
@@ -71,11 +71,13 @@ $intro-item-bg2: #56c3b2;
     line-height: 24px;
     text-decoration: none;
 
-  @include for-size(tablet) {
+    @include for-size(tablet) {
       font-size: 20px;
       line-height: 30px;
-    }
+      width: 130px;
+      padding: 25px 174px 22px 36px;
 
+    }
 
     &--bg1 {
       background: $intro-item-bg1;

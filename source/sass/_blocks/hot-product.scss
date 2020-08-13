@@ -10,10 +10,11 @@ $hot-product-item-price: #444444;
   margin: 0 30px;
   display: flex;
   flex-direction: column;
+  position: relative;
 
-  @media (min-width: $tablet-width) {
+  @include for-size(tablet) {
     margin: 0 50px;
-    flex-direction: row;
+
     flex-wrap: wrap;
   }
 
@@ -25,7 +26,7 @@ $hot-product-item-price: #444444;
     font-weight: bold;
     line-height: 30px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       padding-bottom: 50px;
       font-size: 43px;
       line-height: 50px;
@@ -40,9 +41,11 @@ $hot-product-item-price: #444444;
     line-height: 20px;
     text-transform: uppercase;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       width: 100px;
-      padding-top: 46px;
+      position: absolute;
+      right: 0;
+      padding-top: 40px;
       line-height: 17px;
       text-align: center;
     }
@@ -57,9 +60,18 @@ $hot-product-item-price: #444444;
     font-weight: normal;
     line-height: 24px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
+      width: 295px;
       font-size: 17px;
       line-height: 30px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__item-table {
+    @include for-size(tablet) {
+      width: 295px;
+      margin-bottom: 50px;
     }
   }
 
@@ -83,6 +95,12 @@ $hot-product-item-price: #444444;
   &__item-picture {
     margin: 0;
     padding: 28px 0;
+
+    @include for-size(tablet) {
+      position: absolute;
+      top: 125px;
+      right: 0;
+    }
   }
 
   &__item-price {
@@ -94,8 +112,17 @@ $hot-product-item-price: #444444;
     line-height: 24px;
     text-align: center;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
+      width: 295px;
       font-size: 20px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__button {
+    @include for-size(tablet) {
+      width: 292px;
     }
   }
 }
+

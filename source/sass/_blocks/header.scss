@@ -7,7 +7,7 @@ $header-nav-toggle-box-shadow: #231f20;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin: 0 50px;
   padding: 0;
 
   @include for-size(tablet) {
@@ -21,7 +21,7 @@ $header-nav-toggle-box-shadow: #231f20;
   }
 
   &__nav {
-    margin: 0;
+    margin: 0  0 0 auto;
     padding: 0;
     //display: none;
     display: flex;
@@ -52,7 +52,7 @@ $header-nav-toggle-box-shadow: #231f20;
         display: none;
       }
 
-    @include for-size(desktop) {
+      @include for-size(desktop) {
         display: none;
       }
     }
@@ -74,9 +74,38 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(tablet) {
           position: absolute;
           left: 0;
-          top: 100px;
+          top: 110px;
           border: none;
           padding: 0;
+        }
+      }
+
+      &--form {
+        @include for-size(tablet) {
+          position: absolute;
+          left: 170px;
+          top: 110px;
+          border: none;
+          padding: 0;
+        }
+      }
+
+      &--search {
+        @include for-size(tablet) {
+          font-size: 0;
+          border-top: none;
+          border-right: 1px solid $header-nav-link-border;
+          border-left: 1px solid $header-nav-link-border;
+          border-bottom: none;
+        }
+      }
+
+      &--basket {
+        @include for-size(tablet) {
+          border-top: none;
+          border-right: 1px solid $header-nav-link-border;
+          border-left: 1px solid $header-nav-link-border;
+          border-bottom: none;
         }
       }
     }
@@ -94,6 +123,15 @@ $header-nav-toggle-box-shadow: #231f20;
 
     @include for-size(phone-only) {
       display: none;
+    }
+
+    @include for-size(tablet) {
+      position: absolute;
+      right: 0;
+      top: 95px;
+      text-align: right;
+      border: none;
+      padding: 0;
     }
   }
 }
