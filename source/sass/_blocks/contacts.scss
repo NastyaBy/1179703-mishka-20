@@ -7,7 +7,7 @@ $contacts-info-title: #444444;
   flex-direction: column;
   margin: 0 30px;
 
-  @media (min-width: $tablet-width) {
+  @include for-size(tablet) {
     margin: 0 50px;
   }
 
@@ -19,7 +19,7 @@ $contacts-info-title: #444444;
     font-weight: bold;
     line-height: 30px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       font-size: 43px;
       line-height: 50px;
     }
@@ -45,14 +45,19 @@ $contacts-info-title: #444444;
 
   &__item-picture {
     margin: 0 -30px;
+
+    @include for-size(tablet) {
+      margin: 0 -50px;
+    }
   }
 
   &__button {
     margin: 39px 0;
     text-align: center;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       width: 230px;
+      align-self: center;
     }
   }
 }

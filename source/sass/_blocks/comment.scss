@@ -9,8 +9,9 @@ $comment-item-button-border: #ececec;
   flex-direction: column;
   margin: 0 30px;
 
-  @media (min-width: $tablet-width) {
+  @include for-size(tablet) {
     margin: 0 50px;
+    position: relative;
   }
 
   &__title {
@@ -21,7 +22,7 @@ $comment-item-button-border: #ececec;
     font-weight: bold;
     line-height: 30px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       padding: 85px 284px 39px 0;
       font-size: 43px;
       line-height: 50px;
@@ -30,13 +31,14 @@ $comment-item-button-border: #ececec;
 
   &__item-text {
     margin: 0;
+    width: 100%;
     padding-bottom: 30px;
     color: $comment-item-text;
     font-size: 15px;
     font-weight: normal;
     line-height: 30px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       padding-bottom: 61px;
       font-size: 17px;
     }
@@ -49,8 +51,9 @@ $comment-item-button-border: #ececec;
     font-weight: bold;
     line-height: 24px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
       padding-bottom: 8px;
+      font-size: 18px;
     }
   }
 
@@ -61,6 +64,13 @@ $comment-item-button-border: #ececec;
     font-weight: normal;
     line-height: 30px;
     text-decoration: none;
+
+    @include for-size(tablet) {
+      position: absolute;
+      font-size: 18px;
+      top: 390px;
+      left: 0;
+    }
   }
 
   &__item-button {
@@ -68,8 +78,11 @@ $comment-item-button-border: #ececec;
     font-size: 0;
     border: 1px solid $comment-item-button-border;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
+      margin: 0;
+      padding: 0;
       border: none;
+      width: 50px;
     }
   }
 
@@ -77,8 +90,13 @@ $comment-item-button-border: #ececec;
     margin: 38px 30px;
     text-align: center;
 
-    @media (min-width: $tablet-width) {
+    @include for-size(tablet) {
+      position: absolute;
       width: 175px;
+      top: 52px;
+      right: 0;
+      line-height: 20px;
+
     }
   }
 }

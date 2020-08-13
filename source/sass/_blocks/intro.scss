@@ -31,21 +31,21 @@ $intro-item-bg2: #56c3b2;
     flex-grow: 1;
 
     @include for-size(tablet) {
+      padding-top: 100px;
+      width: 100%;
       font-size: 43px;
       line-height: 50px;
-      width: 100%;
-      padding: 155px 20px 372px 20px;
     }
 
     &--bg {
-      padding-bottom: 120px;
+      padding-bottom: 150px;
       background: $intro-title-bg-mobile;
 
       @include for-size(tablet) {
-        padding-bottom: 555px;
+        padding-bottom: 510px;
         background: $intro-title-bg-tablet;
         background-size: cover;
-        margin: 0 -50px -125px;
+        margin: 0 0 -125px;
       }
 
       @include for-size(desktop) {
