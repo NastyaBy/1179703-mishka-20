@@ -9,6 +9,10 @@ $overview-desc: #444444;
   padding: 0 30px;
   border: 1px solid $overview-border-color;
 
+  @include for-size (tablet) {
+    padding: 0 40px;
+  }
+
   &__title {
     color: $overview-title;
     font-size: 17px;
@@ -23,6 +27,10 @@ $overview-desc: #444444;
     font-size: 13px;
     font-weight: normal;
     line-height: 24px;
+
+    @include for-size (tablet) {
+      margin: 25px 0 42px 0;
+    }
   }
 
   &__button {
