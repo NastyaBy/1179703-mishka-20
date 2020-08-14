@@ -11,6 +11,10 @@ $features-item: #000000;
     flex-wrap: wrap;
   }
 
+  @include for-size (desktop) {
+    padding: 25px 20px 22px 220px;
+  }
+
   &__title {
     margin: 0;
     padding-top: 30px;
@@ -19,10 +23,15 @@ $features-item: #000000;
     font-weight: bold;
     line-height: 30px;
 
-    @media (min-width: $tablet-width) {
+    @include for-size (tablet) {
       font-size: 43px;
       line-height: 50px;
       padding-bottom: 51px;
+    }
+
+    @include for-size (desktop) {
+      font-size: 53px;
+      line-height: 57px;
     }
   }
 
@@ -30,7 +39,7 @@ $features-item: #000000;
     margin: 0;
     padding: 0;
 
-    @media (min-width: $tablet-width) {
+    @include for-size (tablet) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 95px;
@@ -41,15 +50,15 @@ $features-item: #000000;
   &__item {
     padding: 28px 0;
     color: $features-item;
-    width: 300px;
     font-size: 17px;
     font-weight: bold;
     line-height: 20px;
     list-style-type: none;
 
-    @media (min-width: $tablet-width) {
+    @include for-size (tablet) {
       font-size: 20px;
       line-height: 22px;
+      width: 300px;
     }
   }
 }

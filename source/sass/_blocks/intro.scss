@@ -49,6 +49,7 @@ $intro-item-bg2: #56c3b2;
       }
 
       @include for-size (desktop) {
+        padding-bottom: 547px;
         background: $intro-title-bg-desktop;
       }
     }
@@ -76,6 +77,10 @@ $intro-item-bg2: #56c3b2;
       line-height: 30px;
       width: 130px;
       padding: 25px 174px 22px 36px;
+    }
+
+    @include for-size (desktop) {
+      padding: 25px 355px 22px 36px;
     }
 
     &--bg1 {

@@ -14,8 +14,12 @@ $hot-product-item-price: #444444;
 
   @include for-size(tablet) {
     margin: 0 50px;
-
     flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 115px;
+    padding-left: 225px;
   }
 
   &__item-preview {
@@ -49,6 +53,11 @@ $hot-product-item-price: #444444;
       line-height: 17px;
       text-align: center;
     }
+
+    @include for-size(desktop) {
+      left: 0;
+      right: auto;
+    }
   }
 
 
@@ -61,7 +70,7 @@ $hot-product-item-price: #444444;
     line-height: 24px;
 
     @include for-size(tablet) {
-      width: 295px;
+      width: 36%;
       font-size: 17px;
       line-height: 30px;
       margin-bottom: 35px;
@@ -93,13 +102,18 @@ $hot-product-item-price: #444444;
   }
 
   &__item-picture {
-    margin: 0;
+    margin: 0 auto;
     padding: 28px 0;
 
     @include for-size(tablet) {
       position: absolute;
       top: 125px;
       right: 0;
+    }
+
+    @include for-size(desktop) {
+      top: 54px;
+      z-index: -1;
     }
   }
 
