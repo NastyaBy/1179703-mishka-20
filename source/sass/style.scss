@@ -1,3 +1,4 @@
+@import "_blocks/media.scss";
 @import "_blocks/button.scss";
 @import "_blocks/header.scss";
 @import "_blocks/footer.scss";
@@ -10,13 +11,27 @@
 @import "_blocks/overview.scss";
 @import "_blocks/form.scss";
 
+$body-background-color: #ffffff;
+
+.head {
+  height: 100%;
+}
+
 .body {
-  margin: 0;
+  display: grid;
+  align-content: start;
+  min-height: 100%;
+  min-width: 320px;
+  max-width: 1150px;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0 auto;
   padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
+  background-color: $body-background-color;
 }
+
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;

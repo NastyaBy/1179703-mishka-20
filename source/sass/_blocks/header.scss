@@ -7,49 +7,235 @@ $header-nav-toggle-box-shadow: #231f20;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin: 0 30px;
   padding: 0;
+  position: relative;
+
+
+  @include for-size(tablet) {
+    flex-direction: row;
+    position: relative;
+    margin: 0 50px;
+  }
 
   &__logo {
-    padding: 22px 0;
+    padding: 20px 0;
     font-size: 0;
+
+    @include for-size(tablet) {
+      margin-right: 210px;
+    }
+
+    @include for-size(desktop) {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 500px;
+    }
   }
 
   &__nav {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     //display: none;
     display: flex;
     justify-content: center;
     flex-direction: column;
 
+    @include for-size(tablet) {
+      flex-direction: row;
+    }
+
+    @include for-size(desktop) {
+      margin: 0;
+      align-content: space-between;
+    }
+
+
+    &-toggle {
+      position: absolute;
+      display: block;
+      top: 30px;
+      right: 35px;
+      width: 20px;
+      height: 2px;
+      z-index: 2;
+      cursor: pointer;
+      border: none;
+      background-color: $header-nav-toggle-background-color;
+      box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
+      font-size: 0;
+
+      &--active {
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          left: 84.06%;
+          right: 9.38%;
+          top: 5px;
+          width: 20px;
+          height: 2px;
+          background-color: $header-nav-toggle-box-shadow;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+
+      @include for-size(tablet) {
+        display: none;
+      }
+
+      @include for-size(desktop) {
+        display: none;
+      }
+    }
+
     &-link {
       margin: 0;
-      padding: 28px 30px;
+      padding: 34px;
       color: $header-nav-link-color;
       font-size: 17px;
       font-weight: bold;
       line-height: 24px;
+      white-space: nowrap;
       text-decoration: none;
       position: relative;
       border-top: 1px solid $header-nav-link-border;
       border-bottom: 1px solid $header-nav-link-border;
-    }
-  }
 
-  &__nav-toggle {
-    position: absolute;
-    display: block;
-    top: 30px;
-    left: 269px;
-    right: 30px;
-    width: 20px;
-    height: 2px;
-    z-index: 2;
-    cursor: pointer;
-    border: none;
-    background-color: $header-nav-toggle-background-color;
-    box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
-    font-size: 0;
+      &--catalog {
+        @include for-size(tablet) {
+          position: absolute;
+          left: 0;
+          top: 110px;
+          border: none;
+          padding: 0;
+        }
+
+        @include for-size(desktop) {
+          position: static;
+          padding: 34px 35px 34px 0;
+          border-top: none;
+          border-right: 1px solid #ececec;
+          border-bottom: none;
+        }
+      }
+
+      &--form {
+        @include for-size(tablet) {
+          position: absolute;
+          left: 170px;
+          top: 108px;
+          border: none;
+          padding: 0;
+        }
+
+        @include for-size(desktop) {
+          position: static;
+          margin-right: 295px;
+          padding: 34px 35px;
+          border-top: none;
+          border-left: 1px solid #ececec;
+          border-bottom: none;
+        }
+      }
+
+      &--search {
+        @include for-size(tablet) {
+          font-size: 0;
+          border-top: none;
+          border-right: 1px solid $header-nav-link-border;
+          border-left: 1px solid $header-nav-link-border;
+          border-bottom: none;
+        }
+      }
+
+      &--basket {
+        @include for-size(tablet) {
+          border-top: none;
+          border-left: 1px solid $header-nav-link-border;
+          border-bottom: none;
+        }
+
+        @include for-size(desktop) {
+          padding-right: 0;
+        }
+      }
+
+      &--new {
+        @include for-size(phone-only) {
+          display: none;
+        }
+
+        @include for-size(tablet) {
+          display: none;
+        }
+
+        @include for-size(desktop) {
+          display: block;
+          position: absolute;
+          padding: 0;
+          left: 0;
+          top: 108px;
+          border: none;
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+
+      &--sale {
+        @include for-size(phone-only) {
+          display: none;
+        }
+
+        @include for-size(tablet) {
+          display: none;
+        }
+        @include for-size(desktop) {
+          display: block;
+          position: absolute;
+          padding: 0;
+          top: 108px;
+          left: 210px;
+          border: none;
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    @include for-size(tablet) {
+      font-size: 15px;
+    }
+
+    &__info {
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 24px;
+      white-space: nowrap;
+
+      @include for-size(phone-only) {
+        display: none;
+      }
+
+      @include for-size(tablet) {
+        position: absolute;
+        right: 0;
+        top: 95px;
+        text-align: right;
+        border: none;
+        padding: 0;
+      }
+    }
   }
 }

@@ -17,94 +17,114 @@
     Открыть меню
   </button>
   <nav class="header__nav">
-    <a class="header__nav-link" href="catalog.html" aria-label="Каталог товара">Каталог товара</a>
-    <a class="header__nav-link" href="form.html" aria-label="Вязание на заказ">Вязание на заказ</a>
-    <a class="header__nav-link" href="#" aria-label="Поиск по сайту">Поиск по сайту</a>
-    <a class="header__nav-link" href="#" aria-label="Корзина: пока пуста">Корзина: пока пуста</a>
+    <a class="header__nav-link header__nav-link--catalog" href="catalog.html" aria-label="Каталог товара">Каталог
+      товара</a>
+    <a class="header__nav-link header__nav-link--form" href="form.html" aria-label="Вязание на заказ">Вязание на
+      заказ</a>
+    <a class="header__nav-link header__nav-link--search" href="#" aria-label="Поиск по сайту">Поиск по сайту</a>
+    <a class="header__nav-link header__nav-link--basket" href="#" aria-label="Корзина: пока пуста">Корзина: пока
+      пуста</a>
+    <a class="header__nav-link header__nav-link--new" href="#" aria-label="Новые поступления">Новые поступления</a>
+    <a class="header__nav-link header__nav-link--sale" href="#" aria-label="Распродажа">Распродажа</a>
+
   </nav>
+  <p class="header__info">Бесплатная доставка по России</p>
 </header>
 <main>
   <h1 class="visually-hidden">Мишка</h1>
   <section class="intro">
-  <h2 class="intro__title">Вязание на заказ</h2>
-  <p class="intro__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
-    с вами, чтобы уточнить детали.</p>
-  <form class="form" action="https://echo.htmlacademy.ru" method="get">
-    <fieldset class="form__fieldset">
-      <legend class="form__title">Тип</legend>
-      <div class="form-radio">
-        <input  type="radio" name="type" id="interior-accessory" value="Interior accessory" checked="checked"/>
-        <label for="interior-accessory">Аксессуар для интерьер</label>
+    <h2 class="intro__title">Вязание на заказ</h2>
+    <p class="intro__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
+      с вами, чтобы уточнить детали.</p>
+    <form class="form" action="https://echo.htmlacademy.ru" method="get">
+      <div class="form__fieldset">
+        <strong class="form__title">Тип</strong>
+        <div class="form__data">
+          <div class="form-radio">
+            <input type="radio" name="type" id="interior-accessory" value="Interior accessory" checked="checked"/>
+            <label for="interior-accessory">Аксессуар для интерьер</label>
+          </div>
+          <div class="form-radio">
+            <input type="radio" name="type" id="kids-toy" value="Kids toy"/>
+            <label for="kids-toy">Детская игрушка</label>
+          </div>
+        </div>
       </div>
-      <div class="form-radio">
-        <input type="radio" name="type" id="kids-toy" value="Kids toy"/>
-        <label for="kids-toy">Детская игрушка</label>
+      <div class="form__fieldset">
+        <strong class="form__title">Цвет</strong>
+        <div class="form__data">
+          <div class="form-checkbox">
+            <input type="checkbox" name="color" id="white" value="White" checked="checked"/>
+            <label for="white">Белый</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="color" id="gray" value="Gray" checked="checked"/>
+            <label for="gray">Серый</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="color" id="tiffany" value="Tiffany"/>
+            <label for="tiffany">«Тиффани»</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="color" id="black" value="Black"/>
+            <label for="black">Черный</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="color" id="pink" value="Pink"/>
+            <label for="pink">Розовый</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="color" id="orange" value="Orange"/>
+            <label for="orange">Оранжевый</label>
+          </div>
+        </div>
       </div>
-    </fieldset>
-    <fieldset class="form__fieldset" >
-      <legend class="form__title">Цвет</legend>
-      <div class="form-checkbox">
-        <input type="checkbox" name="color" id="white" value="White" checked="checked"/>
-        <label for="white">Белый</label>
+      <div class="form__fieldset">
+        <strong class="form__title">Фио</strong>
+        <div class="form__data">
+          <label class="form__item-text" for="name">
+            Имя:
+            <input class="form__item-input" type="text" id="name" placeholder="Введите ваше имя*"/>
+          </label>
+          <label class="form__item-text" for="surname">
+            Фамилия:
+            <input class="form__item-input" type="text" id="surname" placeholder="Укажите фамилию*"/>
+          </label>
+          <label class="form__item-text" for="patronymic">
+            Отчество:
+            <input class="form__item-input" type="text" id="patronymic" placeholder="Отчество, если желаете"/>
+          </label>
+        </div>
       </div>
-      <div class="form-checkbox">
-        <input type="checkbox" name="color" id="gray" value="Gray" checked="checked"/>
-        <label for="gray">Серый</label>
+      <div class="form__fieldset">
+        <label class="form__title">
+          Тел
+          <input class="form__item-input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
+        </label>
+        <label class="form__title">
+          E-mail
+          <input class="form__item-input" type="email" placeholder="Ваш Email*"/>
+        </label>
       </div>
-      <div class="form-checkbox">
-        <input type="checkbox" name="color"  id="tiffany" value="Tiffany"/>
-        <label for="tiffany">«Тиффани»</label>
+      <div class="form__fieldset">
+        <label class="form__title">
+          Доп
+          <input class="form__item-input" type="text" placeholder="Опишите все ваши пожелания к заказу"/>
+        </label>
+        <p class="form__text">*Поля обязательны для заполнения</p>
+        <button class="button form__button" type="submit" formaction="#" aria-label="Кнопка отправить заказ">
+          Отправить заказ
+        </button>
       </div>
-      <div class="form-checkbox">
-        <input type="checkbox" name="color" id="black" value="Black"/>
-        <label for="black">Черный</label>
-      </div>
-      <div class="form-checkbox">
-        <input type="checkbox" name="color" id="pink" value="Pink"/>
-        <label for="pink">Розовый</label>
-      </div>
-      <div class="form-checkbox">
-        <input type="checkbox" name="color" id="orange" value="Orange"/>
-        <label for="orange">Оранжевый</label>
-      </div>
-    </fieldset>
-    <fieldset class="form__fieldset" >
-      <legend class="form__title">Фио</legend>
-      <label class="form__item-text" for="name">
-        Имя:
-        <input class="form__item-input" type="text" id="name" placeholder="Введите ваше имя*"/>
-      </label>
-      <label class="form__item-text" for="surname">
-        Фамилия:
-        <input class="form__item-input" type="text" id="surname" placeholder="Укажите фамилию*"/>
-      </label>
-      <label class="form__item-text" for="patronymic">
-        Отчество:
-        <input class="form__item-input" type="text" id="patronymic" placeholder="Отчество, если желаете"/>
-      </label>
-    </fieldset>
-
-    <label class="form__title">
-      Тел
-      <input class="form__item-input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
-    </label>
-    <label class="form__title">
-      E-mail
-      <input class="form__item-input" type="email" placeholder="Ваш Email*"/>
-    </label>
-    <label class="form__title">
-      Доп
-      <input class="form__item-input" type="text" placeholder="Опишите все ваши пожелания к заказу"/>
-    </label>
-    <p class="form__text">*Поля обязательны для заполнения</p>
-    <button class="button form__button" type="submit" formaction="#" aria-label="Кнопка отправить заказ">
-      Отправить заказ
-    </button>
-  </form>
+    </form>
   </section>
 </main>
 
 <footer class="footer">
+  <a class="footer__logo" href="index.html">>
+    Логотип Мишка
+    <img src="./img/mishka-logo-mobile.svg" width="85.97" height="34.92" alt="Логотип Мишка"/>
+  </a>
   <div class="footer__social">
     <a class="footer__social-item" href="" aria-label="Инстаграм">Инстаграм</a>
     <a class="footer__social-item" href="" aria-label="Фейсбук">Фейсбук</a>

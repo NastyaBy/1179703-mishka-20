@@ -1,6 +1,7 @@
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
+$catalog-item-description-border: #ececec;
 
 .catalog {
   display: flex;
@@ -8,12 +9,31 @@ $catalog-item-description: #444444;
   margin: 0 30px;
   padding: 0;
 
+  @include for-size (tablet) {
+    margin: 0 50px;
+  }
 
   &__item {
     margin: 30px 0 0;
     padding: 0;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
+
+    @include for-size (tablet) {
+      display: grid;
+      grid-template-columns: 50% auto min-content;
+      grid-template-rows: auto min-content min-content;
+    }
+
+    &-preview {
+      margin: 0;
+      padding: 0;
+
+      @include for-size (tablet) {
+        grid-column: 1;
+        grid-row: 1 / -1;
+      }
+    }
 
     &-title {
       margin: 28px 28px 8px 28px;
@@ -22,15 +42,26 @@ $catalog-item-description: #444444;
       font-size: 17px;
       font-weight: bold;
       line-height: 24px;
+
+      @include for-size (tablet) {
+        grid-column: 2 / 4;
+        grid-row: 1;
+      }
     }
 
     &-description {
-      margin: 0;
-      padding: 0 28px 28px 28px;
+      margin: 0 28px;
+      padding-bottom: 18px;
       color: $catalog-item-description;
       font-size: 13px;
       font-weight: normal;
       line-height: 30px;
+      border-bottom: 1px solid $catalog-item-description-border;
+
+      @include for-size (tablet) {
+        grid-column: 2 / 4;
+        grid-row: 2;
+      }
     }
 
     &-price {
@@ -39,11 +70,21 @@ $catalog-item-description: #444444;
       font-size: 15px;
       font-weight: bold;
       line-height: 24px;
+
+      @include for-size (tablet) {
+        grid-column: 2;
+        grid-row: 3;
+      }
     }
 
     &-button {
       font-size: 0;
       border: none;
+
+      @include for-size (tablet) {
+        grid-column: 3;
+        grid-row: 3;
+      }
     }
   }
 }

@@ -8,13 +8,24 @@ $form-item-input: #000000;
 .form {
   display: flex;
   flex-direction: column;
-  margin: 0 30px;
+  margin: 0;
   padding: 0;
+
+  @include for-size (tablet) {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__fieldset {
     margin: 0;
-    padding: 0;
+    padding: 0 30px;
     border: 0 none;
+
+    @include for-size (tablet) {
+      display: flex;
+      flex-direction: row;
+      padding: 0 30px;
+    }
   }
 
   &__title {
@@ -24,6 +35,17 @@ $form-item-input: #000000;
     font-weight: bold;
     line-height: 16px;
     text-transform: uppercase;
+
+    @include for-size (tablet) {
+      flex-shrink: 0;
+      padding-right: 100px;
+    }
+  }
+
+  &__data {
+    @include for-size (tablet) {
+      width: auto;
+    }
   }
 
   &__item-text {

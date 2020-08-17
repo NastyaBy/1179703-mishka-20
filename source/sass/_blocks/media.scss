@@ -1,0 +1,28 @@
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: 767px;
+
+
+/*
+  @include for-size(phone-only) {
+    font-size: 1rem;
+  }
+*/
+
+@mixin for-size($size) {
+  @if $size == phone-only {
+    @media (max-width: $mobile-width-only) {
+      @content;
+    }
+  }
+  @else if $size == tablet {
+    @media (min-width: $tablet-width) {
+      @content;
+    }
+  }
+  @else if $size == desktop {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+}

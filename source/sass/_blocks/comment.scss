@@ -9,6 +9,17 @@ $comment-item-button-border: #ececec;
   flex-direction: column;
   margin: 0 30px;
 
+  @include for-size(tablet) {
+    margin: 0 50px;
+    position: relative;
+    padding-bottom: 132px;
+  }
+
+  @include for-size(desktop) {
+    padding-left: 205px;
+  }
+
+
   &__title {
     margin: 0;
     padding: 15px 0;
@@ -16,15 +27,27 @@ $comment-item-button-border: #ececec;
     font-size: 25px;
     font-weight: bold;
     line-height: 30px;
+
+    @include for-size(tablet) {
+      padding: 85px 284px 39px 0;
+      font-size: 43px;
+      line-height: 50px;
+    }
   }
 
   &__item-text {
     margin: 0;
+    width: 100%;
     padding-bottom: 30px;
     color: $comment-item-text;
     font-size: 15px;
     font-weight: normal;
     line-height: 30px;
+
+    @include for-size(tablet) {
+      padding-bottom: 61px;
+      font-size: 17px;
+    }
   }
 
   &__item-name {
@@ -33,6 +56,10 @@ $comment-item-button-border: #ececec;
     font-size: 17px;
     font-weight: bold;
     line-height: 24px;
+
+    @include for-size(tablet) {
+      font-size: 18px;
+    }
   }
 
   &__item-email {
@@ -42,16 +69,55 @@ $comment-item-button-border: #ececec;
     font-weight: normal;
     line-height: 30px;
     text-decoration: none;
+
+    @include for-size(tablet) {
+      position: absolute;
+      font-size: 18px;
+      top: 390px;
+      left: 0;
+    }
+
+    @include for-size(desktop) {
+      top: 350px;
+      left: 205px;
+    }
+  }
+
+  &__navigation {
+    @include for-size(tablet) {
+      position: absolute;
+      right: 0;
+      top: 350px;
+    }
+
+    @include for-size(desktop) {
+      top: 305px;
+    }
   }
 
   &__item-button {
     padding: 13px 38px;
+    margin: 0 -2px;
+    width: 50%;
     font-size: 0;
     border: 1px solid $comment-item-button-border;
+
+    @include for-size(tablet) {
+      border: none;
+      padding: 0 0 0 37px;
+    }
   }
 
   &__button {
-    margin: 38px 30px;
+    margin: 38px 0 30px 0;
     text-align: center;
+
+    @include for-size(tablet) {
+      position: absolute;
+      width: 175px;
+      top: 52px;
+      right: 0;
+      line-height: 20px;
+    }
   }
 }
