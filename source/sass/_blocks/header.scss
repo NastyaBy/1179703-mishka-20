@@ -68,6 +68,7 @@ $header-nav-toggle-box-shadow: #231f20;
 
       &--active {
         box-shadow: none;
+
         &::before,
         &::after {
           content: "";
