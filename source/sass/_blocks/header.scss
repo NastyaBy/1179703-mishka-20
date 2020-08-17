@@ -9,6 +9,7 @@ $header-nav-toggle-box-shadow: #231f20;
   align-items: center;
   margin: 0 30px;
   padding: 0;
+  position: relative;
 
 
   @include for-size(tablet) {
@@ -20,6 +21,17 @@ $header-nav-toggle-box-shadow: #231f20;
   &__logo {
     padding: 20px 0;
     font-size: 0;
+
+    @include for-size(tablet) {
+      margin-right: 210px;
+    }
+
+    @include for-size(desktop) {
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      left: 500px;
+    }
   }
 
   &__nav {
@@ -32,6 +44,11 @@ $header-nav-toggle-box-shadow: #231f20;
 
     @include for-size(tablet) {
       flex-direction: row;
+    }
+
+    @include for-size(desktop) {
+      margin: 0;
+      align-content: space-between;
     }
 
 
@@ -64,7 +81,7 @@ $header-nav-toggle-box-shadow: #231f20;
 
     &-link {
       margin: 0;
-      padding: 28px 30px;
+      padding: 34px;
       color: $header-nav-link-color;
       font-size: 17px;
       font-weight: bold;
@@ -86,10 +103,9 @@ $header-nav-toggle-box-shadow: #231f20;
 
         @include for-size(desktop) {
           position: static;
-          padding: 28px 30px;
+          padding: 34px 35px 34px 0;
           border-top: none;
           border-right: 1px solid #ececec;
-          border-left: 1px solid #ececec;
           border-bottom: none;
         }
       }
@@ -98,16 +114,16 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(tablet) {
           position: absolute;
           left: 170px;
-          top: 110px;
+          top: 108px;
           border: none;
           padding: 0;
         }
 
         @include for-size(desktop) {
           position: static;
-          padding: 28px 30px;
+          margin-right: 295px;
+          padding: 34px 35px;
           border-top: none;
-          border-right: 1px solid #ececec;
           border-left: 1px solid #ececec;
           border-bottom: none;
         }
@@ -126,9 +142,12 @@ $header-nav-toggle-box-shadow: #231f20;
       &--basket {
         @include for-size(tablet) {
           border-top: none;
-          border-right: 1px solid $header-nav-link-border;
           border-left: 1px solid $header-nav-link-border;
           border-bottom: none;
+        }
+
+        @include for-size(desktop) {
+          padding-right: 0;
         }
       }
 
@@ -144,10 +163,12 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(desktop) {
           display: block;
           position: absolute;
-          left: 0;
-          top: 110px;
-          border: none;
           padding: 0;
+          left: 0;
+          top: 108px;
+          border: none;
+          font-size: 15px;
+          line-height: 24px;
         }
       }
 
@@ -162,10 +183,12 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(desktop) {
           display: block;
           position: absolute;
-          top: 110px;
-          left: 250px;
-          border: none;
           padding: 0;
+          top: 108px;
+          left: 210px;
+          border: none;
+          font-size: 15px;
+          line-height: 24px;
         }
       }
     }

@@ -1,6 +1,7 @@
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
+$catalog-item-description-border: #ececec;
 
 .catalog {
   display: flex;
@@ -49,12 +50,13 @@ $catalog-item-description: #444444;
     }
 
     &-description {
-      margin: 0;
-      padding: 0 28px 28px 28px;
+      margin: 0 28px;
+      padding-bottom: 18px;
       color: $catalog-item-description;
       font-size: 13px;
       font-weight: normal;
       line-height: 30px;
+      border-bottom: 1px solid $catalog-item-description-border;
 
       @include for-size (tablet) {
         grid-column: 2 / 4;

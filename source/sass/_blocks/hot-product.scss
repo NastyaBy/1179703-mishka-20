@@ -3,6 +3,7 @@ $hot-product-item-description-color: #63d1bb;
 $hot-product-item-text: #444444;
 $hot-product-item-row-title: #444444;
 $hot-product-item-row-description: #444444;
+$hot-product-item-row-border: #ececec;
 $hot-product-item-price: #444444;
 
 
@@ -19,7 +20,7 @@ $hot-product-item-price: #444444;
 
   @include for-size(desktop) {
     padding-top: 115px;
-    padding-left: 225px;
+    padding-left: 205px;
   }
 
   &__item-preview {
@@ -55,7 +56,7 @@ $hot-product-item-price: #444444;
     }
 
     @include for-size(desktop) {
-      left: 0;
+      left: 50px;
       right: auto;
     }
   }
@@ -78,27 +79,33 @@ $hot-product-item-price: #444444;
   }
 
   &__item-table {
+    border-collapse: collapse;
+
     @include for-size(tablet) {
       width: 295px;
       margin-bottom: 50px;
     }
   }
 
-  &__row-title {
+  &__title {
     margin: 0;
+    padding: 10px 0;
     color: $hot-product-item-row-title;
     font-size: 15px;
     font-weight: normal;
     line-height: 20px;
     text-align: start;
+    border-bottom: 1px solid $hot-product-item-row-border;
   }
 
-  &__row-description {
+  &__description {
     margin: 0;
+    padding-bottom: 10px;
     color: $hot-product-item-row-description;
     font-size: 15px;
     font-weight: normal;
     line-height: 20px;
+    border-bottom: 1px solid $hot-product-item-row-border;
   }
 
   &__item-picture {

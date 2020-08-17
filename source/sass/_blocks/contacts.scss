@@ -6,10 +6,16 @@ $contacts-info-title: #444444;
   display: flex;
   flex-direction: column;
   margin: 0 30px;
+  position: relative;
 
   @include for-size(tablet) {
     margin: 0 50px;
   }
+
+  @include for-size(desktop) {
+    padding-left: 205px;
+  }
+
 
   &__title {
     margin: 0;
@@ -25,8 +31,8 @@ $contacts-info-title: #444444;
     }
   }
 
-  &__info {
-    margin: 0;
+  &__table {
+    margin: 0 0 30px 0;
     color: $contacts-info;
     font-size: 15px;
     line-height: 30px;
@@ -34,12 +40,18 @@ $contacts-info-title: #444444;
     border-collapse: collapse;
 
     &-title {
-      width: 90px;
+      width: 80px;
       color: $contacts-info-title;
       font-weight: normal;
       white-space: nowrap;
       text-transform: lowercase;
       text-align: start;
+      vertical-align: top;
+      padding-bottom: 30px;
+    }
+
+    &-description {
+      vertical-align: top;
     }
   }
 
@@ -49,15 +61,24 @@ $contacts-info-title: #444444;
     @include for-size(tablet) {
       margin: 0 -50px;
     }
+
+    @include for-size(desktop) {
+      position: absolute;
+      right: 50px;
+    }
   }
 
   &__button {
-    margin: 39px 0;
+    margin: 84px 0 34px 0;
     text-align: center;
 
     @include for-size(tablet) {
       width: 230px;
       align-self: center;
+    }
+
+    @include for-size(desktop) {
+      align-self: auto;
     }
   }
 }
