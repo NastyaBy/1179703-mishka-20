@@ -217,25 +217,25 @@ $header-nav-toggle-box-shadow: #231f20;
     @include for-size(tablet) {
       font-size: 15px;
     }
+  }
 
-    &__info {
-      font-size: 15px;
-      font-weight: normal;
-      line-height: 24px;
-      white-space: nowrap;
+  &__info {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 24px;
+    white-space: nowrap;
 
-      @include for-size(phone-only) {
-        display: none;
-      }
+    @include for-size(phone-only) {
+      display: none;
+    }
 
-      @include for-size(tablet) {
-        position: absolute;
-        right: 0;
-        top: 95px;
-        text-align: right;
-        border: none;
-        padding: 0;
-      }
+    @include for-size(tablet) {
+      position: absolute;
+      right: 0;
+      top: 95px;
+      text-align: right;
+      border: none;
+      padding: 0;
     }
   }
 }

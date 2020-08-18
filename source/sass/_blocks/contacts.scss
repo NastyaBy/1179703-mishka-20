@@ -57,6 +57,7 @@ $contacts-info-title: #444444;
 
   &__item-picture {
     margin: 0 -30px;
+    align-self: center;
 
     @include for-size(tablet) {
       margin: 0 -50px;

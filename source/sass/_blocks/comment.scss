@@ -45,6 +45,7 @@ $comment-item-button-border: #ececec;
     line-height: 30px;
 
     @include for-size(tablet) {
+      width: 95%;
       padding-bottom: 61px;
       font-size: 17px;
     }
