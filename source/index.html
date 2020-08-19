@@ -143,7 +143,8 @@
       </tr>
       <tr>
         <th class="contacts__table-title">Адрес:</th>
-        <td class="contacts__table-description">г. Санкт-Петербург,<br/> ул. Большая Конюшенная,<br/> д. 19/8, офис 101</td>
+        <td class="contacts__table-description">г. Санкт-Петербург,<br/> ул. Большая Конюшенная,<br/> д. 19/8, офис 101
+        </td>
       </tr>
     </table>
     <img class="contacts__item-picture" src="./img/map-mobile.jpg" width="320" height="457" alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"/>
@@ -169,5 +170,27 @@
     </a>
   </p>
 </footer>
+
+<div class="modal">
+  <div class="modal__inner">
+      <h2 class="modal__title">Добавить<br class="br-phone-only"/> в корзину</h2>
+    <p class="modal__description">Выберите размер:</p>
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+      <div class="modal__radio">
+        <input type="radio" name="type" id="s" value="S"/>
+        <label for="s">S</label>
+      </div>
+      <div class="modal__radio">
+        <input type="radio" name="type" id="m" value="M"/>
+        <label for="m">M</label>
+      </div>
+      <div class="modal__radio">
+        <input type="radio" name="type" id="l" value="L"/>
+        <label for="l">L</label>
+      </div>
+    </form>
+    <button class="button modal__button" type="submit">Добавить</button>
+  </div>
+</div>
 </body>
 </html>

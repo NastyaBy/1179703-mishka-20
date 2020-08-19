@@ -96,9 +96,3 @@ $intro-item-bg2: #56c3b2;
     display: none;
   }
 }
-
-.br-phone-only {
-  @include for-size (tablet) {
-    display: none;
-  }
-}
