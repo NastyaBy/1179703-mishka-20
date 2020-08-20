@@ -19,7 +19,7 @@ $header-nav-toggle-box-shadow: #231f20;
   }
 
   &__logo {
-    padding: 20px 0;
+    padding: 20px 0 10px 0;
     font-size: 0;
 
     @include for-size(tablet) {
@@ -37,12 +37,13 @@ $header-nav-toggle-box-shadow: #231f20;
   &__nav {
     margin: 0 auto;
     padding: 0;
-    //display: none;
-    display: flex;
+    display: none;
+    //display: flex;
     justify-content: center;
     flex-direction: column;
 
     @include for-size(tablet) {
+      display: flex;
       flex-direction: row;
     }
 
@@ -55,8 +56,8 @@ $header-nav-toggle-box-shadow: #231f20;
     &-toggle {
       position: absolute;
       display: block;
-      top: 30px;
-      right: 35px;
+      top: 28px;
+      right: 0;
       width: 20px;
       height: 2px;
       z-index: 2;

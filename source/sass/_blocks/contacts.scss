@@ -19,7 +19,7 @@ $contacts-info-title: #444444;
 
   &__title {
     margin: 0;
-    padding: 30px 0;
+    padding: 62px 0 26px 0;
     color: $contacts-title;
     font-size: 18px;
     font-weight: bold;
@@ -70,7 +70,7 @@ $contacts-info-title: #444444;
   }
 
   &__button {
-    margin: 84px 0 34px 0;
+    margin: 40px 0;
     text-align: center;
 
     @include for-size(tablet) {

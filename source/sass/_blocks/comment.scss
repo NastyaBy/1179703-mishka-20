@@ -22,7 +22,7 @@ $comment-item-button-border: #ececec;
 
   &__title {
     margin: 0;
-    padding: 15px 0;
+    padding: 58px 0 12px 0;
     color: $comment-title;
     font-size: 25px;
     font-weight: bold;
@@ -38,7 +38,7 @@ $comment-item-button-border: #ececec;
   &__item-text {
     margin: 0;
     width: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 34px;
     color: $comment-item-text;
     font-size: 15px;
     font-weight: normal;
@@ -85,6 +85,8 @@ $comment-item-button-border: #ececec;
   }
 
   &__navigation {
+    padding-top: 22px;
+
     @include for-size(tablet) {
       position: absolute;
       right: 0;
@@ -97,7 +99,7 @@ $comment-item-button-border: #ececec;
   }
 
   &__item-button {
-    padding: 13px 38px;
+    padding: 0 40px;
     margin: 0 -2px;
     width: 50%;
     font-size: 0;

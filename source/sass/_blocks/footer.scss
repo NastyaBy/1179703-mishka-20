@@ -28,7 +28,7 @@ $footer-social-border: #e5e5e5;
 
   &__social {
     margin: 0;
-    padding: 0;
+    padding: 28px 0 0 0;
     display: flex;
 
 
@@ -38,13 +38,13 @@ $footer-social-border: #e5e5e5;
 
     &-item {
       font-size: 0;
-      margin: 25px 20px 27px 20px;
+      margin: 0 20px 0 20px;
     }
   }
 
   &__copyright {
     margin: 0;
-    padding: 20px 0 32px 0;
+    padding: 20px 0 25px 0;
     color: $footer-copyright;
     font-size: 19px;
     font-weight: bold;
