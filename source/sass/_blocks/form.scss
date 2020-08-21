@@ -21,7 +21,7 @@ $form-item-input-apps: #000000;
 
   &__fieldset {
     margin: 0;
-    padding: 0 30px;
+    padding: 25px 30px 25px 30px;
     border: 0 none;
 
     @include for-size (tablet) {
@@ -63,7 +63,6 @@ $form-item-input-apps: #000000;
   &__item-input {
     margin: 0;
     padding: 17px;
-    width: 100%;
     color: $form-item-input;
     font-size: 17px;
     font-weight: normal;
