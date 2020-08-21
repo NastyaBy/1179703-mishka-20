@@ -10,6 +10,7 @@
 @import "_blocks/intro.scss";
 @import "_blocks/overview.scss";
 @import "_blocks/form.scss";
+@import "_blocks/modal";
 
 $body-background-color: #ffffff;
 
@@ -49,4 +50,10 @@ $body-background-color: #ffffff;
 .img {
   max-width: 100%;
   height: auto;
+}
+
+.br-phone-only {
+  @include for-size(tablet) {
+    display: none;
+  }
 }

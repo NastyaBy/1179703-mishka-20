@@ -1,5 +1,6 @@
 $footer-background: #f1f1f1;
 $footer-copyright: #000000;
+$footer-social-border: #e5e5e5;
 
 .footer {
   display: flex;
@@ -20,23 +21,30 @@ $footer-copyright: #000000;
     margin: 0;
     font-size: 0;
 
-    @media (max-width: $mobile-width-only) {
+    @include for-size(phone-only) {
       display: none;
     }
   }
 
   &__social {
     margin: 0;
-    padding: 0;
+    padding: 28px 0 0 0;
+    display: flex;
+
+
+    @include for-size(tablet) {
+      border-bottom: none;
+    }
 
     &-item {
       font-size: 0;
+      margin: 0 20px 0 20px;
     }
   }
 
   &__copyright {
     margin: 0;
-    padding: 0;
+    padding: 20px 0 25px 0;
     color: $footer-copyright;
     font-size: 19px;
     font-weight: bold;

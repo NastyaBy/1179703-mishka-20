@@ -4,12 +4,15 @@ $form-checkbox-color: #000000;
 $form-item-title-color: #63d1bb;
 $form-item-text-color: #000000;
 $form-item-input: #000000;
+$form-item-input-border: #000000;
+$form-item-input-apps: #000000;
 
 .form {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+  position: relative;
 
   @include for-size (tablet) {
     display: flex;
@@ -59,13 +62,26 @@ $form-item-input: #000000;
 
   &__item-input {
     margin: 0;
-    padding: 0;
+    padding: 17px;
+    width: 100%;
     color: $form-item-input;
     font-size: 17px;
     font-weight: normal;
     line-height: 18px;
     opacity: 0.3;
     border: 0 none;
+    border-bottom: 2px solid $form-item-input-border;
+
+
+    &--apps {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px 14px;
+      border: 2px solid $form-item-input-apps;
+      min-height: 142px;
+      box-sizing: border-box;
+    }
   }
 
 

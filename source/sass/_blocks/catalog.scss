@@ -13,17 +13,30 @@ $catalog-item-description-border: #ececec;
     margin: 0 50px;
   }
 
+  @include for-size (desktop) {
+    display: flex;
+    flex-direction: row;
+  }
+
   &__item {
     margin: 30px 0 0;
     padding: 0;
+    align-self: center;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
 
     @include for-size (tablet) {
       display: grid;
+      align-self: auto;
       grid-template-columns: 50% auto min-content;
       grid-template-rows: auto min-content min-content;
     }
+
+    @include for-size (desktop) {
+      display: block;
+      margin-right: 52px;
+    }
+
 
     &-preview {
       margin: 0;
