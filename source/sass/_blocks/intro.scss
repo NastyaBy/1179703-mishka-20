@@ -61,6 +61,12 @@ $intro-item-bg2: #56c3b2;
     font-size: 13px;
     font-weight: normal;
     line-height: 24px;
+
+    @include for-size (tablet) {
+      margin: 55px 50px 63px 50px;
+      font-size: 17px;
+      line-height: 30px;
+    }
   }
 
   &__item {

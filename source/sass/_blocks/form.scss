@@ -13,11 +13,7 @@ $form-item-input-apps: #000000;
   margin: 0;
   padding: 0;
   position: relative;
-
-  @include for-size (tablet) {
-    display: flex;
-    flex-direction: column;
-  }
+  align-content: space-between;
 
   &__fieldset {
     margin: 0;
@@ -27,17 +23,32 @@ $form-item-input-apps: #000000;
     @include for-size (tablet) {
       display: flex;
       flex-direction: row;
-      padding: 0 30px;
+      padding: 65px 30px;
+      flex-wrap: wrap;
     }
   }
 
   &__title {
     margin-bottom: 24px;
+    padding-right: 22px;
     color: $form-title-color;
     font-size: 17px;
     font-weight: bold;
     line-height: 16px;
     text-transform: uppercase;
+
+    //&::after {
+    //  margin-left: 22px;
+    //  content: "";
+    //  display: inline-block;
+    //  vertical-align: middle;
+    //  box-sizing: border-box;
+    //  width: 65%;
+    //  height: 1px;
+    //  background: #6CBD83;
+    //  border: solid;
+    //  border-width: 0 10px;
+    //}
 
     @include for-size (tablet) {
       flex-shrink: 0;
@@ -45,7 +56,12 @@ $form-item-input-apps: #000000;
     }
   }
 
+  &__text {
+    order: 4;
+  }
+
   &__data {
+    padding-top: 25px;
     @include for-size (tablet) {
       width: auto;
     }
@@ -53,7 +69,7 @@ $form-item-input-apps: #000000;
 
   &__item-text {
     margin: 0;
-    padding: 0;
+    padding: 22px 0;
     color: $form-item-text-color;
     font-size: 17px;
     font-weight: bold;
@@ -62,12 +78,12 @@ $form-item-input-apps: #000000;
 
   &__item-input {
     margin: 0;
-    padding: 17px;
+    padding: 17px 0;
+    width: 100%;
     color: $form-item-input;
     font-size: 17px;
     font-weight: normal;
     line-height: 18px;
-    opacity: 0.3;
     border: 0 none;
     border-bottom: 2px solid $form-item-input-border;
 
