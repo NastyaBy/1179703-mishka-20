@@ -7,9 +7,10 @@ $header-nav-toggle-box-shadow: #231f20;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 30px;
+  margin: 0;
   padding: 0;
   position: relative;
+  z-index: 2;
 
 
   @include for-size(tablet) {
@@ -45,6 +46,7 @@ $header-nav-toggle-box-shadow: #231f20;
     @include for-size(tablet) {
       display: flex;
       flex-direction: row;
+      margin: 0 0 0 auto;
     }
 
     @include for-size(desktop) {
@@ -109,6 +111,7 @@ $header-nav-toggle-box-shadow: #231f20;
       font-weight: bold;
       line-height: 24px;
       white-space: nowrap;
+      align-self: center;
       text-decoration: none;
       position: relative;
       border-top: 1px solid $header-nav-link-border;
@@ -135,7 +138,7 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(tablet) {
           position: absolute;
           left: 170px;
-          top: 108px;
+          top: 110px;
           border: none;
           padding: 0;
         }
@@ -162,10 +165,12 @@ $header-nav-toggle-box-shadow: #231f20;
 
       &--basket {
         border-bottom: 1px solid $header-nav-link-border;
+
         @include for-size(tablet) {
           border-top: none;
           border-left: 1px solid $header-nav-link-border;
           border-bottom: none;
+          padding-right: 0;
         }
 
         @include for-size(desktop) {

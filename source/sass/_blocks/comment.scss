@@ -85,7 +85,7 @@ $comment-item-button-border: #ececec;
   }
 
   &__navigation {
-    padding-top: 22px;
+    padding-top: 32px;
 
     @include for-size(tablet) {
       position: absolute;
@@ -99,7 +99,7 @@ $comment-item-button-border: #ececec;
   }
 
   &__item-button {
-    padding: 0 40px;
+    padding: 10px 40px 4px 40px;
     margin: 0 -2px;
     width: 50%;
     font-size: 0;

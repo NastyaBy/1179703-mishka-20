@@ -13,7 +13,7 @@ $intro-item-bg2: #56c3b2;
   display: flex;
   flex-direction: column;
 
-  @include for-size (tablet) {
+  @include for-size(tablet) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,28 +30,45 @@ $intro-item-bg2: #56c3b2;
     background: $intro-title-background;
     flex-grow: 1;
 
-    @include for-size (tablet) {
+
+    @include for-size(tablet) {
+      position: relative;
       padding-top: 100px;
       width: 100%;
       font-size: 43px;
       line-height: 50px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 34px;
+        background: url("data:image/svg+xml,%3Csvg width='1150' height='34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1121.3 0c-14.4 0-14.4 14-28.7 14-14.3 0-14.4-14-28.7-14-14.3 0-14.4 14-28.7 14-14.4 0-14.4-14-28.8-14S992 14 977.7 14C963.3 14 963.3 0 949 0c-14.4 0-14.4 14-28.7 14-14.3 0-14.7-14-29-14-14.4 0-14.4 14-28.7 14-14.3 0-14.5-14-28.8-14-14.4 0-14.4 14-28.7 14-14.4 0-14.4-14-28.8-14s-14.4 14-28.7 14c-14.4 0-14.4-14-28.7-14-14.3 0-14.5 14-28.9 14-14.4 0-14.4-14-28.7-14-14.4 0-14.4 14-28.7 14-14.4 0-14.4-14-28.8-14s-14.4 14-28.7 14c-14.4 0-14.4-14-28.7-14C532 0 532 14 517.7 14 503.3 14 503.3 0 489 0c-14.4 0-14.4 14-28.8 14S445.8 0 431.4 0 417 14 402.6 14 388.2 0 373.8 0 359.4 14 345 14 330.6 0 316.2 0s-14.4 14-28.8 14S273 0 258.6 0s-14.4 14-28.7 14c-14.4 0-14.4-14-28.8-14s-14.4 14-28.8 14-14.4-14-28.8-14-14.4 14-28.8 14S100.3 0 85.9 0c-14 0-14 14-28.4 14C43.1 14 43.1 0 28.8 0 14.5 0 14.4 14 0 14v20h1150V14c-14.4 0-14.4-14-28.7-14z' fill='%23fff'/%3E%3C/svg%3E") 0 0 repeat-x;
+      }
     }
+
 
     &--bg {
       padding-bottom: 120px;
       background: $intro-title-bg-mobile;
 
-      @include for-size (tablet) {
+      @include for-size(tablet) {
         padding-bottom: 510px;
         background: $intro-title-bg-tablet;
         background-size: cover;
         margin: 0 0 -125px;
-      }
 
-      @include for-size (desktop) {
-        padding-bottom: 547px;
-        background: $intro-title-bg-desktop;
+        &::after {
+          display: none;
+        }
       }
+    }
+
+    @include for-size(desktop) {
+      padding-bottom: 547px;
+      background: $intro-title-bg-desktop;
     }
   }
 
@@ -62,7 +79,7 @@ $intro-item-bg2: #56c3b2;
     font-weight: normal;
     line-height: 24px;
 
-    @include for-size (tablet) {
+    @include for-size(tablet) {
       margin: 55px 50px 63px 50px;
       font-size: 17px;
       line-height: 30px;
@@ -78,14 +95,15 @@ $intro-item-bg2: #56c3b2;
     line-height: 24px;
     text-decoration: none;
 
-    @include for-size (tablet) {
+    @include for-size(tablet) {
       font-size: 20px;
       line-height: 30px;
       width: 130px;
       padding: 25px 174px 22px 36px;
+      z-index: 3;
     }
 
-    @include for-size (desktop) {
+    @include for-size(desktop) {
       padding: 25px 355px 22px 36px;
     }
 
@@ -102,3 +120,4 @@ $intro-item-bg2: #56c3b2;
     display: none;
   }
 }
+

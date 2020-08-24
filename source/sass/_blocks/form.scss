@@ -23,7 +23,7 @@ $form-item-input-apps: #000000;
     @include for-size (tablet) {
       display: flex;
       flex-direction: row;
-      padding: 65px 30px;
+      padding: 65px 50px;
       flex-wrap: wrap;
     }
   }
@@ -62,8 +62,10 @@ $form-item-input-apps: #000000;
 
   &__data {
     padding-top: 25px;
+
     @include for-size (tablet) {
       width: auto;
+      padding-top: 0;
     }
   }
 
