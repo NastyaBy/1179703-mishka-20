@@ -59,7 +59,7 @@ $header-nav-toggle-box-shadow: #231f20;
       position: absolute;
       display: block;
       top: 28px;
-      right: 0;
+      right: 30px;
       width: 20px;
       height: 2px;
       z-index: 2;
@@ -106,6 +106,8 @@ $header-nav-toggle-box-shadow: #231f20;
     &-link {
       margin: 0;
       padding: 34px;
+      position: relative;
+      align-items: stretch;
       color: $header-nav-link-color;
       font-size: 17px;
       font-weight: bold;
@@ -113,7 +115,6 @@ $header-nav-toggle-box-shadow: #231f20;
       white-space: nowrap;
       align-self: center;
       text-decoration: none;
-      position: relative;
       border-top: 1px solid $header-nav-link-border;
 
       &--catalog {
@@ -148,7 +149,6 @@ $header-nav-toggle-box-shadow: #231f20;
           margin-right: 295px;
           padding: 34px 35px;
           border-top: none;
-          border-left: 1px solid #ececec;
           border-bottom: none;
         }
       }
@@ -157,7 +157,6 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(tablet) {
           font-size: 0;
           border-top: none;
-          border-right: 1px solid $header-nav-link-border;
           border-left: 1px solid $header-nav-link-border;
           border-bottom: none;
         }
@@ -238,7 +237,7 @@ $header-nav-toggle-box-shadow: #231f20;
     @include for-size(tablet) {
       position: absolute;
       right: 0;
-      top: 95px;
+      top: 94px;
       text-align: right;
       border: none;
       padding: 0;

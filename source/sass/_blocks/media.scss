@@ -26,3 +26,9 @@ $mobile-width-only: 767px;
     }
   }
 }
+
+@mixin retina-size {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}

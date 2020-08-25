@@ -50,6 +50,9 @@ $body-background-color: #ffffff;
 .img {
   max-width: 100%;
   height: auto;
+  @include for-size (phone-only) {
+    max-width: 50%;
+  }
 }
 
 .br-phone-only {
