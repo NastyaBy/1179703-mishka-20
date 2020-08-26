@@ -1,9 +1,9 @@
 $intro-title-color: #010000;
 $intro-text-color: #444444;
 $intro-title-background: #f1f1f1;
-$intro-title-bg-mobile: url("../img/hero-mobile@1x.jpg") 50% -17px no-repeat;
-$intro-title-bg-tablet: url("../img/hero-tablet@1x.jpg") 50% -17px no-repeat;
-$intro-title-bg-desktop: url("../img/hero-desktop@1x.jpg") 50% -17px no-repeat;
+$intro-title-bg-index-mobile: url("../img/hero-mobile@1x.jpg") 50% -17px no-repeat;
+$intro-title-bg-index-tablet: url("../img/hero-tablet@1x.jpg") 50% -17px no-repeat;
+$intro-title-bg-index-desktop: url("../img/hero-desktop@1x.jpg") 50% -17px no-repeat;
 $intro-item-color: #ffffff;
 $intro-item-bg1: #63d1bb;
 $intro-item-bg2: #56c3b2;
@@ -48,28 +48,32 @@ $intro-item-bg2: #56c3b2;
         background: url("data:image/svg+xml,%3Csvg width='1150' height='34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1121.3 0c-14.4 0-14.4 14-28.7 14-14.3 0-14.4-14-28.7-14-14.3 0-14.4 14-28.7 14-14.4 0-14.4-14-28.8-14S992 14 977.7 14C963.3 14 963.3 0 949 0c-14.4 0-14.4 14-28.7 14-14.3 0-14.7-14-29-14-14.4 0-14.4 14-28.7 14-14.3 0-14.5-14-28.8-14-14.4 0-14.4 14-28.7 14-14.4 0-14.4-14-28.8-14s-14.4 14-28.7 14c-14.4 0-14.4-14-28.7-14-14.3 0-14.5 14-28.9 14-14.4 0-14.4-14-28.7-14-14.4 0-14.4 14-28.7 14-14.4 0-14.4-14-28.8-14s-14.4 14-28.7 14c-14.4 0-14.4-14-28.7-14C532 0 532 14 517.7 14 503.3 14 503.3 0 489 0c-14.4 0-14.4 14-28.8 14S445.8 0 431.4 0 417 14 402.6 14 388.2 0 373.8 0 359.4 14 345 14 330.6 0 316.2 0s-14.4 14-28.8 14S273 0 258.6 0s-14.4 14-28.7 14c-14.4 0-14.4-14-28.8-14s-14.4 14-28.8 14-14.4-14-28.8-14-14.4 14-28.8 14S100.3 0 85.9 0c-14 0-14 14-28.4 14C43.1 14 43.1 0 28.8 0 14.5 0 14.4 14 0 14v20h1150V14c-14.4 0-14.4-14-28.7-14z' fill='%23fff'/%3E%3C/svg%3E") 0 0 no-repeat;
         z-index: 4;
       }
+
+      @include for-size(desktop) {
+        padding-top: 92px;
+        padding-bottom: 114px;
+        font-size: 53px;
+        line-height: 57px;
+      }
+
     }
 
 
-    &--bg {
+    &--index-bg {
       padding-bottom: 120px;
-      background: $intro-title-bg-mobile;
+      background: $intro-title-bg-index-mobile;
 
       @include for-size(tablet) {
         padding-bottom: 510px;
-        background: $intro-title-bg-tablet;
+        background: $intro-title-bg-index-tablet;
         background-size: cover;
         margin: 0 0 -125px;
-        //
-        //&::after {
-        //  display: none;
-        //}
       }
-    }
 
-    @include for-size(desktop) {
-      padding-bottom: 547px;
-      background: $intro-title-bg-desktop;
+      @include for-size(desktop) {
+        padding-bottom: 547px;
+        background: $intro-title-bg-index-desktop;
+      }
     }
   }
 

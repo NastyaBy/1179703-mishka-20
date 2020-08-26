@@ -128,7 +128,9 @@ $header-nav-toggle-box-shadow: #231f20;
 
         @include for-size(desktop) {
           position: static;
-          padding: 34px 35px 34px 0;
+          padding: 26px 35px 34px 0;
+          font-size: 17px;
+          line-height: 24px;
           border-top: none;
           border-right: 1px solid #ececec;
           border-bottom: none;
