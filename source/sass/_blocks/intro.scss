@@ -50,7 +50,7 @@ $intro-item-bg2: #56c3b2;
       }
 
       @include for-size(desktop) {
-        padding-top: 92px;
+        padding-top: 158px;
         padding-bottom: 114px;
         font-size: 53px;
         line-height: 57px;
@@ -63,14 +63,15 @@ $intro-item-bg2: #56c3b2;
       background: $intro-title-bg-index-mobile;
 
       @include for-size(tablet) {
-        padding-bottom: 510px;
+        padding-top: 155px;
+        padding-bottom: 497px;
         background: $intro-title-bg-index-tablet;
         background-size: cover;
         margin: 0 0 -125px;
       }
 
       @include for-size(desktop) {
-        padding-bottom: 547px;
+        padding-bottom: 480px;
         background: $intro-title-bg-index-desktop;
       }
     }

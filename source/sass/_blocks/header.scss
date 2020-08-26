@@ -31,7 +31,8 @@ $header-nav-toggle-box-shadow: #231f20;
       padding: 0;
       margin: 0;
       position: absolute;
-      left: 500px;
+      left: 455px;
+      top: 9px;
     }
   }
 
@@ -105,7 +106,7 @@ $header-nav-toggle-box-shadow: #231f20;
 
     &-link {
       margin: 0;
-      padding: 34px;
+      padding: 30px 32px 22px 32px;
       position: relative;
       align-items: stretch;
       color: $header-nav-link-color;
@@ -128,7 +129,7 @@ $header-nav-toggle-box-shadow: #231f20;
 
         @include for-size(desktop) {
           position: static;
-          padding: 26px 35px 34px 0;
+          padding: 32px 35px 32px 4px;
           font-size: 17px;
           line-height: 24px;
           border-top: none;
@@ -148,8 +149,8 @@ $header-nav-toggle-box-shadow: #231f20;
 
         @include for-size(desktop) {
           position: static;
-          margin-right: 295px;
-          padding: 34px 35px;
+          margin-right: 291px;
+          padding: 32px 35px;
           border-top: none;
           border-bottom: none;
         }
@@ -192,7 +193,7 @@ $header-nav-toggle-box-shadow: #231f20;
           display: block;
           position: absolute;
           padding: 0;
-          left: 0;
+          left: 6px;
           top: 108px;
           border: none;
           font-size: 15px;
@@ -213,7 +214,7 @@ $header-nav-toggle-box-shadow: #231f20;
           position: absolute;
           padding: 0;
           top: 108px;
-          left: 210px;
+          left: 225px;
           border: none;
           font-size: 15px;
           line-height: 24px;
@@ -238,7 +239,7 @@ $header-nav-toggle-box-shadow: #231f20;
 
     @include for-size(tablet) {
       position: absolute;
-      right: 0;
+      right: -20px;
       top: 94px;
       text-align: right;
       border: none;
