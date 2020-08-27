@@ -30,11 +30,12 @@ $hot-product-item-price: #444444;
     grid-template-columns: 41% min-content min-content;
     grid-template-rows: min-content min-content min-content min-content min-content;
     grid-gap: 20px;
-    margin: 0 50px;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   @include for-size(desktop) {
-    grid-template-columns: min-content 27% min-content;
+    grid-template-columns: min-content 12% min-content;
     grid-template-rows: min-content min-content min-content min-content min-content;
     padding-top: 115px;
   }
@@ -83,7 +84,6 @@ $hot-product-item-price: #444444;
 
     @include for-size(desktop) {
       grid-column: 1 / 2;
-      margin: 0;
       padding: 152px 0 0 4px;
     }
   }
