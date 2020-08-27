@@ -12,7 +12,9 @@ $features-item: #000000;
   }
 
   @include for-size (desktop) {
+    margin: 0 auto;
     padding: 25px 20px 90px 205px;
+    width: $general-width;
   }
 
   &__title {

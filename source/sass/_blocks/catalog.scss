@@ -16,6 +16,7 @@ $catalog-item-description-border: #ececec;
   @include for-size(desktop) {
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
   }
 
   &__item {
