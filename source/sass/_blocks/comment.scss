@@ -28,17 +28,14 @@ $comment-item-button-border: #ececec;
 
   @include for-size(tablet) {
     display: grid;
-    grid-template-columns: 865px 185px;
+    grid-template-columns: 730px 185px;
     grid-template-rows: auto min-content min-content;
-    justify-content: center;
-    margin: 0 50px;
     padding-bottom: 132px;
     background: url("../img/review@1x.jpg") 0 0 no-repeat;
   }
 
   @include for-size(desktop) {
-    margin: 0 auto;
-    padding-left: 205px;
+    padding-left: 174px;
     padding-bottom: 163px;
   }
 
