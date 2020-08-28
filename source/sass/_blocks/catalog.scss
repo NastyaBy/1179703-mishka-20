@@ -4,8 +4,6 @@ $catalog-item-description: #444444;
 $catalog-item-description-border: #ececec;
 
 .catalog {
-  display: flex;
-  flex-direction: column;
   margin: 0 30px;
   padding: 0;
 
@@ -14,9 +12,18 @@ $catalog-item-description-border: #ececec;
   }
 
   @include for-size(desktop) {
-    display: flex;
-    flex-direction: row;
     margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include for-size(desktop) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 
   &__item {

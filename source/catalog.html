@@ -51,7 +51,9 @@
   <h1 class="visually-hidden">Мишка</h1>
   <section class="intro">
     <h2 class="intro__title">Каталог товаров</h2>
-    <ul class="catalog">
+  </section>
+  <section class="catalog">
+    <ul class="catalog__list">
       <li class="catalog__item">
         <picture class="catalog__item-preview">
           <source srcset="./img/photo-hare-desktop@1x.jpg" media="(min-width: 1150px)">
@@ -76,7 +78,7 @@
         <picture class="catalog__item-preview">
           <source srcset="./img/photo-bowl-desktop@1x.jpg" media="(min-width: 1150px)">
           <source srcset="./img/photo-bowl-tablet@1x.jpg" media="(min-width: 770px)">
-          <img  src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья"/>
+          <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья"/>
         </picture>
         <h3 class="catalog__item-title">Корзинка для белья</h3>
         <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
@@ -95,7 +97,7 @@
         <picture class="catalog__item-preview">
           <source srcset="./img/photo-toys-desktop@1x.jpg" media="(min-width: 1150px)">
           <source srcset="./img/photo-toys-tablet@1x.jpg" media="(min-width: 770px)">
-          <img  src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек"/>
+          <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек"/>
         </picture>
         <h3 class="catalog__item-title">Большая корзинка<br/> для игрушек</h3>
         <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
@@ -113,15 +115,16 @@
     </ul>
   </section>
   <section class="overview">
-      <picture class="overview__video">
-        <source srcset="./img/video-desktop@1x.jpg" media="(min-width: 1150px)">
-        <source srcset="./img/video-tablet@1x.jpg" media="(min-width: 770px)">
-        <img src="./img/video-mobile@1x.jpg" alt="Видео процеса производстава">
-      </picture>
+    <picture class="overview__video">
+      <source srcset="./img/video-desktop@1x.jpg" media="(min-width: 1150px)">
+      <source srcset="./img/video-tablet@1x.jpg" media="(min-width: 770px)">
+      <img src="./img/video-mobile@1x.jpg" alt="Видео процеса производстава">
+    </picture>
     <h2 class="overview__title">Процесс производства</h2>
     <p class="overview__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
       появляются наши товары.</p>
-    <a class="button overview__button" href="form.html" aria-label="Перейти на форму оформления заказа">Сделать заказ</a>
+    <a class="button overview__button" href="form.html" aria-label="Перейти на форму оформления заказа">Сделать
+      заказ</a>
   </section>
 </main>
 <div class="footer">
@@ -185,26 +188,26 @@
     </div>
   </div>
 
-<div class="modal">
-  <div class="modal__inner">
-    <h2 class="modal__title">Добавить<br class="br-phone-only"/> в корзину</h2>
-    <p class="modal__description">Выберите размер:</p>
-    <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
-      <div class="modal__radio">
-        <input type="radio" name="type" id="s" value="S"/>
-        <label for="s">S</label>
-      </div>
-      <div class="modal__radio">
-        <input type="radio" name="type" id="m" value="M"/>
-        <label for="m">M</label>
-      </div>
-      <div class="modal__radio">
-        <input type="radio" name="type" id="l" value="L"/>
-        <label for="l">L</label>
-      </div>
-    </form>
-    <button class="button modal__button" type="submit">Добавить</button>
+  <div class="modal">
+    <div class="modal__inner">
+      <h2 class="modal__title">Добавить<br class="br-phone-only"/> в корзину</h2>
+      <p class="modal__description">Выберите размер:</p>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="modal__radio">
+          <input type="radio" name="type" id="s" value="S"/>
+          <label for="s">S</label>
+        </div>
+        <div class="modal__radio">
+          <input type="radio" name="type" id="m" value="M"/>
+          <label for="m">M</label>
+        </div>
+        <div class="modal__radio">
+          <input type="radio" name="type" id="l" value="L"/>
+          <label for="l">L</label>
+        </div>
+      </form>
+      <button class="button modal__button" type="submit">Добавить</button>
+    </div>
   </div>
-</div>
 </body>
 </html>

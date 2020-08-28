@@ -16,7 +16,7 @@ $overview-desc: #444444;
   @include for-size (desktop) {
     display: grid;
     grid-template-columns: min-content auto;
-    grid-template-rows: auto min-content min-content;
+    grid-template-rows: min-content min-content min-content;
     justify-content: center;
     padding: 0;
     margin: 57px auto 105px auto;
