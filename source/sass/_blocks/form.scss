@@ -193,7 +193,6 @@ $form-item-input-apps: #000000;
         background-size: 52px 52px;
       }
 
-
       #{$radioIsChecked} + & {
         background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.888 2.874c13.231 0 23.926 10.526 23.926 23.472 0 12.946-10.695 23.472-23.926 23.472-13.23 0-23.925-10.526-23.925-23.472 0-12.946 10.694-23.472 23.925-23.472z' stroke='%23444' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.24 16.393c5.424 0 9.821 4.397 9.821 9.822 0 5.424-4.397 9.822-9.822 9.822-5.424 0-9.821-4.398-9.821-9.822 0-5.425 4.397-9.822 9.822-9.822z' fill='%2362D1BA'/%3E%3C/svg%3E") 0 50% no-repeat;
         background-size: 42px 42px;
@@ -220,6 +219,7 @@ $form-item-input-apps: #000000;
   @include for-size(tablet) {
     margin-bottom: 24px;
   }
+
   &__control {
     position: absolute;
     z-index: -1;

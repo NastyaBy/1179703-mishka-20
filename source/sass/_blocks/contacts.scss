@@ -119,7 +119,6 @@ $contacts-info-title: #444444;
     @include for-size(desktop) {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
-      align-self: auto;
     }
   }
 }
