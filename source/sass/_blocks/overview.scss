@@ -5,8 +5,7 @@ $overview-desc: #444444;
 .overview {
   display: flex;
   flex-direction: column;
-  margin: 30px;
-  padding: 0 30px;
+  margin: 0 30px 55px 30px;
   border: 1px solid $overview-border-color;
 
   @include for-size (tablet) {
@@ -24,6 +23,7 @@ $overview-desc: #444444;
   }
 
   &__video {
+    order: 2;
     @include for-size (desktop) {
       grid-column: 1;
       grid-row: 1 / -1;
@@ -31,10 +31,12 @@ $overview-desc: #444444;
   }
 
   &__title {
+    padding: 10px 30px 10px 90px;
     color: $overview-title;
     font-size: 17px;
     font-weight: bold;
     line-height: 24px;
+    order: 1;
 
     @include for-size (desktop) {
       padding: 27px 110px 27px 80px;
@@ -42,12 +44,13 @@ $overview-desc: #444444;
   }
 
   &__desc {
-    margin: 33px 0;
-    padding: 0;
+    margin: 0;
+    padding: 33px;
     color: $overview-desc;
     font-size: 13px;
     font-weight: normal;
     line-height: 24px;
+    order: 3;
 
     @include for-size (tablet) {
       margin: 25px 0 42px 0;
@@ -61,8 +64,11 @@ $overview-desc: #444444;
   }
 
   &__button {
-    margin: 33px 0;
+    margin: 6px 0 33px 0;
+    width: 156px;
     text-align: center;
+    align-self: center;
+    order: 4;
 
     @include for-size(desktop) {
       margin: 0 36px 57px 80px;
