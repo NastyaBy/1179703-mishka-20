@@ -9,7 +9,7 @@ $overview-desc: #444444;
   border: 1px solid $overview-border-color;
 
   @include for-size (tablet) {
-    padding: 0 40px;
+    margin: 0 auto;
   }
 
   @include for-size (desktop) {
@@ -24,6 +24,14 @@ $overview-desc: #444444;
 
   &__video {
     order: 2;
+
+    @include for-size (tablet) {
+      align-self: center;
+      margin: 0;
+      padding: 0;
+      order: 1;
+    }
+
     @include for-size (desktop) {
       grid-column: 1;
       grid-row: 1 / -1;

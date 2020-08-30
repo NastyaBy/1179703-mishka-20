@@ -8,7 +8,7 @@ $catalog-item-description-border: #ececec;
   padding: 0;
 
   @include for-size(tablet) {
-    margin: 0 50px;
+    padding: 0 50px;
   }
 
   @include for-size(desktop) {
@@ -41,9 +41,10 @@ $catalog-item-description-border: #ececec;
 
     @include for-size(tablet) {
       display: grid;
-      grid-template-columns: 345px 250px min-content;
-      grid-template-rows: auto min-content min-content;
+      grid-template-columns: 335px 250px 70px;
+      grid-template-rows: 60px 200px 70px;
       align-self: auto;
+      margin: 30px 0;
     }
 
     @include for-size(desktop) {
@@ -73,6 +74,7 @@ $catalog-item-description-border: #ececec;
       @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 1;
+        margin: 26px 16px 6px 32px;
         font-size: 20px;
         line-height: 24px;
       }
@@ -90,6 +92,7 @@ $catalog-item-description-border: #ececec;
       @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 2;
+        margin: 0 32px;
         font-size: 15px;
       }
     }
@@ -104,6 +107,9 @@ $catalog-item-description-border: #ececec;
       @include for-size(tablet) {
         grid-column: 2;
         grid-row: 3;
+        padding-top: 25px;
+        padding-right: 22px;
+        font-size: 17px;
       }
     }
 
