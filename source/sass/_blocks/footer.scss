@@ -15,12 +15,11 @@ $footer-social-border: #e5e5e5;
 
 
     @include for-size(tablet) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-content: center;
-      margin: 0 auto;
-      padding: 30px 50px 58px 50px;
+      flex-direction: row;
+      align-items: flex-start;
       max-width: $general-width;
+      margin: 0 auto;
+      padding: 52px 50px 58px 50px;
     }
   }
 
@@ -36,12 +35,31 @@ $footer-social-border: #e5e5e5;
   }
 
   &__social {
+    position: relative;
+    display: flex;
     margin: 0;
     padding: 28px 0 0 0;
-    display: flex;
+
+    @include for-size(phone-only) {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        top: 100%;
+        margin-top: 13px;
+        border-bottom: 1px solid $footer-social-border;
+      }
+    }
 
     @include for-size(tablet) {
-      border-bottom: none;
+      align-items: baseline;
+      margin: 0 auto;
+      padding: 0;
     }
 
     &-item {
@@ -51,16 +69,24 @@ $footer-social-border: #e5e5e5;
   }
 
   &__copyright {
+    display: flex;
+    align-items: center;
     margin: 0;
-    padding: 20px 0 25px 0;
+    padding: 35px 0 25px 0;
     color: $footer-copyright;
     font-size: 19px;
     font-weight: bold;
     line-height: 18px;
     text-align: center;
+
+    @include for-size(tablet) {
+      padding: 0;
+    }
   }
 
   &__academy {
+    margin-left: 28px;
     font-size: 0;
+    line-height: 0;
   }
 }
