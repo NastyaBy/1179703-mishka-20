@@ -13,6 +13,7 @@ $catalog-item-description-border: #ececec;
 
   @include for-size(desktop) {
     margin: 0 auto;
+    padding: 0;
   }
 
   &__list {
@@ -29,6 +30,8 @@ $catalog-item-description-border: #ececec;
       display: flex;
       flex-direction: row;
       justify-content: center;
+      margin-top: 110px;
+      gap: 51px;
     }
   }
 
@@ -49,7 +52,8 @@ $catalog-item-description-border: #ececec;
 
     @include for-size(desktop) {
       display: block;
-      margin-right: 52px;
+      margin: 0;
+      padding: 0;
     }
 
 

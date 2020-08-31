@@ -21,6 +21,7 @@ $header-nav-toggle-box-shadow: #231f20;
   &__logo {
     padding: 20px 0 10px 0;
     font-size: 0;
+    position: relative;
 
     @include for-size(tablet) {
       margin-right: 210px;
@@ -36,7 +37,7 @@ $header-nav-toggle-box-shadow: #231f20;
   }
 
   &__nav {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     //display: none;
     display: flex;
@@ -113,7 +114,7 @@ $header-nav-toggle-box-shadow: #231f20;
       font-weight: bold;
       line-height: 24px;
       white-space: nowrap;
-      align-self: center;
+      align-self: start;
       text-decoration: none;
       border-top: 1px solid $header-nav-link-border;
 
@@ -156,6 +157,15 @@ $header-nav-toggle-box-shadow: #231f20;
       }
 
       &--search {
+        position: relative;
+
+        &-icon {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          width: 32px;
+          height: 32px;
+        }
         @include for-size(tablet) {
           font-size: 0;
           border-top: none;
@@ -166,6 +176,15 @@ $header-nav-toggle-box-shadow: #231f20;
 
       &--basket {
         border-bottom: 1px solid $header-nav-link-border;
+        position: relative;
+
+        &-icon {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          width: 30px;
+          height: 30px;
+        }
 
         @include for-size(tablet) {
           border-top: none;

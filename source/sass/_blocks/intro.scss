@@ -56,7 +56,7 @@ $intro-item-bg2: #56c3b2;
       }
 
       @include for-size(desktop) {
-        padding-top: 158px;
+        padding-top: 102px;
         padding-bottom: 114px;
         font-size: 53px;
         line-height: 57px;
@@ -99,7 +99,7 @@ $intro-item-bg2: #56c3b2;
   &__item {
     margin: 0;
     padding: 24px 160px 31px 32px;
-    height: 48px;
+    height: 50px;
     color: $intro-item-color;
     font-size: 19px;
     font-weight: bold;
