@@ -4,63 +4,68 @@ $header-nav-toggle-background-color: #ffffff;
 $header-nav-toggle-box-shadow: #231f20;
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0;
   position: relative;
   z-index: 2;
 
-
-  @include for-size(tablet) {
-    flex-direction: row;
+  &__inner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
+    @include for-size(tablet) {
+      flex-direction: row;
+      max-width: $general-width;
+    }
   }
 
   &__logo {
+    position: relative;
     padding: 20px 0 10px 0;
     font-size: 0;
-    position: relative;
+    line-height: 0;
 
     @include for-size(tablet) {
-      margin-right: 210px;
+      margin-right: auto;
+      margin-left: 50px;
+      padding: 0;
     }
-
     @include for-size(desktop) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
       padding: 0;
       margin: 0;
-      position: absolute;
-      left: 455px;
-      top: 9px;
     }
   }
 
   &__nav {
-    margin: 0;
-    padding: 0;
     //display: none;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 
+    @include for-size(phone-only) {
+      margin-top: 14px;
+      width: 100%;
+    }
     @include for-size(tablet) {
-      display: flex;
       flex-direction: row;
-      margin: 0 0 0 auto;
+      font-size: 15px;
     }
-
     @include for-size(desktop) {
-      margin: 0;
-      align-content: space-between;
+      flex-grow: 1;
     }
-
 
     &-toggle {
       position: absolute;
       display: block;
       top: 28px;
-      right: 5px;
+      right: 50px;
       width: 20px;
       height: 2px;
       z-index: 2;
@@ -78,10 +83,10 @@ $header-nav-toggle-box-shadow: #231f20;
           content: "";
           position: absolute;
           display: block;
-          left: 84.06%;
-          right: 9.38%;
-          top: 5px;
-          width: 20px;
+          left: 14px;
+          right: 0;
+          top: 10px;
+          width: 27px;
           height: 2px;
           background-color: $header-nav-toggle-box-shadow;
         }
@@ -105,31 +110,29 @@ $header-nav-toggle-box-shadow: #231f20;
     }
 
     &-link {
-      margin: 0;
-      padding: 30px 32px 22px 32px;
       position: relative;
-      align-items: stretch;
+      margin: 0;
+      padding: 26px 32px 28px 76px;
       color: $header-nav-link-color;
       font-size: 17px;
       font-weight: bold;
       line-height: 24px;
       white-space: nowrap;
-      align-self: start;
       text-decoration: none;
       border-top: 1px solid $header-nav-link-border;
 
       &--catalog {
         @include for-size(tablet) {
           position: absolute;
-          left: 0;
-          top: 110px;
-          border: none;
+          top: 109px;
+          left: 50px;
           padding: 0;
+          font-size: 15px;
+          border: none;
         }
-
         @include for-size(desktop) {
           position: static;
-          padding: 32px 35px 32px 4px;
+          padding: 32px 35px 32px 0;
           font-size: 17px;
           line-height: 24px;
           border-top: none;
@@ -141,15 +144,15 @@ $header-nav-toggle-box-shadow: #231f20;
       &--form {
         @include for-size(tablet) {
           position: absolute;
-          left: 170px;
-          top: 110px;
-          border: none;
+          top: 109px;
+          left: 218px;
           padding: 0;
+          font-size: 15px;
+          border: none;
         }
-
         @include for-size(desktop) {
           position: static;
-          margin-right: 291px;
+          margin-right: auto;
           padding: 32px 35px;
           border-top: none;
           border-bottom: none;
@@ -161,13 +164,20 @@ $header-nav-toggle-box-shadow: #231f20;
 
         &-icon {
           position: absolute;
-          top: 30px;
-          left: 0;
-          width: 32px;
-          height: 32px;
+          top: 25px;
+          left: 32px;
+          width: 18px;
+          height: 30px;
+
+          @include for-size(tablet) {
+            position: static;
+          }
         }
+
         @include for-size(tablet) {
+          padding: 30px 32px 22px 32px;
           font-size: 0;
+          line-height: 0;
           border-top: none;
           border-left: 1px solid $header-nav-link-border;
           border-bottom: none;
@@ -180,21 +190,23 @@ $header-nav-toggle-box-shadow: #231f20;
 
         &-icon {
           position: absolute;
-          top: 30px;
-          left: 0;
-          width: 30px;
+          top: 24px;
+          left: 30px;
+          width: 22px;
           height: 30px;
+          @include for-size(tablet) {
+            top: 30px;
+          }
         }
-
         @include for-size(tablet) {
+          margin-right: 50px;
+          padding: 32px 0 32px 85px;
           border-top: none;
           border-left: 1px solid $header-nav-link-border;
           border-bottom: none;
-          padding-right: 0;
         }
-
         @include for-size(desktop) {
-          padding-right: 0;
+          margin-right: 0;
         }
       }
 
@@ -202,16 +214,14 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(phone-only) {
           display: none;
         }
-
         @include for-size(tablet) {
           display: none;
         }
-
         @include for-size(desktop) {
           display: block;
           position: absolute;
           padding: 0;
-          left: 6px;
+          left: 0;
           top: 108px;
           border: none;
           font-size: 15px;
@@ -223,7 +233,6 @@ $header-nav-toggle-box-shadow: #231f20;
         @include for-size(phone-only) {
           display: none;
         }
-
         @include for-size(tablet) {
           display: none;
         }
@@ -232,16 +241,12 @@ $header-nav-toggle-box-shadow: #231f20;
           position: absolute;
           padding: 0;
           top: 108px;
-          left: 225px;
+          left: 220px;
           border: none;
           font-size: 15px;
           line-height: 24px;
         }
       }
-    }
-
-    @include for-size(tablet) {
-      font-size: 15px;
     }
   }
 
@@ -254,14 +259,16 @@ $header-nav-toggle-box-shadow: #231f20;
     @include for-size(phone-only) {
       display: none;
     }
-
     @include for-size(tablet) {
       position: absolute;
-      right: -20px;
+      right: 50px;
       top: 94px;
       text-align: right;
       border: none;
       padding: 0;
+    }
+    @include for-size(desktop) {
+      right: 0;
     }
   }
 }
