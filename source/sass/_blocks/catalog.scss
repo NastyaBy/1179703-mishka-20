@@ -1,7 +1,7 @@
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
-$catalog-item-description-border: #ececec;
+$catalog-item-price-border: #ececec;
 
 .catalog {
   margin: 0 auto;
@@ -23,15 +23,16 @@ $catalog-item-description-border: #ececec;
     padding: 0;
 
     @include for-size(tablet) {
-      margin-top: 38px;
+      margin-top: 42px;
     }
 
     @include for-size(desktop) {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
       margin-top: 110px;
-      gap: 51px;
+      gap: 49px;
     }
   }
 
@@ -45,13 +46,15 @@ $catalog-item-description-border: #ececec;
     @include for-size(tablet) {
       display: grid;
       grid-template-columns: 335px 250px 70px;
-      grid-template-rows: 60px 200px 70px;
+      grid-template-rows: 60px 204px 70px;
       align-self: auto;
-      margin: 30px 0;
+      margin: 27px 0;
     }
 
     @include for-size(desktop) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      position: relative;
       margin: 0;
       padding: 0;
     }
@@ -68,7 +71,7 @@ $catalog-item-description-border: #ececec;
     }
 
     &-title {
-      margin: 22px 16px 6px 28px;
+      margin: 28px 28px 7px 28px;
       padding: 0;
       color: $catalog-item-title;
       font-size: 17px;
@@ -78,42 +81,53 @@ $catalog-item-description-border: #ececec;
       @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 1;
-        margin: 26px 16px 6px 32px;
+        margin: 27px 16px 0 32px;
         font-size: 20px;
         line-height: 24px;
+      }
+      @include for-size(desktop) {
+        margin: 20px 28px 0 28px;
       }
     }
 
     &-description {
       margin: 0 28px;
+      padding-top: 7px;
       padding-bottom: 16px;
       color: $catalog-item-description;
       font-size: 13px;
       font-weight: normal;
       line-height: 30px;
-      border-bottom: 1px solid $catalog-item-description-border;
 
       @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 2;
-        margin: 0 32px;
+        margin: 7px 32px;
         font-size: 15px;
+      }
+
+      @include for-size(desktop) {
+        margin: 0 30px auto;
+        padding-bottom: 10px;
       }
     }
 
     &-price {
-      margin: 0;
-      padding: 0 86px 0 27px;
+      margin: 0 30px;
+      padding: 23px 0 27px 0;
       font-size: 15px;
       font-weight: bold;
       line-height: 24px;
+      border-top: 1px solid $catalog-item-price-border;
 
       @include for-size(tablet) {
-        grid-column: 2;
+        grid-column: 2 / 4;
         grid-row: 3;
-        padding-top: 25px;
-        padding-right: 22px;
+        padding: 20px 0;
         font-size: 17px;
+      }
+      @include for-size(desktop) {
+        padding: 25px 0;
       }
     }
 
@@ -125,6 +139,11 @@ $catalog-item-description-border: #ececec;
       @include for-size(tablet) {
         grid-column: 3;
         grid-row: 3;
+      }
+      @include for-size(desktop) {
+        position: absolute;
+        right: 9px;
+        bottom: 0;
       }
     }
   }
