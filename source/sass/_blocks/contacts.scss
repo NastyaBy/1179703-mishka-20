@@ -16,14 +16,14 @@ $contacts-info-title: #444444;
 
   @include for-size(desktop) {
     display: grid;
-    grid-template-columns: 300px 527px;
+    grid-template-columns: auto 530px;
     grid-template-rows: min-content auto min-content;
     justify-content: center;
+    max-width: #{$general-width + 100px};
     margin: 0 auto;
-    padding-left: 174px;
-    padding-bottom: 105px;
-    width: $general-width;
-    background: url("data:image/svg+xml,%3Csvg width='47' height='82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.766 4.767v38.567L47 24 7.766 4.767zM0 81.9V.9h3.833v81H0z' fill='%2363D1BB'/%3E%3Cpath d='M3.833 1H0v81h3.833V1z' fill='%23231F20'/%3E%3C/svg%3E") 10% 10% no-repeat;
+    padding: 58px 0 105px 225px;
+    background: url("data:image/svg+xml,%3Csvg width='47' height='82' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.766 4.767v38.567L47 24 7.766 4.767zM0 81.9V.9h3.833v81H0z' fill='%2363D1BB'/%3E%3Cpath d='M3.833 1H0v81h3.833V1z' fill='%23231F20'/%3E%3C/svg%3E") 113px 120px no-repeat;
+    box-sizing: border-box;
   }
 
 
@@ -43,6 +43,8 @@ $contacts-info-title: #444444;
     @include for-size(desktop) {
       grid-column: 1;
       grid-row: 1 / 2;
+      padding: 83px 0 38px;
+      font-size: 53px;
     }
   }
 
@@ -61,6 +63,7 @@ $contacts-info-title: #444444;
     @include for-size(desktop) {
       grid-column: 1;
       grid-row: 2 / 3;
+      margin: -42px 0 0 0;
     }
 
     &-row {
@@ -102,16 +105,17 @@ $contacts-info-title: #444444;
     @include for-size(tablet) {
       margin: 0 -50px;
       padding: 0;
-      width: 768px;
+      width: calc(100% + 100px);
       height: 457px;
     }
 
     @include for-size(desktop) {
       grid-column: 2;
       grid-row: 1/ -1;
-      margin: 0;
+      align-self: start;
       width: 527px;
       height: 457px;
+      margin: 0 0 0 -46px;
     }
   }
 
@@ -127,6 +131,8 @@ $contacts-info-title: #444444;
     @include for-size(desktop) {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
+      align-self: end;
+      margin: 0;
     }
   }
 }
