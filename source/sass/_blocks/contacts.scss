@@ -1,6 +1,7 @@
 $contacts-title: #000000;
 $contacts-info: #444444;
 $contacts-info-title: #444444;
+$decorative-line: #62d1ba;
 
 .contacts {
   display: flex;
@@ -139,6 +140,25 @@ $contacts-info-title: #444444;
       grid-row: 3 / 4;
       align-self: end;
       margin: 0;
+    }
+  }
+}
+
+
+.decorative-line {
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -4px;
+    background: $decorative-line;
+
+    @include for-size(tablet) {
+      margin-top: -1px;
+    }
+
+    @include for-size(desktop) {
+      margin-top: 4px;
     }
   }
 }
