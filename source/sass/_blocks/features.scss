@@ -15,19 +15,20 @@ $features-item: #000000;
   @include for-size (desktop) {
     max-width: #{$general-width + 100px};
     margin: 0 auto;
-    padding: 50px 20px 60px 225px;
+    padding: 62px 20px 60px 225px;
     box-sizing: border-box;
   }
 
   &__title {
     margin: 0;
-    padding-top: 2px;
+    padding-top: 3px;
     color: $features-title;
     font-size: 25px;
     font-weight: bold;
     line-height: 30px;
 
     @include for-size (tablet) {
+      padding-top: 2px;
       padding-bottom: 15px;
       font-size: 43px;
       line-height: 50px;

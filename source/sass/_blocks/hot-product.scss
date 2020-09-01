@@ -28,7 +28,7 @@ $hot-product-item-price: #444444;
     grid-template-rows: min-content min-content min-content min-content min-content;
     max-width: $general-width;
     padding-top: 66px;
-    padding-bottom: 110px;
+    padding-bottom: 98px;
   }
 
   &::after {
@@ -186,7 +186,7 @@ $hot-product-item-price: #444444;
 
   &__item-price {
     margin: 0;
-    padding-bottom: 24px;
+    padding-bottom: 23px;
     color: $hot-product-item-price;
     font-size: 17px;
     font-weight: bold;

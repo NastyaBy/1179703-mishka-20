@@ -22,7 +22,7 @@ $header-nav-toggle-box-shadow: #231f20;
 
   &__logo {
     position: relative;
-    padding: 20px 0 10px 0;
+    padding: 22px 0 8px 0;
     font-size: 0;
     line-height: 0;
 
@@ -112,7 +112,7 @@ $header-nav-toggle-box-shadow: #231f20;
     &-link {
       position: relative;
       margin: 0;
-      padding: 26px 32px 28px 76px;
+      padding: 28px 32px 26px 76px;
       color: $header-nav-link-color;
       font-size: 17px;
       font-weight: bold;
@@ -120,6 +120,10 @@ $header-nav-toggle-box-shadow: #231f20;
       white-space: nowrap;
       text-decoration: none;
       border-top: 1px solid $header-nav-link-border;
+
+      @include for-size(tablet) {
+        padding: 26px 32px 28px 76px;
+      }
 
       &--catalog {
         @include for-size(tablet) {
