@@ -11,6 +11,22 @@ $comment-item-button-border: #ececec;
   padding: 0 30px;
   position: relative;
 
+  @include for-size(tablet) {
+    display: grid;
+    grid-template-columns: auto 175px;
+    grid-template-rows: auto min-content min-content;
+    justify-content: center;
+    padding: 0 50px 152px 50px;
+    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+  }
+
+  @include for-size(desktop) {
+    max-width: #{$general-width + 100px};
+    background-position: 50px 0;
+    padding: 0 50px 200px 225px;
+    box-sizing: border-box;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -31,24 +47,6 @@ $comment-item-button-border: #ececec;
     }
   }
 
-  @include for-size(tablet) {
-    display: grid;
-    grid-template-columns: 500px 185px;
-    grid-template-rows: auto min-content min-content;
-    padding-bottom: 132px;
-    justify-content: center;
-    background: url("../img/review@1x.jpg") 0 0 no-repeat;
-  }
-
-  @include for-size(desktop) {
-    grid-template-columns: auto 175px;
-    max-width: #{$general-width + 100px};
-    background-position: 50px 0;
-    padding: 0 50px 200px 225px;
-    box-sizing: border-box;
-  }
-
-
   &__title {
     margin: 0;
     padding: 58px 0 12px 0;
@@ -60,7 +58,7 @@ $comment-item-button-border: #ececec;
     @include for-size(tablet) {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      padding: 85px 284px 39px 0;
+      padding: 83px 284px 39px 0;
       font-size: 43px;
       line-height: 50px;
     }
@@ -137,12 +135,14 @@ $comment-item-button-border: #ececec;
     @include for-size(tablet) {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-    }
-    @include for-size(desktop) {
-      align-self: end;
-      margin: 0 0 6px;
+      margin: 0 0 4px;
       padding: 0;
+      align-self: end;
       text-align: center;
+    }
+
+    @include for-size(desktop) {
+      margin: 0 0 6px;
     }
   }
 
