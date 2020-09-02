@@ -64,9 +64,9 @@
           </div>
         </div>
       </div>
-      <div class="form__fieldset">
+      <div class="form__fieldset form__fieldset--mb form__fieldset--bg">
         <strong class="form__title">Цвет</strong>
-        <div class="form__data">
+        <div class="form__data form__data--inline">
           <div class="form-checkbox">
             <input class="form-checkbox__control" type="checkbox" name="color" id="white" value="White" checked="checked"/>
             <label class="form-checkbox__text" for="white">Белый</label>
@@ -95,7 +95,7 @@
       </div>
       <div class="form__fieldset">
         <strong class="form__title">Фио</strong>
-        <div class="form__data">
+        <div class="form__data form__data--rows">
           <label class="form__item-text" for="name">
             Имя:
             <input class="form__item-input" type="text" id="name" placeholder="Введите ваше имя*"/>
@@ -110,15 +110,17 @@
           </label>
         </div>
       </div>
-      <div class="form__fieldset">
-        <label class="form__title">
-          Тел
-          <input class="form__item-input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
-        </label>
-        <label class="form__title">
-          E-mail
-          <input class="form__item-input" type="email" placeholder="Ваш Email*"/>
-        </label>
+      <div class="form__fieldset form__fieldset--bg">
+        <div class="form__data form__data--rows">
+          <label class="form__item-text">
+            <strong class="form__title form__title--label">Тел</strong>
+            <input class="form__item-input form__item-input--icon-phone" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
+          </label>
+          <label class="form__item-text">
+            <strong class="form__title form__title--label">E-mail</strong>
+            <input class="form__item-input form__item-input--icon-email" type="email" placeholder="Ваш Email*"/>
+          </label>
+        </div>
       </div>
       <div class="form__fieldset">
         <label class="form__title">

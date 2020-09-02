@@ -67,6 +67,11 @@ $catalog-item-price-border: #ececec;
       @include for-size(tablet) {
         grid-column: 1;
         grid-row: 1 / -1;
+        height: 334px;
+      }
+
+      @include for-size(desktop) {
+        height: 462px;
       }
     }
 
