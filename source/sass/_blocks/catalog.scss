@@ -23,7 +23,7 @@ $catalog-item-price-border: #ececec;
     padding: 0;
 
     @include for-size(tablet) {
-      margin-top: 42px;
+      margin-top: 46px;
     }
 
     @include for-size(desktop) {
@@ -31,7 +31,7 @@ $catalog-item-price-border: #ececec;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 110px;
+      margin-top: 111px;
       gap: 49px;
     }
   }
@@ -81,7 +81,7 @@ $catalog-item-price-border: #ececec;
       @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 1;
-        margin: 27px 16px 0 32px;
+        margin: 26px 16px 0 32px;
         font-size: 20px;
         line-height: 24px;
       }
