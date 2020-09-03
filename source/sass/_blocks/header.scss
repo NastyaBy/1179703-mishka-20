@@ -1,7 +1,10 @@
 $header-nav-link-color: #000000;
+$header-nav-link-color--hover: rgba(0, 0, 0, 0.6);
+$header-nav-link-color--active: rgba(0, 0, 0, 0.3);
 $header-nav-link-border: #ececec;
 $header-nav-toggle-background-color: #ffffff;
 $header-nav-toggle-box-shadow: #231f20;
+$icon-color-hover: #63d1bb;
 
 .header {
   position: relative;
@@ -25,6 +28,14 @@ $header-nav-toggle-box-shadow: #231f20;
     padding: 22px 0 8px 0;
     font-size: 0;
     line-height: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
 
     @include for-size(tablet) {
       margin-right: auto;
@@ -125,6 +136,16 @@ $header-nav-toggle-box-shadow: #231f20;
         padding: 26px 32px 28px 76px;
       }
 
+      &:hover {
+        $link-hover: & !global;
+        color: $header-nav-link-color--hover;
+      }
+
+      &:active {
+        $link-active: & !global;
+        color: $header-nav-link-color--active;
+      }
+
       &--catalog {
         @include for-size(tablet) {
           position: absolute;
@@ -167,18 +188,6 @@ $header-nav-toggle-box-shadow: #231f20;
       &--search {
         position: relative;
 
-        &-icon {
-          position: absolute;
-          top: 25px;
-          left: 32px;
-          width: 18px;
-          height: 30px;
-
-          @include for-size(tablet) {
-            position: static;
-          }
-        }
-
         @include for-size(tablet) {
           padding: 30px 32px 22px 32px;
           font-size: 0;
@@ -193,16 +202,6 @@ $header-nav-toggle-box-shadow: #231f20;
         border-bottom: 1px solid $header-nav-link-border;
         position: relative;
 
-        &-icon {
-          position: absolute;
-          top: 24px;
-          left: 30px;
-          width: 22px;
-          height: 30px;
-          @include for-size(tablet) {
-            top: 30px;
-          }
-        }
         @include for-size(tablet) {
           margin-right: 50px;
           padding: 32px 0 32px 85px;
@@ -250,6 +249,43 @@ $header-nav-toggle-box-shadow: #231f20;
           border: none;
           font-size: 15px;
           line-height: 24px;
+        }
+      }
+    }
+
+    &-icon {
+      opacity: 0.2;
+
+      #{$link-hover} & {
+        color: $icon-color-hover;
+        opacity: 1;
+      }
+
+      #{$link-active} & {
+        opacity: 0.3;
+      }
+
+      &--search {
+        position: absolute;
+        top: 25px;
+        left: 32px;
+        width: 18px;
+        height: 30px;
+
+        @include for-size(tablet) {
+          position: static;
+        }
+      }
+
+      &--basket {
+        position: absolute;
+        top: 24px;
+        left: 30px;
+        width: 22px;
+        height: 30px;
+
+        @include for-size(tablet) {
+          top: 30px;
         }
       }
     }

@@ -2,6 +2,7 @@ $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
 $catalog-item-price-border: #ececec;
+$catalog-item-button-hover: #63d1bb;
 
 .catalog {
   margin: 0 auto;
@@ -93,6 +94,14 @@ $catalog-item-price-border: #ececec;
       @include for-size(desktop) {
         margin: 20px 28px 0 28px;
       }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     &-description {
@@ -140,6 +149,7 @@ $catalog-item-price-border: #ececec;
       font-size: 0;
       border: none;
       padding: 22px;
+      opacity: 0.2;
 
       @include for-size(tablet) {
         grid-column: 3;
@@ -149,6 +159,16 @@ $catalog-item-price-border: #ececec;
         position: absolute;
         right: 9px;
         bottom: 0;
+      }
+
+      &:hover {
+        background: none;
+        color: $catalog-item-button-hover;
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.3;
       }
     }
   }

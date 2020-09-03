@@ -112,6 +112,7 @@ $comment-item-button-border: #ececec;
     }
 
     &-email {
+      display: block;
       margin: 0;
       color: $comment-item-email;
       font-size: 17px;
@@ -120,7 +121,6 @@ $comment-item-button-border: #ececec;
       text-decoration: none;
 
       @include for-size(tablet) {
-        display: block;
         font-size: 18px;
       }
 
@@ -155,12 +155,24 @@ $comment-item-button-border: #ececec;
     font-size: 0;
     border: 1px solid $comment-item-button-border;
 
+
     @include for-size(tablet) {
       border: none;
       padding: 0;
+      outline: none;
+      cursor: pointer;
 
       & + & {
         margin-left: 37px;
+      }
+
+      &:hover {
+        background: none;
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
       }
     }
   }
@@ -168,6 +180,8 @@ $comment-item-button-border: #ececec;
   &__button {
     text-align: center;
     margin-bottom: 80px;
+    width: 224px;
+    align-self: center;
 
     @include for-size(tablet) {
       grid-column: 2 / 3;

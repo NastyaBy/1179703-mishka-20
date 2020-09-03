@@ -1,6 +1,8 @@
 $button-color: #444444;
+$button-color-hover: #ffffff;
 $button-border :#444444;
 $button-background: #ffffff;
+$button-background-hover: linear-gradient(0deg, #444444, #444444);
 
 .button {
   margin: 0;
@@ -13,4 +15,14 @@ $button-background: #ffffff;
   background: $button-background;
   text-transform: uppercase;
   text-decoration: none;
+  outline: none;
+
+  &:hover {
+    color: $button-color-hover;
+    background: $button-background-hover;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

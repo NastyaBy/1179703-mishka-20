@@ -1,7 +1,7 @@
 $contacts-title: #000000;
 $contacts-info: #444444;
 $contacts-info-title: #444444;
-$decorative-line: #62d1ba;
+
 
 .contacts {
   display: flex;
@@ -101,11 +101,11 @@ $decorative-line: #62d1ba;
     }
   }
 
-  &__item-picture {
+  &__item-map {
     margin: 0 -30px;
     align-self: center;
     position: relative;
-    width: 322px;
+    width: calc(100% + 60px);
     height: 457px;
 
     @include for-size(tablet) {
@@ -127,7 +127,10 @@ $decorative-line: #62d1ba;
 
   &__button {
     margin: 40px 0;
+    width: 224px;
     text-align: center;
+    align-self: center;
+
 
     @include for-size(tablet) {
       width: 194px;
@@ -144,21 +147,3 @@ $decorative-line: #62d1ba;
   }
 }
 
-
-.decorative-line {
-  &::after {
-    content: "";
-    display: block;
-    height: 1px;
-    margin-top: -4px;
-    background: $decorative-line;
-
-    @include for-size(tablet) {
-      margin-top: -1px;
-    }
-
-    @include for-size(desktop) {
-      margin-top: 4px;
-    }
-  }
-}
