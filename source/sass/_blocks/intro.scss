@@ -21,7 +21,7 @@ $intro-item-bg2: #56c3b2;
 
   &__title {
     margin: 0;
-    padding: 71px 20px;
+    padding: 72px 20px 75px;
     color: $intro-title-color;
     font-size: 27px;
     font-weight: bold;
@@ -33,8 +33,7 @@ $intro-item-bg2: #56c3b2;
 
     @include for-size(tablet) {
       position: relative;
-      padding-top: 100px;
-      padding-bottom: 82px;
+      padding: 100px 20px 82px;
       width: 100%;
       font-size: 43px;
       line-height: 50px;
