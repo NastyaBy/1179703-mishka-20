@@ -1,102 +1,182 @@
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
-$catalog-item-description-border: #ececec;
+$catalog-item-price-border: #ececec;
+$catalog-item-button-hover: #63d1bb;
 
 .catalog {
-  display: flex;
-  flex-direction: column;
-  margin: 0 30px;
+  margin: 0 auto;
   padding: 0;
 
-  @include for-size (tablet) {
-    margin: 0 50px;
+  @include for-size(tablet) {
+    padding: 0 50px;
   }
 
-  @include for-size (desktop) {
+  @include for-size(desktop) {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    @include for-size(tablet) {
+      margin-top: 46px;
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 111px;
+      gap: 49px;
+    }
   }
 
   &__item {
-    margin: 30px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 29px 0 0;
     padding: 0;
     align-self: center;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
 
-    @include for-size (tablet) {
+    @include for-size(tablet) {
       display: grid;
-      align-self: auto;
-      grid-template-columns: 50% auto min-content;
-      grid-template-rows: auto min-content min-content;
+      grid-template-columns: 347px 250px 70px;
+      grid-template-rows: auto 204px 70px;
+      margin: 27px 0 24px;
     }
 
-    @include for-size (desktop) {
-      display: block;
-      margin-right: 52px;
+    @include for-size(desktop) {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
     }
 
 
     &-preview {
       margin: 0;
       padding: 0;
+      height: 195px;
 
-      @include for-size (tablet) {
+      @include for-size(tablet) {
         grid-column: 1;
         grid-row: 1 / -1;
+        height: 334px;
+      }
+
+      @include for-size(desktop) {
+        height: 462px;
       }
     }
 
     &-title {
-      margin: 28px 28px 8px 28px;
+      margin: 27px 28px 7px 28px;
       padding: 0;
       color: $catalog-item-title;
       font-size: 17px;
       font-weight: bold;
       line-height: 24px;
 
-      @include for-size (tablet) {
+      @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 1;
+        margin: 26px 28px 0 20px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+      @include for-size(desktop) {
+        margin: 20px 28px 0 28px;
+      }
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
       }
     }
 
     &-description {
       margin: 0 28px;
-      padding-bottom: 18px;
+      padding-bottom: 16px;
       color: $catalog-item-description;
       font-size: 13px;
       font-weight: normal;
       line-height: 30px;
-      border-bottom: 1px solid $catalog-item-description-border;
 
-      @include for-size (tablet) {
+      @include for-size(tablet) {
         grid-column: 2 / 4;
         grid-row: 2;
+        margin: 0 20px;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      @include for-size(desktop) {
+        margin: 0 30px auto;
+        padding-bottom: 10px;
       }
     }
 
     &-price {
-      margin: 0;
-      padding: 0 28px;
+      margin: 0 27px;
+      padding: 23px 0 27px 0;
       font-size: 15px;
       font-weight: bold;
       line-height: 24px;
+      border-top: 1px solid $catalog-item-price-border;
 
-      @include for-size (tablet) {
-        grid-column: 2;
+      @include for-size(tablet) {
+        grid-column: 2 / 4;
         grid-row: 3;
+        margin: 0 20px;
+        padding: 20px 0;
+        font-size: 17px;
+      }
+      @include for-size(desktop) {
+        padding: 25px 0;
       }
     }
 
     &-button {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
       font-size: 0;
       border: none;
+      padding: 21px;
+      opacity: 0.2;
 
-      @include for-size (tablet) {
-        grid-column: 3;
-        grid-row: 3;
+      @include for-size(tablet) {
+        position: static;
+        grid-column: 3 / 4;
+        grid-row: 3/ 4;
+      }
+      @include for-size(desktop) {
+        position: absolute;
+        right: 9px;
+        bottom: 0;
+      }
+
+      &:hover {
+        background: none;
+        color: $catalog-item-button-hover;
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.3;
       }
     }
   }

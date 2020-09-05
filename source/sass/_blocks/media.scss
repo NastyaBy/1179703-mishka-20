@@ -1,6 +1,7 @@
 $tablet-width: 768px;
 $desktop-width: 1150px;
 $mobile-width-only: 767px;
+$general-width: 1050px;
 
 
 /*
@@ -24,5 +25,11 @@ $mobile-width-only: 767px;
     @media (min-width: $desktop-width) {
       @content;
     }
+  }
+}
+
+@mixin retina-size {
+  @media (min-resolution: 2dppx) {
+    @content;
   }
 }

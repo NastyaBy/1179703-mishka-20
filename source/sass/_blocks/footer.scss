@@ -3,18 +3,26 @@ $footer-copyright: #000000;
 $footer-social-border: #e5e5e5;
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 0;
   padding: 0;
   background: $footer-background;
 
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 50px 50px 58px 50px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+
+    @include for-size(tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+      max-width: $general-width;
+      margin: 0 auto;
+      padding: 52px 50px 58px 50px;
+    }
   }
+
 
   &__logo {
     padding: 0;
@@ -27,32 +35,58 @@ $footer-social-border: #e5e5e5;
   }
 
   &__social {
-    margin: 0;
-    padding: 28px 0 0 0;
+    position: relative;
     display: flex;
+    margin: 0;
+    padding: 25px 0 0 0;
 
+    @include for-size(phone-only) {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 30px;
+        right: 30px;
+        top: 100%;
+        margin-top: 13px;
+        border-bottom: 1px solid $footer-social-border;
+      }
+    }
 
     @include for-size(tablet) {
-      border-bottom: none;
+      align-items: baseline;
+      margin: 0 auto;
+      padding: 0;
     }
 
     &-item {
-      font-size: 0;
       margin: 0 20px 0 20px;
+      font-size: 0;
     }
   }
 
   &__copyright {
+    display: flex;
+    align-items: center;
     margin: 0;
-    padding: 20px 0 25px 0;
+    padding: 35px 0 25px 0;
     color: $footer-copyright;
     font-size: 19px;
     font-weight: bold;
     line-height: 18px;
     text-align: center;
+
+    @include for-size(tablet) {
+      padding: 0;
+    }
   }
 
   &__academy {
+    margin-left: 28px;
     font-size: 0;
+    line-height: 0;
   }
 }

@@ -1,5 +1,6 @@
 @import "_blocks/media.scss";
 @import "_blocks/button.scss";
+@import "_blocks/link.scss";
 @import "_blocks/header.scss";
 @import "_blocks/footer.scss";
 @import "_blocks/catalog.scss";
@@ -23,7 +24,6 @@ $body-background-color: #ffffff;
   align-content: start;
   min-height: 100%;
   min-width: 320px;
-  max-width: 1150px;
   grid-template-rows: min-content 1fr min-content;
   margin: 0 auto;
   padding: 0;
@@ -50,6 +50,9 @@ $body-background-color: #ffffff;
 .img {
   max-width: 100%;
   height: auto;
+  @include for-size (phone-only) {
+    max-width: 50%;
+  }
 }
 
 .br-phone-only {

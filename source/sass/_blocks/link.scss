@@ -1,0 +1,40 @@
+$decorative-line: #62d1ba;
+$link-text-active: #46c1ae;
+$decorative-line-active: #46c1ae;
+
+
+.link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -4px;
+    background: $decorative-line;
+
+    @include for-size(tablet) {
+      margin-top: -1px;
+    }
+
+    @include for-size(desktop) {
+      margin-top: 4px;
+    }
+  }
+
+  &:hover {
+    color: $link-text-active;
+
+    &::after {
+      background: $decorative-line-active;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
