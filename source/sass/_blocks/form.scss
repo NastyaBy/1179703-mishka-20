@@ -3,10 +3,17 @@ $form-radio-color: #000000;
 $form-checkbox-color: #000000;
 $form-item-title-color: #63d1bb;
 $form-item-text-color: #000000;
-$form-item-input: #000000;
+$form-item-input: #444444;
 $form-item-input-border: #000000;
+$form-item-input-border-hover: #62d1ba;
+$form-item-input-border-focus: #62d1ba;
 $form-item-input-apps: #000000;
 $fieldset-bg: #f1f1f1;
+$border-radio: #444444;
+$border-radio-hover: #62d1ba;
+$border-radio-active: rgba(0, 0, 0, 0.3);
+$border-checkbox-hover: #62d1ba;
+$border-checkbox-active: rgba(0, 0, 0, 0.3);
 
 .form {
   position: relative;
@@ -136,6 +143,7 @@ $fieldset-bg: #f1f1f1;
     &--label {
       flex-wrap: nowrap;
       white-space: nowrap;
+
       @include for-size(tablet) {
         width: 120px;
         margin: 0 0 0 50px;
@@ -240,6 +248,7 @@ $fieldset-bg: #f1f1f1;
     &--icon-phone {
       &::before {
         background: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z' fill='black'/%3E%3Cpath d='M12.6008 1.48147C18.5484 1.48147 23.4879 6.22217 23.4879 12.1481H25C25 5.43205 19.4557 0 12.6008 0V1.48147Z' fill='black'/%3E%3Cpath d='M12.6008 9.18506V10.7653C13.4073 10.7653 14.0121 11.3579 14.0121 12.148H15.625C15.625 10.5678 14.3145 9.18506 12.6008 9.18506Z' fill='black'/%3E%3Cpath d='M12.6008 6.12356C15.9274 6.12356 18.75 8.79021 18.75 12.1482H20.3629C20.3629 8.00009 16.9355 4.64209 12.7016 4.64209V6.12356H12.6008Z' fill='black'/%3E%3C/g%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+
         @include for-size(tablet) {
           right: 20px;
         }
@@ -305,6 +314,15 @@ $fieldset-bg: #f1f1f1;
     border: 0 none;
     background: transparent;
     border-bottom: 2px solid $form-item-input-border;
+    outline: none;
+
+    &:hover {
+      border-color: $form-item-input-border-hover;
+    }
+
+    &:focus {
+      border-color: $form-item-input-border-focus;
+    }
 
     @include for-size(tablet) {
       margin-left: 25px;
@@ -394,6 +412,18 @@ $fieldset-bg: #f1f1f1;
     user-select: none;
     cursor: pointer;
 
+    &:hover {
+      &::before {
+        border-color: $border-radio-hover;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: $border-radio-active;
+      }
+    }
+
     @include for-size(tablet) {
       font-size: 19px;
     }
@@ -405,22 +435,22 @@ $fieldset-bg: #f1f1f1;
       flex-shrink: 0;
       flex-grow: 0;
       margin-right: 20px;
-      background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.888 2.874c13.231 0 23.926 10.526 23.926 23.472 0 12.946-10.695 23.472-23.926 23.472-13.23 0-23.925-10.526-23.925-23.472 0-12.946 10.694-23.472 23.925-23.472z' stroke='%23444' stroke-width='2'/%3E%3C/svg%3E") 0 50% no-repeat;
-      background-size: 42px 42px;
+      border: 2px solid $border-radio;
+      border-radius: 50%;
+      box-sizing: border-box;
 
       @include for-size(tablet) {
         width: 52px;
         height: 52px;
         margin-right: 26px;
-        background-size: 52px 52px;
       }
 
       #{$radioIsChecked} + & {
-        background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.888 2.874c13.231 0 23.926 10.526 23.926 23.472 0 12.946-10.695 23.472-23.926 23.472-13.23 0-23.925-10.526-23.925-23.472 0-12.946 10.694-23.472 23.925-23.472z' stroke='%23444' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.24 16.393c5.424 0 9.821 4.397 9.821 9.822 0 5.424-4.397 9.822-9.822 9.822-5.424 0-9.821-4.398-9.821-9.822 0-5.425 4.397-9.822 9.822-9.822z' fill='%2362D1BA'/%3E%3C/svg%3E") 0 50% no-repeat;
-        background-size: 42px 42px;
+        background: url("data:image/svg+xml,%3Csvg width='21' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.24.393c5.424 0 9.821 4.397 9.821 9.822 0 5.424-4.397 9.822-9.822 9.822-5.424 0-9.821-4.398-9.821-9.822C.418 4.79 4.815.393 10.24.393z' fill='%2362D1BA'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: 12px 12px;
 
         @include for-size(tablet) {
-          background-size: 52px 52px;
+          background-size: 21px 21px;
         }
       }
     }
@@ -477,6 +507,19 @@ $fieldset-bg: #f1f1f1;
     user-select: none;
     cursor: pointer;
 
+
+    &:hover {
+      &::before {
+        border-color: $border-checkbox-hover;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: $border-checkbox-active;
+      }
+    }
+
     &::before {
       content: "";
       width: 38px;
@@ -484,7 +527,8 @@ $fieldset-bg: #f1f1f1;
       flex-shrink: 0;
       flex-grow: 0;
       margin-right: 24px;
-      background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23444' stroke-width='2' d='M1 1h50v50H1z'/%3E%3C/svg%3E") 0 50% no-repeat;
+      border: 2px solid $border-radio;
+      box-sizing: border-box;
       background-size: 38px 38px;
 
       @include for-size(tablet) {
@@ -496,11 +540,11 @@ $fieldset-bg: #f1f1f1;
 
 
       #{$checkboxIsChecked} + & {
-        background: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='50' height='50' stroke='%23444444' stroke-width='2'/%3E%3Cpath d='M42.3704 17.3568L41.0098 16L21.5739 35.2863L11.9531 25.6916L10.5926 27.0485L20.2134 36.6432L21.5739 38L23.0316 36.6432L42.3704 17.3568Z' fill='black'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
-        background-size: 38px 38px;
+        background: url("data:image/svg+xml,%3Csvg width='33' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.37 1.357L31.01 0 11.574 19.286l-9.62-9.594-1.361 1.357 9.62 9.594L11.573 22l1.459-1.357L32.37 1.357z' fill='%23000'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: 23px 16px;
 
         @include for-size(tablet) {
-          background-size: 52px 52px;
+          background-size: 31px 22px;
         }
       }
     }
