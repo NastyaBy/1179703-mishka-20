@@ -49,7 +49,7 @@ $footer-logo-academy-color-hover: #46c1ae;
   }
 
   &__logo-icon {
-    color: footer-logo-color;
+    color: $footer-logo-color;
 
     #{$footer-logo-hover} & {
       color: $footer-logo-color-hover;
@@ -148,4 +148,3 @@ $footer-logo-academy-color-hover: #46c1ae;
     opacity: 0.3;
   }
 }
-

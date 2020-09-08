@@ -25,11 +25,12 @@ $fieldset-bg: #f1f1f1;
     line-height: 24px;
 
     @include for-size(phone-only) {
-      margin-bottom: 2px;
+      margin-bottom: 30px;
     }
 
     @include for-size(tablet) {
-      padding: 38px 50px 0 50px;
+      margin: 14px auto;
+      padding: 46px 50px 0 50px;
       font-size: 17px;
       line-height: 30px;
     }
@@ -42,7 +43,7 @@ $fieldset-bg: #f1f1f1;
   }
 
   &__fieldset {
-    padding: 25px 30px 8px 30px;
+    padding: 0 30px 30px 30px;
     border: 0 none;
 
     @include for-size(tablet) {
@@ -58,6 +59,10 @@ $fieldset-bg: #f1f1f1;
     &--bg {
       position: relative;
       background: $fieldset-bg;
+
+      @include for-size(phone-only) {
+        background: none;
+      }
     }
 
     &--contacts {
@@ -141,7 +146,7 @@ $fieldset-bg: #f1f1f1;
 
   &__data {
     flex-grow: 1;
-    padding-top: 20px;
+    padding-top: 16px;
 
     @include for-size(tablet) {
       padding-top: 0;
@@ -170,16 +175,18 @@ $fieldset-bg: #f1f1f1;
     &--footer {
       display: flex;
       flex-direction: column;
+      margin-top: -45px;
 
       @include for-size(tablet) {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin: -50px 0 0;
+        margin: -50px 0 -5px;
         padding: 0 50px;
       }
 
       @include for-size(desktop) {
+        margin: -56px 0 -4px;
         padding: 0 225px;
       }
     }
@@ -190,7 +197,7 @@ $fieldset-bg: #f1f1f1;
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 22px 0;
+    padding: 10px 0 17px;
     color: $form-item-text-color;
     font-size: 17px;
     font-weight: bold;
@@ -318,10 +325,11 @@ $fieldset-bg: #f1f1f1;
   }
 
   &__button {
-    margin: 0;
+    margin: 17px 0 25px;
     width: 100%;
 
     @include for-size(tablet) {
+      margin: 0;
       width: 230px;
     }
   }
@@ -361,8 +369,15 @@ $fieldset-bg: #f1f1f1;
   &__text {
     display: inline-flex;
     align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
     user-select: none;
     cursor: pointer;
+
+    @include for-size(tablet) {
+      font-size: 19px;
+    }
 
     &::before {
       content: "";
@@ -398,7 +413,7 @@ $fieldset-bg: #f1f1f1;
   display: flex;
   align-items: center;
   margin-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   color: $form-checkbox-color;
   font-size: 17px;
   font-weight: bold;
