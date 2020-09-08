@@ -3,6 +3,8 @@ $catalog-item-title: #000000;
 $catalog-item-description: #444444;
 $catalog-item-price-border: #ececec;
 $catalog-item-button-hover: #63d1bb;
+$catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
+
 
 .catalog {
   margin: 0 auto;
@@ -47,6 +49,14 @@ $catalog-item-button-hover: #63d1bb;
     align-self: center;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
+
+    &:hover {
+      box-shadow: 0 6px 10px $catalog-item-box-shadow;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px $catalog-item-box-shadow;
+    }
 
     @include for-size(tablet) {
       display: grid;
