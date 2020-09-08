@@ -37,7 +37,7 @@ $fieldset-bg: #f1f1f1;
 
     @include for-size(desktop) {
       margin-bottom: 13px;
-      padding: 80px 225px 0 225px;
+      padding: 85px 225px 0 225px;
       max-width: 700px;
     }
   }
@@ -50,6 +50,18 @@ $fieldset-bg: #f1f1f1;
       flex-grow: 1;
       margin: 0;
       padding: 50px 0 47px;
+    }
+
+    &--fio {
+      @include for-size(phone-only) {
+        padding-bottom: 0;
+      }
+    }
+
+    &--connection {
+      @include for-size(phone-only) {
+        padding-bottom: 12px;
+      }
     }
 
     &--mb {
@@ -98,7 +110,7 @@ $fieldset-bg: #f1f1f1;
       display: flex;
       align-items: center;
       padding: 0;
-      margin: 0 0 10px;
+      margin: 0 0 15px;
 
       &::after {
         margin-left: 22px;
@@ -122,8 +134,12 @@ $fieldset-bg: #f1f1f1;
     }
 
     &--label {
-      width: 120px;
-      margin: 0 0 0 50px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      @include for-size(tablet) {
+        width: 120px;
+        margin: 0 0 0 50px;
+      }
 
       @include for-size(desktop) {
         width: 68px;
@@ -146,7 +162,7 @@ $fieldset-bg: #f1f1f1;
 
   &__data {
     flex-grow: 1;
-    padding-top: 16px;
+    padding-top: 14px;
 
     @include for-size(tablet) {
       padding-top: 0;
@@ -197,7 +213,7 @@ $fieldset-bg: #f1f1f1;
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 10px 0 17px;
+    padding: 6px 0 20px;
     color: $form-item-text-color;
     font-size: 17px;
     font-weight: bold;
@@ -205,6 +221,7 @@ $fieldset-bg: #f1f1f1;
 
     @include for-size(tablet) {
       flex-direction: row;
+      padding: 10px 0 17px;
     }
 
     &--icon {
@@ -302,7 +319,7 @@ $fieldset-bg: #f1f1f1;
     &--apps {
       display: block;
       width: 100%;
-      margin-top: 3px;
+      margin-top: -6px;
       margin-left: 0;
       padding: 16px;
       border: 2px solid $form-item-input-apps;
@@ -310,6 +327,7 @@ $fieldset-bg: #f1f1f1;
       box-sizing: border-box;
 
       @include for-size(tablet) {
+        margin-top: 3px;
         #{$form-data--rows} & {
           width: calc(100% - 50px);
         }
