@@ -128,7 +128,13 @@ $fieldset-bg: #f1f1f1;
   }
 
   &__text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+
     @include for-size(tablet) {
+      font-size: 17px;
+      line-height: 30px;
       order: 2;
     }
   }
@@ -270,7 +276,7 @@ $fieldset-bg: #f1f1f1;
     color: $form-item-input;
     font-size: 17px;
     font-weight: normal;
-    line-height: 22px;
+    line-height: 18px;
     text-transform: none;
     border: 0 none;
     background: transparent;
