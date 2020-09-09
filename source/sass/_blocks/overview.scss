@@ -5,6 +5,9 @@ $overview-desc: #444444;
 $overview-video-mobile: url("../img/video-mobile@1x.jpg") 0 0 no-repeat;
 $overview-video-tablet: url("../img/video-tablet@1x.jpg") 0 0 no-repeat;
 $overview-video-desktop: url("../img/video-desktop@1x.jpg") 0 0 no-repeat;
+$overview-video-mobile-2x: url("../img/video-mobile@2x.jpg") 0 0 no-repeat;
+$overview-video-tablet-2x: url("../img/video-tablet@2x.jpg") 0 0 no-repeat;
+$overview-video-desktop-2x: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
 
 .overview {
   padding: 0 30px 56px 30px;
@@ -52,6 +55,11 @@ $overview-video-desktop: url("../img/video-desktop@1x.jpg") 0 0 no-repeat;
     height: 150px;
     background: $overview-video-mobile;
 
+    @include retina-size {
+      background: $overview-video-mobile-2x;
+      background-size: cover;
+    }
+
 
     @include for-size(tablet) {
       grid-column: 1;
@@ -59,12 +67,22 @@ $overview-video-desktop: url("../img/video-desktop@1x.jpg") 0 0 no-repeat;
       flex-shrink: 0;
       height: 453px;
       background: $overview-video-tablet;
+
+      @include retina-size {
+        background: $overview-video-tablet-2x;
+        background-size: cover;
+      }
     }
 
     @include for-size(desktop) {
       grid-column: 1;
       grid-row: 1 / -1;
       background: $overview-video-desktop;
+
+      @include retina-size {
+        background: $overview-video-desktop-2x;
+        background-size: cover;
+      }
     }
 
     &-button {
