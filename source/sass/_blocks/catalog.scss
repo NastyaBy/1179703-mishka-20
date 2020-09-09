@@ -33,7 +33,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
     @include for-size(desktop) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 51px;
+      gap: 50px;
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 111px;
@@ -60,7 +60,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
 
     @include for-size(tablet) {
       display: grid;
-      grid-template-columns: 347px 250px 70px;
+      grid-template-columns: 346px 250px 70px;
       grid-template-rows: auto 1fr 70px;
       margin: 27px 0 24px;
     }
@@ -107,7 +107,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
         line-height: 24px;
       }
       @include for-size(desktop) {
-        margin: 20px 28px 0 28px;
+        margin: 26px 26px 0 26px;
       }
 
       &:hover {
@@ -136,7 +136,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       }
 
       @include for-size(desktop) {
-        margin: 0 30px auto;
+        margin: 7px 28px auto;
         padding-bottom: 10px;
       }
     }
@@ -157,6 +157,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
         font-size: 17px;
       }
       @include for-size(desktop) {
+        margin: 0 30px;
         padding: 25px 0;
       }
     }
@@ -177,7 +178,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       }
       @include for-size(desktop) {
         position: absolute;
-        right: 9px;
+        right: 10px;
         bottom: 0;
       }
 
