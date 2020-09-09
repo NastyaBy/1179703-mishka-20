@@ -48,8 +48,9 @@
   <section class="intro">
     <h2 class="intro__title">Вязание на заказ</h2>
   </section>
-    <section class="form">
-    <p class="form__decorative">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся
+  <section class="form">
+    <p class="form__decorative">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+      свяжемся
       с вами, чтобы уточнить детали.</p>
     <form class="form-order" action="https://echo.htmlacademy.ru" method="get">
       <div class="form__fieldset">
@@ -57,7 +58,8 @@
           <strong class="form__title">Тип</strong>
           <div class="form__data">
             <div class="form-radio">
-              <input class="form-radio__control" type="radio" name="type" id="interior-accessory" value="Interior accessory" checked="checked"/>
+              <input class="form-radio__control" type="radio" name="type" id="interior-accessory"
+                     value="Interior accessory" checked="checked"/>
               <label class="form-radio__text" for="interior-accessory">Аксессуар для интерьерa</label>
             </div>
             <div class="form-radio">
@@ -72,11 +74,13 @@
           <strong class="form__title">Цвет</strong>
           <div class="form__data form__data--inline">
             <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="white" value="White" checked="checked"/>
+              <input class="form-checkbox__control" type="checkbox" name="color" id="white" value="White"
+                     checked="checked"/>
               <label class="form-checkbox__text" for="white">Белый</label>
             </div>
             <div class="form-checkbox">
-              <input class="form-checkbox__control" type="checkbox" name="color" id="gray" value="Gray" checked="checked"/>
+              <input class="form-checkbox__control" type="checkbox" name="color" id="gray" value="Gray"
+                     checked="checked"/>
               <label class="form-checkbox__text" for="gray">Серый</label>
             </div>
             <div class="form-checkbox">
@@ -123,12 +127,16 @@
             <label class="form__item-text">
               <strong class="form__title form__title--label">Тел</strong>
               <input class="form__item-input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"/>
-              <svg class="form__item-icon form__item-icon--phone" width="25" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M17.44 24h-1.11c-4.939-.593-8.568-2.864-11.189-5.728C2.521 15.408.403 11.753 0 6.716V5.333c.1-.888.504-1.481 1.109-2.074.605-.69 1.613-1.481 2.52-1.58.706 0 1.815.494 2.218 1.087.403.493.605 1.58.806 2.37.202.889.605 1.975.504 2.765-.201 1.186-1.814 1.68-2.217 2.568 1.612 3.655 4.133 6.42 7.56 8.198.806-.494 1.613-1.877 2.823-1.877.403 0 1.008.198 1.41.297.505.098.908.296 1.311.493.706.297 2.017.593 2.42 1.186.403.592.705 1.58.605 2.172-.303 1.284-2.42 2.667-3.63 3.062zM12.6 1.481c5.948 0 10.888 4.741 10.888 10.667H25C25 5.432 19.456 0 12.6 0v1.481z"/><path d="M12.6 9.185v1.58c.807 0 1.412.593 1.412 1.383h1.613c0-1.58-1.31-2.963-3.024-2.963zM12.6 6.124c3.327 0 6.15 2.666 6.15 6.024h1.613c0-4.148-3.427-7.506-7.661-7.506v1.482H12.6z"/></g></svg>
+              <svg class="form__item-icon form__item-icon--phone" width="25" height="24">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
             </label>
             <label class="form__item-text form__item-text--email">
               <strong class="form__title form__title--label">E-mail</strong>
               <input class="form__item-input" type="email" placeholder="Ваш Email*"/>
-              <svg class="form__item-icon form__item-icon--email" width="32" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28 0H4C1.8 0 0 1.8 0 4v13c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM2 5.3l7 5.3-7 5.3V5.3zM30 17c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l7.8-5.9 4.4 3.3c.5.4 1.2.6 1.8.6.6 0 1.3-.2 1.8-.6l4.4-3.3L30 17zm0-1.2l-7-5.3 7-5.3v10.6zm-12.8-2.2c-.4.3-.8.4-1.2.4-.4 0-.9-.1-1.2-.4l-4.1-3.1-.8-.6L2 4c0-1.1.9-2 2-2h24c1.1 0 2 .9 2 2l-12.8 9.6z" fill="currentColor"/></svg>
+              <svg class="form__item-icon form__item-icon--email" width="32" height="21">
+                <use xlink:href="#icon-email"></use>
+              </svg>
             </label>
           </div>
         </div>
@@ -137,7 +145,9 @@
         <div class="form__inner">
           <strong class="form__title">Доп</strong>
           <div class="form__data form__data--rows">
-            <textarea class="form__item-input form__item-input--apps" cols="50" rows="5" required="" placeholder="Опишите все ваши пожелания к заказу" aria-label="Поле для ввода пожелания к заказу"></textarea>
+            <textarea class="form__item-input form__item-input--apps" cols="50" rows="5" required=""
+                      placeholder="Опишите все ваши пожелания к заказу"
+                      aria-label="Поле для ввода пожелания к заказу"></textarea>
           </div>
         </div>
       </div>
@@ -207,6 +217,25 @@
       d="M20.188 6.857h-3.55L13.188.381C12.985 0 12.58-.095 12.174.095s-.507.572-.304.953l3.145 5.81H5.783l3.145-5.81c.202-.381 0-.762-.305-.953-.406-.19-.811 0-1.014.286l-3.45 6.476H.812c-.406 0-.812.286-.812.762 0 .381.304.762.812.762h.202l.914 2.857c-.203.095-.305.286-.305.572 0 .38.305.666.71.666L4.058 18h12.884l1.725-5.524c.405 0 .71-.286.71-.667 0-.19-.102-.476-.304-.57l.912-2.858h.203c.406 0 .812-.286.812-.762 0-.476-.406-.762-.812-.762zm-4.565 9.62H5.073L3.854 12.38h13.087l-1.319 4.095zm1.623-5.525H3.348l-.812-2.666h15.522l-.812 2.666z"
       fill="currentColor"/>
   </symbol>
+
+  <!--  form-->
+
+  <symbol id="icon-phone" preserveAspectRatio="xMidYMid meet">
+    <g fill="currentColor">
+      <path
+        d="M17.44 24h-1.11c-4.939-.593-8.568-2.864-11.189-5.728C2.521 15.408.403 11.753 0 6.716V5.333c.1-.888.504-1.481 1.109-2.074.605-.69 1.613-1.481 2.52-1.58.706 0 1.815.494 2.218 1.087.403.493.605 1.58.806 2.37.202.889.605 1.975.504 2.765-.201 1.186-1.814 1.68-2.217 2.568 1.612 3.655 4.133 6.42 7.56 8.198.806-.494 1.613-1.877 2.823-1.877.403 0 1.008.198 1.41.297.505.098.908.296 1.311.493.706.297 2.017.593 2.42 1.186.403.592.705 1.58.605 2.172-.303 1.284-2.42 2.667-3.63 3.062zM12.6 1.481c5.948 0 10.888 4.741 10.888 10.667H25C25 5.432 19.456 0 12.6 0v1.481z"/>
+      <path
+        d="M12.6 9.185v1.58c.807 0 1.412.593 1.412 1.383h1.613c0-1.58-1.31-2.963-3.024-2.963zM12.6 6.124c3.327 0 6.15 2.666 6.15 6.024h1.613c0-4.148-3.427-7.506-7.661-7.506v1.482H12.6z"/>
+    </g>
+  </symbol>
+
+  <symbol id="icon-email" preserveAspectRatio="xMidYMid meet">
+    <path
+      d="M28 0H4C1.8 0 0 1.8 0 4v13c0 2.2 1.8 4 4 4h24c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM2 5.3l7 5.3-7 5.3V5.3zM30 17c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2l7.8-5.9 4.4 3.3c.5.4 1.2.6 1.8.6.6 0 1.3-.2 1.8-.6l4.4-3.3L30 17zm0-1.2l-7-5.3 7-5.3v10.6zm-12.8-2.2c-.4.3-.8.4-1.2.4-.4 0-.9-.1-1.2-.4l-4.1-3.1-.8-.6L2 4c0-1.1.9-2 2-2h24c1.1 0 2 .9 2 2l-12.8 9.6z"
+      fill="currentColor"/>
+
+  </symbol>
+
 
   <!--  footer-->
 
