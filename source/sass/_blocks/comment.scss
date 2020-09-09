@@ -1,3 +1,5 @@
+$comment-background: url("../img/review@1x.jpg") 0 0 no-repeat;
+$comment-background-2x: url("../img/review@2x.jpg") 0 0 no-repeat;
 $comment-title: #000000;
 $comment-item-text: #444444;
 $comment-item-name: #000000;
@@ -18,7 +20,13 @@ $comment-item-button-border: #ececec;
     grid-template-rows: auto min-content min-content;
     justify-content: center;
     padding: 0 50px 152px 50px;
-    background: url("../img/review@1x.jpg") 0 0 no-repeat;
+    background: $comment-background;
+    background-size: 350px;
+
+    @include retina-size {
+      background: $comment-background-2x;
+      background-size: 350px;
+    }
   }
 
   @include for-size(desktop) {
