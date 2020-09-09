@@ -10,11 +10,11 @@ $overview-video-tablet-2x: url("../img/video-tablet@2x.jpg") 0 0 no-repeat;
 $overview-video-desktop-2x: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
 
 .overview {
-  padding: 0 30px 56px 30px;
   margin: 0 auto;
+  padding: 0 30px 56px 30px;
 
   @include for-size(tablet) {
-    padding: 0 50px;
+    padding: 0 50px 64px 50px;
   }
   @include for-size(desktop) {
     padding: 26px 50px 102px 50px;
@@ -24,6 +24,7 @@ $overview-video-desktop-2x: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
     display: grid;
     grid-template-columns: 260px;
     grid-template-rows: min-content min-content min-content min-content;
+    justify-content: center;
     border: 1px solid $overview-border-color;
 
     &:hover {
