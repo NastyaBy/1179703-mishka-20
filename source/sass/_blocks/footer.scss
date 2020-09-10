@@ -34,6 +34,7 @@ $footer-logo-academy-color-hover: #46c1ae;
     padding: 0;
     margin: 0;
     font-size: 0;
+    cursor: pointer;
 
     &:hover {
       $footer-logo-hover: & !global;

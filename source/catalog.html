@@ -52,7 +52,7 @@
   </section>
   <section class="catalog">
     <div class="catalog__list">
-      <a class="catalog__item">
+      <a class="catalog__item" href="#">
         <picture class="catalog__item-preview">
           <source type="image/webp" media="(min-width: 1150px)" srcset="./img/photo-hare-desktop@1x.webp 1x, ./img/photo-hare-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-hare-tablet@1x.webp 1x, ./img/photo-hare-tablet@2x.webp 2x">
@@ -64,13 +64,13 @@
         <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
         <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
         <strong class="catalog__item-price">1 200 pуб.</strong>
-        <button class="button catalog__item-button" type="submit">Купить
+        <button class="button catalog__item-button js-modalOpen"  data-popup-trigger="order" type="submit">Купить
           <svg class="icon" width="20" height="19" >
             <use xlink:href="#icon-basket"></use>
           </svg>
         </button>
       </a>
-      <a class="catalog__item">
+      <a class="catalog__item" href="#">
         <picture class="catalog__item-preview">
           <source type="image/webp" media="(min-width: 1150px)" srcset="./img/photo-bowl-desktop@1x.webp 1x, ./img/photo-bowl-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-bowl-tablet@1x.webp 1x, ./img/photo-bowl-tablet@2x.webp 2x">
@@ -82,13 +82,13 @@
         <h3 class="catalog__item-title">Корзинка для белья</h3>
         <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
         <strong class="catalog__item-price">690 pуб.</strong>
-        <button class="button catalog__item-button" type="submit">Купить
+        <button class="button catalog__item-button js-modalOpen" data-popup-trigger="order" type="submit">Купить
           <svg class="icon" width="20" height="19" >
             <use xlink:href="#icon-basket"></use>
           </svg>
         </button>
       </a>
-      <a class="catalog__item">
+      <a class="catalog__item" href="#">
         <picture class="catalog__item-preview">
           <source type="image/webp" media="(min-width: 1150px)" srcset="./img/photo-toys-desktop@1x.webp 1x, ./img/photo-toys-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="./img/photo-toys-tablet@1x.webp 1x, ./img/photo-toys-tablet@2x.webp 2x">
@@ -100,7 +100,7 @@
         <h3 class="catalog__item-title">Большая корзинка<br/> для игрушек</h3>
         <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
         <strong class="catalog__item-price">1 500 pуб.</strong>
-        <button class="button catalog__item-button" type="submit">Купить
+        <button class="button catalog__item-button js-modalOpen" data-popup-trigger="order" type="submit">Купить
           <svg class="icon" width="20" height="19" >
             <use xlink:href="#icon-basket"></use>
           </svg>
@@ -136,17 +136,17 @@
       </svg>
     </a>
     <div class="footer__social">
-      <a class="footer__social-item" href="" aria-label="Инстаграм">Инстаграм
+      <a class="footer__social-item" href="#" aria-label="Инстаграм">Инстаграм
         <svg class="footer__svg" width="22" height="21">
           <use xlink:href="#icon-instagram"></use>
         </svg>
       </a>
-      <a class="footer__social-item" href="" aria-label="Фейсбук">Фейсбук
+      <a class="footer__social-item" href="#" aria-label="Фейсбук">Фейсбук
         <svg class="footer__svg" width="15" height="28">
           <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
-      <a class="footer__social-item" href="" aria-label="Твиттер">Твиттер
+      <a class="footer__social-item" href="#" aria-label="Твиттер">Твиттер
         <svg class="footer__svg" width="23" height="20">
           <use xlink:href="#icon-twitter"></use>
         </svg>
@@ -164,7 +164,7 @@
   </div>
 </footer>
 
-<div class="modal">
+<div class="modal js-modal" data-popup-modal="order">
   <div class="modal__inner">
     <h2 class="modal__title">Добавить<br class="br-phone-only"/> в корзину</h2>
     <p class="modal__description">Выберите размер:</p>
@@ -184,6 +184,7 @@
     </form>
     <button class="button modal__button" type="submit">Добавить</button>
   </div>
+  <i class="modal__blackout js-modalBlackout"></i>
 </div>
 
 <svg style="display: none;">
@@ -242,6 +243,8 @@
   </symbol>
 
 </svg>
+
+<script src="./js/modal.js"></script>
 
 </body>
 </html>

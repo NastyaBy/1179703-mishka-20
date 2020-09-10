@@ -88,7 +88,7 @@
       <img src="img/triple-set-mobile@1x.jpg" srcset="./img/triple-set-mobile@2x.jpg 2x" alt="Вязанная корзинка цвета «Тиффани»/серый">
     </picture>
     <strong class="hot-product__item-price">Цена: 990 pуб.</strong>
-    <button class="button hot-product__button " type="submit">Заказать</button>
+    <button class="button hot-product__button js-modalOpen" data-popup-trigger="order" type="submit">Заказать</button>
   </section>
 
   <section class="features">
@@ -139,7 +139,7 @@
       </button>
     </div>
 
-    <a class="button comment__button" href="blank.html" aria-label="Написать отзыв">Написать</a>
+    <a class="button comment__button" href="#" aria-label="Написать отзыв">Написать</a>
   </section>
 
   <section class="contacts">
@@ -167,7 +167,7 @@
     <!--     <source media="(min-width: 768px)" srcset="./img/map-tablet@1x.jpg 1x, ./img/map-tablet@2x.jpg 2x">-->
     <!--     <img src="./img/map-mobile@1x.jpg" srcset="./img/map-mobile@2x.jpg 2x" alt="Карта расположения офиса: г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101">-->
     <!--     </picture>-->
-    <a class="button contacts__button " href="blank.html" aria-label="Написать нам">Напишите нам</a>
+    <a class="button contacts__button " href="#" aria-label="Написать нам">Напишите нам</a>
   </section>
 </main>
 
@@ -180,17 +180,17 @@
       </svg>
     </a>
     <div class="footer__social">
-      <a class="footer__social-item" href="" aria-label="Инстаграм">Инстаграм
+      <a class="footer__social-item" href="#" aria-label="Инстаграм">Инстаграм
         <svg class="footer__svg" width="22" height="21">
           <use xlink:href="#icon-instagram"></use>
         </svg>
       </a>
-      <a class="footer__social-item" href="" aria-label="Фейсбук">Фейсбук
+      <a class="footer__social-item" href="#" aria-label="Фейсбук">Фейсбук
         <svg class="footer__svg" width="15" height="28">
           <use xlink:href="#icon-facebook"></use>
         </svg>
       </a>
-      <a class="footer__social-item" href="" aria-label="Твиттер">Твиттер
+      <a class="footer__social-item" href="#" aria-label="Твиттер">Твиттер
         <svg class="footer__svg" width="23" height="20">
           <use xlink:href="#icon-twitter"></use>
         </svg>
@@ -208,7 +208,7 @@
   </div>
 </footer>
 
-<div class="modal">
+<div class="modal js-modal" data-popup-modal="order">
   <div class="modal__inner">
     <h2 class="modal__title">Добавить<br class="br-phone-only"/> в корзину</h2>
     <p class="modal__description">Выберите размер:</p>
@@ -228,6 +228,7 @@
     </form>
     <button class="button modal__button" type="submit">Добавить</button>
   </div>
+  <i class="modal__blackout js-modalBlackout"></i>
 </div>
 
 <svg style="display: none;">
@@ -289,5 +290,7 @@
   </symbol>
 
 </svg>
+
+<script src="./js/modal.js"></script>
 </body>
 </html>

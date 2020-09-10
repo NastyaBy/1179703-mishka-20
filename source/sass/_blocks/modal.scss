@@ -6,37 +6,59 @@ $modal-border-modal-radio-hover: rgba(68, 68, 68, 0.3);
 $modal-box-shadow-color: rgba(0, 1, 1, 0.25);
 $button-modal-text-color: #ffffff;
 $button-modal-border: #63d1bb;
+$button-modal-border-hover: #444444;
 $button-modal-background-hover: linear-gradient(0deg, #444444, #444444);
 
 
 .modal {
-  display: none;
   position: fixed;
-  z-index: 100;
+  z-index: -100;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 0 auto;
-  padding-bottom: 46px;
-  width: 100%;
-  background: $modal-background;
 
-  &--close {
-    display: none;
+  &.is--visible {
+    $modalVisible: & !global;
+    z-index: 100;
+  }
+
+  &__blackout {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $modal-background;
+    opacity: 0;
+    transition: opacity 50ms linear;
+
+    &.is-blacked-out {
+      opacity: 1;
+    }
   }
 
   &__inner {
-    transform: translateY(50%);
-    margin: 0;
-    padding: 30px 30px 45px;
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-self: center;
     text-align: center;
+    margin: 0;
+    padding: 30px 30px 45px;
     border: 1px solid $modal-border;
     box-shadow: 0 5px 10px $modal-box-shadow-color;
     background: $modal-inner-background;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: opacity 100ms linear;
+
+
+    #{$modalVisible} & {
+      opacity: 1;
+    }
 
     @include for-size(tablet) {
       margin: 0 auto;
@@ -81,6 +103,10 @@ $button-modal-background-hover: linear-gradient(0deg, #444444, #444444);
     color: $button-modal-text-color;
     border: 2px solid $button-modal-border;
     background: $button-modal-border;
+
+    &:hover {
+      border-color: $button-modal-border-hover;
+    }
   }
 }
 

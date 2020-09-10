@@ -1,6 +1,7 @@
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
+$catalog-item-price-color: #000000;
 $catalog-item-price-border: #ececec;
 $catalog-item-button-hover: #63d1bb;
 $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
@@ -49,6 +50,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
     align-self: center;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
+    text-decoration: none;
 
     &:hover {
       box-shadow: 0 6px 10px $catalog-item-box-shadow;
@@ -147,6 +149,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       font-size: 15px;
       font-weight: bold;
       line-height: 24px;
+      color: $catalog-item-price-color;
       border-top: 1px solid $catalog-item-price-border;
 
       @include for-size(tablet) {
@@ -170,6 +173,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       border: none;
       padding: 21px;
       opacity: 0.2;
+      cursor: pointer;
 
       @include for-size(tablet) {
         position: static;
