@@ -26,4 +26,3 @@ modalTriggers.forEach(trigger => {
     })
   })
 })
-
