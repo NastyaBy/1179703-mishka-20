@@ -3,14 +3,23 @@ $form-radio-color: #000000;
 $form-checkbox-color: #000000;
 $form-item-title-color: #63d1bb;
 $form-item-text-color: #000000;
-$form-item-input: #000000;
+$form-item-icon-color: #000000;
+$form-item-icon-color-hover: #62d1ba;
+$form-item-icon-color-focus: #62d1ba;
+$form-item-input: #444444;
 $form-item-input-border: #000000;
+$form-item-input-border-hover: #62d1ba;
+$form-item-input-border-focus: #62d1ba;
 $form-item-input-apps: #000000;
 $fieldset-bg: #f1f1f1;
+$border-radio: #444444;
+$border-radio-hover: #62d1ba;
+$border-radio-active: rgba(0, 0, 0, 0.3);
+$border-checkbox-hover: #62d1ba;
+$border-checkbox-active: rgba(0, 0, 0, 0.3);
 
 .form {
-  max-width: #{$general-width + 100px};
-  margin: 0 auto;
+  position: relative;
 
   &-order {
     position: relative;
@@ -25,37 +34,44 @@ $fieldset-bg: #f1f1f1;
     font-weight: normal;
     line-height: 24px;
 
+    @include for-size(phone-only) {
+      margin-bottom: 30px;
+    }
 
     @include for-size(tablet) {
-      padding: 38px 50px 0 50px;
+      margin: 14px auto;
+      padding: 46px 50px 0 50px;
       font-size: 17px;
       line-height: 30px;
     }
 
     @include for-size(desktop) {
       margin-bottom: 13px;
-      padding: 80px 225px 0 225px;
+      padding: 85px 225px 0 225px;
       max-width: 700px;
     }
   }
 
   &__fieldset {
-    padding: 8px 30px 8px 30px;
+    padding: 0 30px 30px 30px;
     border: 0 none;
 
     @include for-size(tablet) {
-      display: flex;
-      flex-direction: row;
-      padding: 65px 50px;
-      flex-wrap: wrap;
-    }
-
-    @include for-size(desktop) {
       flex-grow: 1;
-      flex-wrap: nowrap;
-      justify-content: start;
       margin: 0;
       padding: 50px 0 47px;
+    }
+
+    &--fio {
+      @include for-size(phone-only) {
+        margin-bottom: -38px;
+      }
+    }
+
+    &--connection {
+      @include for-size(phone-only) {
+        padding-bottom: 12px;
+      }
     }
 
     &--mb {
@@ -64,19 +80,10 @@ $fieldset-bg: #f1f1f1;
 
     &--bg {
       position: relative;
+      background: $fieldset-bg;
 
-      @include for-size(tablet) {
-        &::before {
-          content: "";
-          position: absolute;
-          z-index: -1;
-          top: 0;
-          bottom: 0;
-          left: 50%;
-          width: 100vw;
-          background: $fieldset-bg;
-          transform: translateX(-50%);
-        }
+      @include for-size(phone-only) {
+        background: none;
       }
     }
 
@@ -86,8 +93,21 @@ $fieldset-bg: #f1f1f1;
     }
   }
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+
+
+    @include for-size(tablet) {
+      flex-direction: row;
+      max-width: #{$general-width + 100px};
+      margin: 0 auto;
+    }
+  }
+
   &__title {
-    margin-bottom: 24px;
     padding-right: 22px;
     color: $form-title-color;
     font-size: 17px;
@@ -95,40 +115,66 @@ $fieldset-bg: #f1f1f1;
     line-height: 16px;
     text-transform: uppercase;
 
-    //&::after {
-    //  margin-left: 22px;
-    //  content: "";
-    //  display: inline-block;
-    //  vertical-align: middle;
-    //  box-sizing: border-box;
-    //  width: 65%;
-    //  height: 1px;
-    //  background: #6CBD83;
-    //  border: solid;
-    //  border-width: 0 10px;
-    //}
+
+    @include for-size(phone-only) {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0 0 15px;
+
+      &::after {
+        margin-left: 22px;
+        content: "";
+        width: 100%;
+        height: 1px;
+        border: solid;
+        border-width: 0 0 1px;
+      }
+    }
 
     @include for-size(tablet) {
       flex-shrink: 0;
+      width: 147px;
+      margin: 18px 0 0 50px;
+    }
+
+    @include for-size(desktop) {
       width: 93px;
-      margin: 19px 0 0 110px;
+      margin: 18px 0 0 110px;
     }
 
     &--label {
-      width: 68px;
-      margin: 2px 0 0 110px;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      margin-bottom: 7px;
+
+      @include for-size(tablet) {
+        width: 120px;
+        margin: 0 0 0 50px;
+      }
+
+      @include for-size(desktop) {
+        width: 68px;
+        margin: 2px 0 0 110px;
+      }
     }
   }
 
   &__text {
-    @include for-size(desktop) {
-      order: 4;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 16px;
+
+    @include for-size(tablet) {
+      font-size: 17px;
+      line-height: 30px;
+      order: 2;
     }
   }
 
   &__data {
     flex-grow: 1;
-    padding-top: 25px;
+    padding-top: 14px;
 
     @include for-size(tablet) {
       padding-top: 0;
@@ -137,7 +183,7 @@ $fieldset-bg: #f1f1f1;
     &--inline {
       $form-data--inline: & !global;
 
-      @include for-size(desktop) {
+      @include for-size(tablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -148,22 +194,59 @@ $fieldset-bg: #f1f1f1;
     &--rows {
       $form-data--rows: & !global;
 
-      @include for-size(desktop) {
+      @include for-size(tablet) {
         display: flex;
         flex-direction: column;
+      }
+    }
+
+    &--footer {
+      display: flex;
+      flex-direction: column;
+      margin-top: -45px;
+
+      @include for-size(tablet) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: -50px 0 -5px;
+        padding: 0 50px;
+      }
+
+      @include for-size(desktop) {
+        margin: -56px 0 -4px;
+        padding: 0 225px;
       }
     }
   }
 
   &__item-text {
+    position: relative;
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     margin: 0;
-    padding: 22px 0;
+    padding: 6px 0 20px;
     color: $form-item-text-color;
     font-size: 17px;
     font-weight: bold;
     line-height: 18px;
+
+    @include for-size(tablet) {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 25px;
+      padding: 0;
+      font-size: 19px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      #{$form-data--rows} & {
+        margin-right: 50px;
+      }
+    }
 
     @include for-size(desktop) {
       align-items: center;
@@ -179,11 +262,46 @@ $fieldset-bg: #f1f1f1;
         margin-right: 225px;
       }
     }
+
+    &--email {
+      padding-top: 15px;
+    }
+  }
+
+  &__item-icon {
+    $formItemIcon: & !global;
+    position: absolute;
+    top: 43px;
+    right: 4px;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    color: $form-item-icon-color;
+    opacity: 0.2;
+
+    @include for-size(tablet) {
+      top: 13px;
+      right: 23px;
+    }
+
+    @include for-size(desktop) {
+      right: 6px;
+    }
+
+    &--phone {
+      width: 25px;
+    }
+
+    &--email {
+      width: 32px;
+    }
   }
 
   &__item-input {
+    flex-grow: 1;
+    position: relative;
     margin: 0;
-    padding: 14px 16px;
+    padding: 15px 0;
     color: $form-item-input;
     font-size: 17px;
     font-weight: normal;
@@ -192,46 +310,71 @@ $fieldset-bg: #f1f1f1;
     border: 0 none;
     background: transparent;
     border-bottom: 2px solid $form-item-input-border;
+    outline: none;
+
+    &:hover {
+      border-color: $form-item-input-border-hover;
+
+      & + #{$formItemIcon} {
+        color: $form-item-icon-color-hover;
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      border-color: $form-item-input-border-focus;
+
+      & + #{$formItemIcon} {
+        color: $form-item-icon-color-focus;
+        opacity: 1;
+      }
+    }
+
+    @include for-size(tablet) {
+      margin-left: 25px;
+      padding: 14px 16px;
+      font-size: 19px;
+    }
 
     &::placeholder {
       line-height: 18px;
       opacity: 0.3;
     }
 
-    &--icon-phone {
-      height: 24px;
-      background: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z' fill='black'/%3E%3Cpath d='M12.6008 1.48147C18.5484 1.48147 23.4879 6.22217 23.4879 12.1481H25C25 5.43205 19.4557 0 12.6008 0V1.48147Z' fill='black'/%3E%3Cpath d='M12.6008 9.18506V10.7653C13.4073 10.7653 14.0121 11.3579 14.0121 12.148H15.625C15.625 10.5678 14.3145 9.18506 12.6008 9.18506Z' fill='black'/%3E%3Cpath d='M12.6008 6.12356C15.9274 6.12356 18.75 8.79021 18.75 12.1482H20.3629C20.3629 8.00009 16.9355 4.64209 12.7016 4.64209V6.12356H12.6008Z' fill='black'/%3E%3C/g%3E%3C/svg%3E%0A") 667px 14px no-repeat;
-    }
-
-    &--icon-email {
-      height: 21px;
-      background: url("data:image/svg+xml,%3Csvg width='32' height='21' viewBox='0 0 32 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z' fill='black'/%3E%3C/svg%3E%0A")  664px 15px no-repeat;
-    }
-
-    @include for-size(desktop) {
-      flex-grow: 1;
-      margin-left: 25px;
-      font-size: 19px;
-    }
-
     &--apps {
       display: block;
-      margin-top: 3px;
+      width: 100%;
+      margin-top: -3px;
       margin-left: 0;
       padding: 16px;
       border: 2px solid $form-item-input-apps;
-      min-height: 142px;
+      min-height: 145px;
       box-sizing: border-box;
 
-      #{$form-data--rows} & {
-        margin-right: 225px;
+      @include for-size(tablet) {
+        margin-top: 0;
+        #{$form-data--rows} & {
+          width: calc(100% - 50px);
+        }
+      }
+
+      @include for-size(desktop) {
+        #{$form-data--rows} & {
+          width: auto;
+          margin-right: 225px;
+        }
       }
     }
   }
 
   &__button {
-    margin: 48px 0 55px 0;
-    width: 230px;
+    margin: 17px 0 25px;
+    width: 100%;
+
+    @include for-size(tablet) {
+      margin: 0;
+      width: 230px;
+    }
   }
 }
 
@@ -269,8 +412,27 @@ $fieldset-bg: #f1f1f1;
   &__text {
     display: inline-flex;
     align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
     user-select: none;
     cursor: pointer;
+
+    &:hover {
+      &::before {
+        border-color: $border-radio-hover;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: $border-radio-active;
+      }
+    }
+
+    @include for-size(tablet) {
+      font-size: 19px;
+    }
 
     &::before {
       content: "";
@@ -279,22 +441,22 @@ $fieldset-bg: #f1f1f1;
       flex-shrink: 0;
       flex-grow: 0;
       margin-right: 20px;
-      background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.888 2.874c13.231 0 23.926 10.526 23.926 23.472 0 12.946-10.695 23.472-23.926 23.472-13.23 0-23.925-10.526-23.925-23.472 0-12.946 10.694-23.472 23.925-23.472z' stroke='%23444' stroke-width='2'/%3E%3C/svg%3E") 0 50% no-repeat;
-      background-size: 42px 42px;
+      border: 2px solid $border-radio;
+      border-radius: 50%;
+      box-sizing: border-box;
 
       @include for-size(tablet) {
         width: 52px;
         height: 52px;
         margin-right: 26px;
-        background-size: 52px 52px;
       }
 
       #{$radioIsChecked} + & {
-        background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.888 2.874c13.231 0 23.926 10.526 23.926 23.472 0 12.946-10.695 23.472-23.926 23.472-13.23 0-23.925-10.526-23.925-23.472 0-12.946 10.694-23.472 23.925-23.472z' stroke='%23444' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M26.24 16.393c5.424 0 9.821 4.397 9.821 9.822 0 5.424-4.397 9.822-9.822 9.822-5.424 0-9.821-4.398-9.821-9.822 0-5.425 4.397-9.822 9.822-9.822z' fill='%2362D1BA'/%3E%3C/svg%3E") 0 50% no-repeat;
-        background-size: 42px 42px;
+        background: url("data:image/svg+xml,%3Csvg width='21' height='21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.24.393c5.424 0 9.821 4.397 9.821 9.822 0 5.424-4.397 9.822-9.822 9.822-5.424 0-9.821-4.398-9.821-9.822C.418 4.79 4.815.393 10.24.393z' fill='%2362D1BA'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: 12px 12px;
 
         @include for-size(tablet) {
-          background-size: 52px 52px;
+          background-size: 21px 21px;
         }
       }
     }
@@ -306,7 +468,7 @@ $fieldset-bg: #f1f1f1;
   display: flex;
   align-items: center;
   margin-right: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   color: $form-checkbox-color;
   font-size: 17px;
   font-weight: bold;
@@ -321,6 +483,8 @@ $fieldset-bg: #f1f1f1;
     font-size: 19px;
 
     #{$form-data--inline} & {
+      width: 232px;
+
       &:last-child {
         margin-bottom: 24px;
       }
@@ -349,6 +513,19 @@ $fieldset-bg: #f1f1f1;
     user-select: none;
     cursor: pointer;
 
+
+    &:hover {
+      &::before {
+        border-color: $border-checkbox-hover;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: $border-checkbox-active;
+      }
+    }
+
     &::before {
       content: "";
       width: 38px;
@@ -356,7 +533,8 @@ $fieldset-bg: #f1f1f1;
       flex-shrink: 0;
       flex-grow: 0;
       margin-right: 24px;
-      background: url("data:image/svg+xml,%3Csvg width='52' height='52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23444' stroke-width='2' d='M1 1h50v50H1z'/%3E%3C/svg%3E") 0 50% no-repeat;
+      border: 2px solid $border-radio;
+      box-sizing: border-box;
       background-size: 38px 38px;
 
       @include for-size(tablet) {
@@ -368,11 +546,11 @@ $fieldset-bg: #f1f1f1;
 
 
       #{$checkboxIsChecked} + & {
-        background: url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='50' height='50' stroke='%23444444' stroke-width='2'/%3E%3Cpath d='M42.3704 17.3568L41.0098 16L21.5739 35.2863L11.9531 25.6916L10.5926 27.0485L20.2134 36.6432L21.5739 38L23.0316 36.6432L42.3704 17.3568Z' fill='black'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
-        background-size: 38px 38px;
+        background: url("data:image/svg+xml,%3Csvg width='33' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32.37 1.357L31.01 0 11.574 19.286l-9.62-9.594-1.361 1.357 9.62 9.594L11.573 22l1.459-1.357L32.37 1.357z' fill='%23000'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: 23px 16px;
 
         @include for-size(tablet) {
-          background-size: 52px 52px;
+          background-size: 31px 22px;
         }
       }
     }

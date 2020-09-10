@@ -1,6 +1,12 @@
 $footer-background: #f1f1f1;
+$footer-logo-color: #000000;
+$footer-logo-color-hover: #46c1ae;
+$footer-item-color: #000000;
+$footer-item-color-hover: #46c1ae;
 $footer-copyright: #000000;
 $footer-social-border: #e5e5e5;
+$footer-logo-academy-color: #63d1bb;
+$footer-logo-academy-color-hover: #46c1ae;
 
 .footer {
   margin: 0;
@@ -29,8 +35,28 @@ $footer-social-border: #e5e5e5;
     margin: 0;
     font-size: 0;
 
+    &:hover {
+      $footer-logo-hover: & !global;
+    }
+
+    &:active {
+      $footer-logo-active: & !global;
+    }
+
     @include for-size(phone-only) {
       display: none;
+    }
+  }
+
+  &__logo-icon {
+    color: $footer-logo-color;
+
+    #{$footer-logo-hover} & {
+      color: $footer-logo-color-hover;
+    }
+
+    #{$footer-logo-active} & {
+      opacity: 0.3;
     }
   }
 
@@ -61,10 +87,18 @@ $footer-social-border: #e5e5e5;
       margin: 0 auto;
       padding: 0;
     }
+  }
 
-    &-item {
-      margin: 0 20px 0 20px;
-      font-size: 0;
+  &__social-item {
+    margin: 0 20px 0 20px;
+    font-size: 0;
+
+    &:hover {
+      $footer-item-hover: & !global;
+    }
+
+    &:active {
+      $footer-item-active: & !global;
     }
   }
 
@@ -88,5 +122,29 @@ $footer-social-border: #e5e5e5;
     margin-left: 28px;
     font-size: 0;
     line-height: 0;
+  }
+
+  &__academy-icon {
+    color: $footer-logo-academy-color;
+
+    &:hover {
+      color: $footer-logo-academy-color-hover;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.footer__svg {
+  color: $footer-item-color;
+
+  #{$footer-item-hover} & {
+    color: $footer-item-color-hover;
+  }
+
+  #{$footer-item-active} & {
+    opacity: 0.3;
   }
 }
