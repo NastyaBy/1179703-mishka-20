@@ -72,6 +72,9 @@ $border-checkbox-active: rgba(0, 0, 0, 0.3);
       @include for-size(phone-only) {
         padding-bottom: 12px;
       }
+      @include for-size(tablet) {
+        padding-bottom: 53px;
+      }
     }
 
     &--mb {
@@ -174,11 +177,14 @@ $border-checkbox-active: rgba(0, 0, 0, 0.3);
 
   &__data {
     flex-grow: 1;
-    padding-top: 14px;
+    @include for-size(phone-only) {
+      padding-top: 12px;
+    }
 
     @include for-size(tablet) {
       padding-top: 0;
     }
+
 
     &--inline {
       $form-data--inline: & !global;
@@ -209,7 +215,7 @@ $border-checkbox-active: rgba(0, 0, 0, 0.3);
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        margin: -50px 0 -5px;
+        margin: -53px 0 -4px;
         padding: 0 50px;
       }
 
@@ -264,7 +270,9 @@ $border-checkbox-active: rgba(0, 0, 0, 0.3);
     }
 
     &--email {
-      padding-top: 15px;
+      @include for-size(phone-only) {
+        padding-top: 15px;
+      }
     }
   }
 
