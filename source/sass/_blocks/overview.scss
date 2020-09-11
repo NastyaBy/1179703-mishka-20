@@ -25,6 +25,8 @@ $overview-video-desktop-2x: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
     grid-template-columns: 260px;
     grid-template-rows: min-content min-content min-content min-content;
     justify-content: center;
+    max-width: 260px;
+    margin: 0 auto;
     border: 1px solid $overview-border-color;
 
     &:hover {
@@ -37,10 +39,12 @@ $overview-video-desktop-2x: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
 
     @include for-size(tablet) {
       grid-template-columns: 668px;
+      max-width: 668px;
+      margin: 0 auto;
     }
 
     @include for-size(desktop) {
-      grid-template-columns: 683px 368px;
+      grid-template-columns: 682px 365px;
       grid-template-rows: min-content min-content min-content;
       max-width: $general-width;
       margin: 0 auto;
@@ -66,7 +70,7 @@ $overview-video-desktop-2x: url("../img/video-desktop@2x.jpg") 0 0 no-repeat;
       grid-column: 1;
       grid-row: 1;
       flex-shrink: 0;
-      height: 453px;
+      height: 454px;
       background: $overview-video-tablet;
 
       @include retina-size {

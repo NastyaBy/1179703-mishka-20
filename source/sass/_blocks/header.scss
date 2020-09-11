@@ -9,6 +9,11 @@ $icon-color-hover: #63d1bb;
 .header {
   position: relative;
   z-index: 2;
+  margin-bottom: 80px;
+
+  @include for-size(tablet) {
+    margin-bottom: 0;
+  }
 
   &__inner {
     position: relative;
@@ -28,6 +33,7 @@ $icon-color-hover: #63d1bb;
     padding: 22px 0 8px 0;
     font-size: 0;
     line-height: 0;
+    z-index: 100;
 
     &:hover {
       opacity: 0.6;
@@ -37,7 +43,12 @@ $icon-color-hover: #63d1bb;
       opacity: 0.3;
     }
 
+    @include for-size(phone-only) {
+      position: absolute;
+    }
     @include for-size(tablet) {
+      position: absolute;
+      left: 0;
       margin-right: auto;
       margin-left: 50px;
       padding: 0;
@@ -53,71 +64,34 @@ $icon-color-hover: #63d1bb;
   }
 
   &__nav {
-    //display: none;
-    display: flex;
+    $header-nav: & !global;
+    position: relative;
+    left: 0;
+    right: 0;
+    display: none;
     justify-content: center;
     flex-direction: column;
     margin: 0;
     padding: 0;
 
     @include for-size(phone-only) {
-      margin-top: 14px;
-      width: 100%;
+      margin-top: 80px;
     }
     @include for-size(tablet) {
+      flex-grow: 1;
+      display: flex;
       flex-direction: row;
+      justify-content: flex-end;
       font-size: 15px;
     }
-    @include for-size(desktop) {
-      flex-grow: 1;
+
+
+    &--closed {
+      display: none;
     }
 
-    &-toggle {
-      position: absolute;
+    &--open {
       display: block;
-      top: 28px;
-      right: 50px;
-      width: 20px;
-      height: 2px;
-      z-index: 2;
-      cursor: pointer;
-      border: none;
-      background-color: $header-nav-toggle-background-color;
-      box-shadow: 0 2px 0 0 $header-nav-toggle-box-shadow, 0 8px 0 0 $header-nav-toggle-box-shadow, 0 14px 0 0 $header-nav-toggle-box-shadow;
-      font-size: 0;
-
-      &--active {
-        box-shadow: none;
-
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          display: block;
-          left: 14px;
-          right: 0;
-          top: 10px;
-          width: 27px;
-          height: 2px;
-          background-color: $header-nav-toggle-box-shadow;
-        }
-
-        &::before {
-          transform: rotate(45deg);
-        }
-
-        &::after {
-          transform: rotate(-45deg);
-        }
-      }
-
-      @include for-size(tablet) {
-        display: none;
-      }
-
-      @include for-size(desktop) {
-        display: none;
-      }
     }
 
     &-link {
@@ -310,6 +284,70 @@ $icon-color-hover: #63d1bb;
     }
     @include for-size(desktop) {
       right: 0;
+    }
+  }
+}
+
+.header-toggle {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  @include for-size(tablet) {
+    position: relative;
+  }
+
+  &__control {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+      $checkboxIsChecked: & !global;
+
+      & ~ #{$header-nav} {
+        display: flex;
+        margin-bottom: -80px;
+
+        @include for-size(tablet) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include for-size(tablet) {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    @include for-size(desktop) {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 16px;
+      right: 18px;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      box-sizing: border-box;
+      background: url("data:image/svg+xml,%3Csvg width='20' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0H0v2h20V0zM20 6H0v2h20V6zM20 12H0v2h20v-2z' fill='%23231F20'/%3E%3C/svg%3E") 50% 50% no-repeat;
+      background-size: 20px auto;
+
+      #{$checkboxIsChecked} + & {
+        background: url("data:image/svg+xml,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21 1.366L19.566 0 10.55 8.585 1.434 0 0 1.366l9.015 8.683L0 18.634 1.434 20l9.117-8.585L19.566 20 21 18.634l-9.015-8.585L21 1.366z' fill='%23000'/%3E%3C/svg%3E") 50% 50% no-repeat;
+        background-size: 21px auto;
+      }
     }
   }
 }

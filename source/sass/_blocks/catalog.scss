@@ -1,6 +1,7 @@
 $catalog-item-border-color: #ececec;
 $catalog-item-title: #000000;
 $catalog-item-description: #444444;
+$catalog-item-price-color: #000000;
 $catalog-item-price-border: #ececec;
 $catalog-item-button-hover: #63d1bb;
 $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
@@ -33,7 +34,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
     @include for-size(desktop) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 51px;
+      gap: 50px;
       flex-wrap: wrap;
       justify-content: center;
       margin-top: 111px;
@@ -49,6 +50,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
     align-self: center;
     list-style-type: none;
     border: 1px solid $catalog-item-border-color;
+    text-decoration: none;
 
     &:hover {
       box-shadow: 0 6px 10px $catalog-item-box-shadow;
@@ -60,7 +62,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
 
     @include for-size(tablet) {
       display: grid;
-      grid-template-columns: 347px 250px 70px;
+      grid-template-columns: 346px 250px 70px;
       grid-template-rows: auto 1fr 70px;
       margin: 27px 0 24px;
     }
@@ -107,7 +109,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
         line-height: 24px;
       }
       @include for-size(desktop) {
-        margin: 20px 28px 0 28px;
+        margin: 26px 26px 0 26px;
       }
 
       &:hover {
@@ -136,7 +138,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       }
 
       @include for-size(desktop) {
-        margin: 0 30px auto;
+        margin: 7px 28px auto;
         padding-bottom: 10px;
       }
     }
@@ -147,6 +149,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       font-size: 15px;
       font-weight: bold;
       line-height: 24px;
+      color: $catalog-item-price-color;
       border-top: 1px solid $catalog-item-price-border;
 
       @include for-size(tablet) {
@@ -157,6 +160,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
         font-size: 17px;
       }
       @include for-size(desktop) {
+        margin: 0 30px;
         padding: 25px 0;
       }
     }
@@ -169,6 +173,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       border: none;
       padding: 21px;
       opacity: 0.2;
+      cursor: pointer;
 
       @include for-size(tablet) {
         position: static;
@@ -177,7 +182,7 @@ $catalog-item-box-shadow: rgba(0, 0, 0, 0.1);
       }
       @include for-size(desktop) {
         position: absolute;
-        right: 9px;
+        right: 10px;
         bottom: 0;
       }
 
