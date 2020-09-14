@@ -8,6 +8,8 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const del = require("del");
@@ -78,12 +80,11 @@ exports.copy = copy;
 
 //Html
 const html = () => {
-  return gulp.src([
-    "source/*.html"
-  ], {
-    base: 'source'
-  })
-    .pipe(gulp.dest("build"));
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"))
 };
 
 exports.html = html;
@@ -99,7 +100,7 @@ exports.clean = clean;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -125,4 +126,4 @@ exports.build = build;
 const watch = gulp.series(build, watcher)
 exports.watch = watch
 
-exports.start = gulp.series(build, server)
+exports.start = gulp.series(watch, server)
