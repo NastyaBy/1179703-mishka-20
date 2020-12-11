@@ -3,7 +3,7 @@ const bodyBlackout = document.querySelector('.js-modalBlackout')
 
 modalTriggers.forEach(trigger => {
   trigger.addEventListener('click', (evt) => {
-    const {popupTrigger} = trigger.dataset
+    const popupTrigger = trigger.dataset.popupTrigger
     const popupModal = document.querySelector(`[data-popup-modal="${popupTrigger}"]`)
 
     evt.preventDefault();
